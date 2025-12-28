@@ -1,5 +1,9 @@
 # 💫 About Me:
-currently i am a cllege student<br>i am looking to collabrate on artificial intelligence and data science along with ai engineering field related things<br>im looking for seeking help to learn programing knowledges that helps me to master the above mentioned feilds<br>currently i am learning python <br>ask and update me about the current opurtunities that help me to seek knowledge regarding ai assistance which runs and works on voice commands<br>
+currently i am a college student. 
+I am looking to collabrate on artificial intelligence and data science along with ai engineering field related things.
+Im looking for seeking help to learn programing knowledges that helps me to master the above mentioned feilds.
+Currently i am learning python .
+Ask and update me about the current opurtunities that help me to seek knowledge regarding ai assistance which runs and works on voice commands.
 
 
 ## 🌐 Socials:
