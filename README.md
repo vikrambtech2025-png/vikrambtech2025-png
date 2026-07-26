@@ -1,31 +1,31 @@
 <!--
-  ╔════════════════════════════════════════════════════════════════════════╗
-  ║            VIKRAM — PREMIUM AESTHETIC GITHUB PROFILE                  ║
-  ║            Sophisticated • Professional • Elegant                     ║
-  ╚════════════════════════════════════════════════════════════════════════╝
+  ╔══════════════════════════════════════════════════════════════════════════╗
+  ║          VIKRAM — THE ULTIMATE PREMIUM GITHUB PROFILE                  ║
+  ║          Sophisticated • Elegant • Professional • Aesthetic            ║
+  ╚══════════════════════════════════════════════════════════════════════════╝
 -->
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SECTION 1 — HERO: Cinematic Gradient + Minimal Typography       -->
+<!--  HERO — Cinematic Opening                                        -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<!-- Premium Gradient Banner -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,20:0a192f,40:112240,60:1a1a2e,80:16213e,100:0f3460&height=300&section=header&animation=1&text=Vikram&fontSize=100&fontColor=ffffff&fontAlignY=38&descSize=22&descAlignY=62&desc=AI%20%2F%20ML%20Engineer%20%7C%20Building%20Intelligent%20Systems&rotate=0&stroke=22C55E&strokeWidth=0.5"/>
+<!-- Premium Animated Header -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,12:0a192f,25:112240,37:1a1a2e,50:1e3a5f,62:0f3460,75:112240,87:0a192f,100:0d1117&height=320&section=header&animation=2&text=Vikram&fontSize=100&fontColor=ffffff&fontAlignY=42&descSize=20&descAlignY=68&desc=AI%20%2F%20ML%20Engineer%20%7C%20Building%20Intelligent%20Systems&rotate=0&stroke=22C55E&strokeWidth=0.3&descAnimation=3&textAnimation=2"/>
 
 <br/><br/>
 
-<!-- Animated Typing — Elegant, Slow, Refined -->
+<!-- Typing Animation — Slow, Elegant, Refined -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=28&pause=2000&color=22C55E&center=true&vCenter=true&multiline=true&repeat=true&width=750&height=140&lines=Hello+%E2%9D%A4%EF%B8%8F+I'm+**Vikram**;Crafting+AI+Systems+with+Purpose;RAG+%E2%80%A2+LLMs+%E2%80%A2+Full-Stack+ML&duration=4000&pause=2000" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=26&pause=2500&color=22C55E&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=150&lines=Hello+%E2%9D%A4%EF%B8%8F+I'm+**Vikram**;Crafting+AI+Systems+with+Purpose;RAG+%E2%80%A2+LLMs+%E2%80%A2+Full-Stack+ML+%E2%80%A2+Agents&duration=5000&pause=3000" alt="Typing SVG" />
 </p>
 
-<!-- Refined Badge Row — Subtle, Not Overwhelming -->
+<!-- Refined Badge Row -->
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=vikrambtech2025-png&color=22C55E&style=flat-square&label=PROFILE+VIEWS&labelColor=0d1117" alt="Views"/>
   &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/FOLLOW-2K+-10B981?style=flat-square&logo=github&logoColor=white&labelColor=0d1117" alt="Followers"/>
+  <img src="https://img.shields.io/badge/FOLLOW-ME-10B981?style=flat-square&logo=github&logoColor=white&labelColor=0d1117" alt="Followers"/>
   &nbsp;&nbsp;
   <img src="https://img.shields.io/badge/REPOS-25+-8B5CF6?style=flat-square&labelColor=0d1117" alt="Repos"/>
   &nbsp;&nbsp;
@@ -37,12 +37,12 @@
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SECTION 2 — ABOUT: Clean Split Layout                            -->
+<!--  ABOUT ME — Premium Split Layout                                  -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <table align="center" width="100%">
 <tr>
-<td width="65%" valign="top">
+<td width="62%" valign="top">
 
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Flower-Emojis/main/Emojis/Hand%20Emojis/Handshake.gif" width="28"> About Me
 
@@ -53,18 +53,18 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 <br/>
 
 ```
-┌─────────────────────────────────────────────────────┐
-│  👨‍💻  AI/ML Engineer                                │
-│  🎯  RAG Systems  •  LLM Applications  •  Agents   │
-│  🛠️  Python  •  FastAPI  •  React  •  LangChain     │
-│  🌱  Currently: Advanced RAG & Autonomous Agents   │
-│  📫  vikrambtech2025@gmail.com                      │
-└─────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│  👨‍💻  AI/ML Engineer                                    │
+│  🎯  RAG Systems  •  LLM Applications  •  AI Agents    │
+│  🛠️  Python  •  FastAPI  •  React  •  LangChain         │
+│  🌱  Currently: Advanced RAG & Autonomous Agents       │
+│  📫  vikrambtech2025@gmail.com                          │
+└─────────────────────────────────────────────────────────┘
 ```
 
 <br/>
 
-<!-- Animated Social Links -->
+<!-- Social Links -->
 <p align="left">
   <a href="mailto:vikrambtech2025@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
   <a href="https://linkedin.com/in/your-profile"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
@@ -72,14 +72,14 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 </p>
 
 </td>
-<td width="35%" valign="top" align="center">
+<td width="38%" valign="top" align="center">
 
-<!-- GitHub Stats Card — Premium Theme -->
+<!-- Stats Card -->
 <img src="https://github-readme-stats.vercel.app/api?username=vikrambtech2025-png&show_icons=true&theme=tokyonight&bg_color=0d1117&hide_border=true&title_color=22C55E&icon_color=58A6FF&text_color=c9d1d9&include_all_commits=true&count_private=true&hide=prs" width="100%" alt="Stats"/>
 
 <br/>
 
-<!-- Streak Stats -->
+<!-- Streak -->
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=vikrambtech2025-png&theme=dark&background=0d1117&hide_border=true&ring=22C55E&fire=FF6B6B&currStreakLabel=22C55E&sideLabels=c9d1d9" width="100%" alt="Streak"/>
 
 </td>
@@ -89,7 +89,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SECTION 3 — FEATURED PROJECTS: Premium Cards                     -->
+<!--  FEATURED PROJECTS — Premium Cards                                -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -128,7 +128,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SECTION 4 — TECH STACK: Elegant Grid                             -->
+<!--  TECH STACK — Elegant Grid                                        -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -204,7 +204,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SECTION 5 — ANALYTICS: Triple Column                             -->
+<!--  GITHUB ANALYTICS — Triple Column                                 -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -230,7 +230,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SECTION 6 — TROPHIES                                            -->
+<!--  TROPHIES                                                        -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -244,7 +244,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SECTION 7 — SNAKE                                                -->
+<!--  SNAKE ANIMATION                                                  -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -258,7 +258,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SECTION 8 — ACTIVITY GRAPH                                       -->
+<!--  ACTIVITY GRAPH                                                   -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -272,7 +272,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SECTION 9 — QUOTE + CONTRIBUTION INSIGHTS                        -->
+<!--  QUOTE + TOP LANGS                                                -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <table align="center" width="100%">
@@ -297,19 +297,17 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SECTION 10 — FOOTER                                              -->
+<!--  FOOTER                                                           -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
 <br/>
 
-<!-- Elegant Footer -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,20:0a192f,40:112240,60:1a1a2e,80:16213e,100:0f3460&height=160&section=footer&animation=1"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,12:0a192f,25:112240,37:1a1a2e,50:1e3a5f,62:0f3460,75:112240,87:0a192f,100:0d1117&height=180&section=footer&animation=2"/>
 
 <br/>
 
-<!-- Minimal Visitor Counter -->
 <img src="https://api.visitorbadge.io/v2/page-views-badge/vikrambtech2025-png?label=VISITORS&labelColor=0d1117&color=22C55E&style=flat-square" alt="Visitors"/>
 
 <br/>
