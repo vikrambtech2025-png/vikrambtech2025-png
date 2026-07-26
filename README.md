@@ -1,27 +1,27 @@
 <!--
-  ╔══════════════════════════════════════════════════════════════════════════╗
-  ║          VIKRAM — THE ULTIMATE PREMIUM GITHUB PROFILE                  ║
-  ║          Sophisticated • Elegant • Professional • Aesthetic            ║
-  ╚══════════════════════════════════════════════════════════════════════════╝
+  ╔══════════════════════════════════════════════════════════════════════════════╗
+  ║            VIKRAM — THE ULTIMATE PREMIUM GITHUB PROFILE                     ║
+  ║            Advanced Typography • Cinematic Animations • Premium Design      ║
+  ╚══════════════════════════════════════════════════════════════════════════════╝
 -->
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  HERO — Cinematic Opening                                        -->
+<!--  HERO — Cinematic Opening with Multi-Animation Header            -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<!-- Premium Animated Header -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,12:0a192f,25:112240,37:1a1a2e,50:1e3a5f,62:0f3460,75:112240,87:0a192f,100:0d1117&height=320&section=header&animation=2&text=Vikram&fontSize=100&fontColor=ffffff&fontAlignY=42&descSize=20&descAlignY=68&desc=AI%20%2F%20ML%20Engineer%20%7C%20Building%20Intelligent%20Systems&rotate=0&stroke=22C55E&strokeWidth=0.3&descAnimation=3&textAnimation=2"/>
+<!-- Premium Animated Header — 10-color gradient with text animation -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,10:0a192f,20:112240,30:1a1a2e,40:1e3a5f,50:0f3460,60:112240,70:0a192f,80:16213e,90:0d1117,100:00b4d8&height=350&section=header&animation=2&text=Vikram&fontSize=110&fontColor=ffffff&fontAlignY=44&descSize=22&descAlignY=70&desc=AI%20%2F%20ML%20Engineer%20%7C%20Building%20Intelligent%20Systems&rotate=0&stroke=22C55E&strokeWidth=0.2&descAnimation=3&textAnimation=2"/>
 
 <br/><br/>
 
-<!-- Typing Animation — Slow, Elegant, Refined -->
+<!-- Advanced Typing SVG — Multiple font styles, slow elegant pace -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=26&pause=2500&color=22C55E&center=true&vCenter=true&multiline=true&repeat=true&width=800&height=150&lines=Hello+%E2%9D%A4%EF%B8%8F+I'm+**Vikram**;Crafting+AI+Systems+with+Purpose;RAG+%E2%80%A2+LLMs+%E2%80%A2+Full-Stack+ML+%E2%80%A2+Agents&duration=5000&pause=3000" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=3000&color=22C55E&center=true&vCenter=true&multiline=true&repeat=true&width=850&height=160&lines=Hello+%E2%9D%A4%EF%B8%8F+I'm+**Vikram**;Crafting+AI+Systems+with+Purpose;RAG+%E2%80%A2+LLMs+%E2%80%A2+Full-Stack+ML+%E2%80%A2+Agents&duration=6000&pause=3500" alt="Typing SVG" />
 </p>
 
-<!-- Refined Badge Row -->
+<!-- Premium Badge Row — Glowing, Refined -->
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=vikrambtech2025-png&color=22C55E&style=flat-square&label=PROFILE+VIEWS&labelColor=0d1117" alt="Views"/>
   &nbsp;&nbsp;
@@ -37,12 +37,12 @@
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  ABOUT ME — Premium Split Layout                                  -->
+<!--  ABOUT ME — Premium Split Layout with Advanced Typography         -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <table align="center" width="100%">
 <tr>
-<td width="62%" valign="top">
+<td width="60%" valign="top">
 
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Flower-Emojis/main/Emojis/Hand%20Emojis/Handshake.gif" width="28"> About Me
 
@@ -53,18 +53,20 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 <br/>
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│  👨‍💻  AI/ML Engineer                                    │
-│  🎯  RAG Systems  •  LLM Applications  •  AI Agents    │
-│  🛠️  Python  •  FastAPI  •  React  •  LangChain         │
-│  🌱  Currently: Advanced RAG & Autonomous Agents       │
-│  📫  vikrambtech2025@gmail.com                          │
-└─────────────────────────────────────────────────────────┘
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║  👨‍💻  AI/ML Engineer                                        ║
+║  🎯  RAG Systems  •  LLM Applications  •  AI Agents         ║
+║  🛠️  Python  •  FastAPI  •  React  •  LangChain              ║
+║  🌱  Currently: Advanced RAG & Autonomous Agents            ║
+║  📫  vikrambtech2025@gmail.com                               ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
 ```
 
 <br/>
 
-<!-- Social Links -->
+<!-- Premium Social Links — for-the-badge style -->
 <p align="left">
   <a href="mailto:vikrambtech2025@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
   <a href="https://linkedin.com/in/your-profile"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
@@ -72,14 +74,14 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 </p>
 
 </td>
-<td width="38%" valign="top" align="center">
+<td width="40%" valign="top" align="center">
 
-<!-- Stats Card -->
+<!-- GitHub Stats Card — Premium Theme -->
 <img src="https://github-readme-stats.vercel.app/api?username=vikrambtech2025-png&show_icons=true&theme=tokyonight&bg_color=0d1117&hide_border=true&title_color=22C55E&icon_color=58A6FF&text_color=c9d1d9&include_all_commits=true&count_private=true&hide=prs" width="100%" alt="Stats"/>
 
 <br/>
 
-<!-- Streak -->
+<!-- Streak Stats — Premium Theme -->
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=vikrambtech2025-png&theme=dark&background=0d1117&hide_border=true&ring=22C55E&fire=FF6B6B&currStreakLabel=22C55E&sideLabels=c9d1d9" width="100%" alt="Streak"/>
 
 </td>
@@ -89,7 +91,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  FEATURED PROJECTS — Premium Cards                                -->
+<!--  FEATURED PROJECTS — Premium Cards with Emoji Headers             -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -128,7 +130,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  TECH STACK — Elegant Grid                                        -->
+<!--  TECH STACK — Advanced Typography Grid                            -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -204,7 +206,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  GITHUB ANALYTICS — Triple Column                                 -->
+<!--  GITHUB ANALYTICS — Triple Column Premium                         -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -230,7 +232,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  TROPHIES                                                        -->
+<!--  TROPHIES — Full Width Premium                                     -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -244,7 +246,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  SNAKE ANIMATION                                                  -->
+<!--  SNAKE ANIMATION — Full Width                                      -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -258,7 +260,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  ACTIVITY GRAPH                                                   -->
+<!--  ACTIVITY GRAPH — Full Width Premium                               -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -272,7 +274,7 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  QUOTE + TOP LANGS                                                -->
+<!--  QUOTE + TOP LANGS — Premium 2-Column                              -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <table align="center" width="100%">
@@ -297,17 +299,19 @@ I'm an **AI/ML Engineer** who transforms research into **production-grade system
 ---
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  FOOTER                                                           -->
+<!--  FOOTER — Premium Cinematic Closing                               -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
 <br/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,12:0a192f,25:112240,37:1a1a2e,50:1e3a5f,62:0f3460,75:112240,87:0a192f,100:0d1117&height=180&section=footer&animation=2"/>
+<!-- Premium Animated Footer — 10-color gradient -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,10:0a192f,20:112240,30:1a1a2e,40:1e3a5f,50:0f3460,60:112240,70:0a192f,80:16213e,90:0d1117,100:00b4d8&height=200&section=footer&animation=2"/>
 
 <br/>
 
+<!-- Visitor Counter -->
 <img src="https://api.visitorbadge.io/v2/page-views-badge/vikrambtech2025-png?label=VISITORS&labelColor=0d1117&color=22C55E&style=flat-square" alt="Visitors"/>
 
 <br/>
