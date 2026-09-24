@@ -109,7 +109,16 @@
 
 <br>
 
----
+<!-- Animated AI-core emblem — self-hosted animated SVG (fully standalone) -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-ai-core.svg" width="430px" alt="AI Core Emblem"/>
+</div>
+
+<br>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
+</p>
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
 <!--  ABOUT ME                                                        -->
@@ -141,11 +150,18 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
   <a href="https://github.com/vikrambtech2025-png"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
 </p>
 
+<!-- Animated shimmer tagline — self-hosted animated SVG -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-shine-text.svg" width="96%" alt="From data to intelligence"/>
+</p>
+
 </td>
 </tr>
 </table>
 
----
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
+</p>
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
 <!--  FEATURED PROJECTS — static cards (no flaky APIs, all public)     -->
@@ -212,7 +228,9 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
   <i>All repos above are public and viewable — click any card to explore it on GitHub.</i>
 </p>
 
----
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
+</p>
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
 <!--  TECH STACK — built from the actual dependencies across all repos -->
@@ -295,10 +313,12 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 </tr>
 </table>
 
----
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
+</p>
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  GITHUB ANALYTICS — standalone, shields-only (all verified)       -->
+<!--  GITHUB ANALYTICS — verified-live badges + animated pulse + streak  -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -314,9 +334,18 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 
 <p><b>Language mix across 200+ repos:</b> Python &amp; Jupyter dominate — 191 repos · Java 3 · JavaScript 3 · TypeScript 1</p>
 
+<!-- Animated pulse ring (self-hosted) + live streak card (verified service) -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-stats-pulse.svg" width="200px" alt="Project pulse"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://streak-stats.demolab.com/?user=vikrambtech2025-png&theme=github-dark-blue&hide_border=true" width="430px" alt="GitHub Streak"/>
+</p>
+
 </div>
 
----
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
+</p>
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
 <!--  CONTRIBUTION SNAKE — verified working                            -->
@@ -330,7 +359,18 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 
 </div>
 
----
+<!-- Random quote — verified live service (animated typing) -->
+<div align="center">
+
+## 💬 Random Quote
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" width="90%" alt="Random quote"/>
+
+</div>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
+</p>
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
 <!--  FOOTER — standalone closing                                      -->
