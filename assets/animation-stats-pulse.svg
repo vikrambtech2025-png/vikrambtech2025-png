@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" fill="none">
+  <!-- base ring -->
+  <circle cx="120" cy="120" r="88" stroke="#21262d" stroke-width="14" fill="none"/>
+  <!-- animated progress ring -->
+  <circle cx="120" cy="120" r="88" stroke="#22c55e" stroke-width="14" fill="none" stroke-linecap="round"
+          stroke-dasharray="553 0" transform="rotate(-90 120 120)">
+    <animate attributeName="stroke-dasharray" values="553 0;150 403;553 0" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <!-- rotating dashed outer ring -->
+  <circle cx="120" cy="120" r="108" stroke="#00b4d8" stroke-width="2" stroke-dasharray="5 11" fill="none">
+    <animateTransform attributeName="transform" type="rotate" from="0 120 120" to="360 120 120" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <!-- center -->
+  <text x="120" y="126" text-anchor="middle" font-family="Fira Code, Consolas, monospace" font-size="34" font-weight="700" fill="#ffffff">
+    200+
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="3s" repeatCount="indefinite"/>
+  </text>
+  <text x="120" y="150" text-anchor="middle" font-family="Fira Code, Consolas, monospace" font-size="12" fill="#64748b" letter-spacing="2">PROJECTS SHIPPED</text>
+</svg>
