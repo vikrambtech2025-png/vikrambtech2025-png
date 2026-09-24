@@ -33,10 +33,22 @@
 <br>
 
 <!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  ASCII AVATAR — kept, as requested                                -->
+<!--  HOLOGRAPHIC ASCII AVATAR — standalone animated SVG (self-hosted) -->
 <!-- ══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
+
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/ascii-hologram.svg" width="340px" alt="Holographic ASCII avatar"/>
+
+<br>
+<sub>Hologram · 57×57 ASCII avatar — generated from GitHub profile picture</sub>
+
+</div>
+
+<br>
+
+<details>
+<summary><b>&#x2699; Raw ASCII source — 57×57 (original)</b></summary>
 
 ```
   +=========================================================+
@@ -103,12 +115,9 @@
   +=========================================================+
 ```
 
-<br>
-<sub>57×57 ASCII avatar — generated from GitHub profile picture</sub>
-</div>
+</details>
 
 <br>
-
 <!-- Animated AI-core emblem — self-hosted animated SVG (fully standalone) -->
 <div align="center">
   <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-ai-core.svg" width="430px" alt="AI Core Emblem"/>
