@@ -141,7 +141,7 @@
 
 > *"Building AI that doesn't just work — it understands."*
 
-I'm an **AI/ML Engineer** who turns research into **production-grade systems** — from RAG pipelines that chat with your documents, to ML models that predict market trends and computer-vision apps that see the world. I build the full stack of intelligent applications, and 200+ repos on GitHub show the journey.
+I'm an **AI/ML Engineer** who turns research into **production-grade systems** — from RAG pipelines that chat with your documents, to ML models that predict market trends and computer-vision apps that see the world. I build the full stack of intelligent applications, and 197 repos on GitHub show the journey.
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
@@ -231,6 +231,22 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 </a>
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/vikrambtech2025-png/colpali-rag">
+<b>🔮 ColPali RAG</b><br/>
+<span>Multimodal RAG — late-interaction visual retrieval (MaxSim) + dense &amp; BM25 hybrid search over Qdrant, with pytest suite and retrieval evals.</span><br/>
+<img src="https://img.shields.io/github/stars/vikrambtech2025-png/colpali-rag?style=flat-square&label=stars&color=22C55E&labelColor=0d1117"/>&nbsp;<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0d1117"/>
+</a>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/vikrambtech2025-png/production-rag">
+<b>⚙️ Production RAG</b><br/>
+<span>Production-style RAG pipeline — event-driven Inngest workflows, FastAPI function host, OpenAI embeddings, Qdrant vector search.</span><br/>
+<img src="https://img.shields.io/github/stars/vikrambtech2025-png/production-rag?style=flat-square&label=stars&color=22C55E&labelColor=0d1117"/>&nbsp;<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0d1117"/>
+</a>
+</td>
+</tr>
 </table>
 
 <p align="center">
@@ -249,7 +265,7 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 
 ## 🛠️ Tech Stack
 
-*Every badge below maps to real dependencies found across my 200+ repos.*
+*Every badge below maps to real dependencies found across my 197 repos.*
 
 </div>
 
@@ -341,7 +357,9 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
   <img src="https://komarev.com/ghpvc/?username=vikrambtech2025-png&style=for-the-badge&color=22C55E&label=PROFILE+VIEWS&labelColor=0d1117" alt="Profile views"/>
 </p>
 
-<p><b>Language mix across 200+ repos:</b> Python &amp; Jupyter dominate — 191 repos · Java 3 · JavaScript 3 · TypeScript 1</p>
+<!--STATS:START-->
+<p><b>Language mix across 197 public repos:</b> Python &amp; Jupyter dominate — 189 repos · Java 2 · JavaScript 2 · TypeScript 1</p>
+<!--STATS:END-->
 
 <!-- Animated pulse ring (self-hosted) + live streak card (verified service) -->
 <p align="center">
