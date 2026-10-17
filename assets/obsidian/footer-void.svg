@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="1200" height="200" role="img" aria-label="Footer">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05070d"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="fwave1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#FF1F4B"/>
+    </linearGradient>
+    <linearGradient id="fwave2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFB300"/>
+      <stop offset="1" stop-color="#00E5FF"/>
+    </linearGradient>
+    <filter id="fglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style><![CDATA[
+    .w1{animation:w1 7s ease-in-out infinite}
+    .w2{animation:w2 9s ease-in-out infinite}
+    @keyframes w1{0%,100%{transform:translateX(0)}50%{transform:translateX(-60px)}}
+    @keyframes w2{0%,100%{transform:translateX(0)}50%{transform:translateX(60px)}}
+    .glow{animation:fg 3s ease-in-out infinite}
+    @keyframes fg{0%,100%{opacity:.5}50%{opacity:1}}
+  ]]></style>
+  <rect width="1200" height="200" fill="url(#fbg)"/>
+
+  <g class="w1" opacity="0.5">
+    <path d="M-100 150 C 100 110 250 190 400 150 S 700 100 850 150 S 1150 190 1300 150" fill="none" stroke="url(#fwave1)" stroke-width="2"/>
+  </g>
+  <g class="w2" opacity="0.4">
+    <path d="M-100 170 C 100 130 250 210 400 170 S 700 120 850 170 S 1150 210 1300 170" fill="none" stroke="url(#fwave2)" stroke-width="2"/>
+  </g>
+
+  <text x="600" y="72" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="20" letter-spacing="8" font-weight="700" fill="#E6F1FF" filter="url(#fglow)">VIKRAM</text>
+  <text x="600" y="98" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="12" letter-spacing="5" fill="#00E5FF">AI / ML ENGINEER</text>
+
+  <g class="glow" font-family="Consolas, 'Courier New', monospace" font-size="11.5" fill="#7f93af">
+    <text x="600" y="126" text-anchor="middle">RAG SYSTEMS &#183; LLM APPLICATIONS &#183; AUTONOMOUS AGENTS</text>
+  </g>
+
+  <line class="glow" x1="380" y1="146" x2="820" y2="146" stroke="url(#fwave1)" stroke-width="1.6"/>
+  <text x="600" y="164" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="10.5" fill="#5A6B85">built with python + obsession &#183; zero third-party services &#183; self-hosted</text>
+</svg>

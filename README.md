@@ -1,404 +1,204 @@
 <!--
   ╔══════════════════════════════════════════════════════════════════════════════╗
-  ║            VIKRAM — AI/ML ENGINEER · STANDALONE PROFILE                     ║
-  ║            Reliable · Self-contained · Built from real repo data            ║
+  ║   VIKRAM // OBSIDIAN PROFILE                                                 ║
+  ║   hand-coded animated SVG · zero third-party services · self-hosted          ║
+  ║   every pixel lives in this repo. nothing can break it.                      ║
+  ║   curious devs who view-source: the second easter egg is near the bottom.    ║
   ╚══════════════════════════════════════════════════════════════════════════════╝
 -->
 
 <div align="center">
 
-<!-- Hero — animated banner (verified working service) -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,10:0a192f,20:112240,30:1a1a2e,40:1e3a5f,50:0f3460,60:112240,70:0a192f,80:16213e,90:0d1117,100:00b4d8&height=350&section=header&animation=2&text=Vikram&fontSize=110&fontColor=ffffff&fontAlignY=44&descSize=22&descAlignY=70&desc=AI%20%2F%20ML%20Engineer%20%7C%20Building%20Intelligent%20Systems&rotate=0&stroke=22C55E&strokeWidth=0.2&descAnimation=3&textAnimation=2"/>
+<!-- ══ HERO ══ -->
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/hero-void.svg" width="100%" alt="Vikram — AI/ML Engineer"/>
 
 <br/><br/>
 
-<!-- Typing SVG — verified working -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=3000&color=22C55E&center=true&vCenter=true&multiline=true&repeat=true&width=850&height=160&lines=Hello+%E2%9D%A4%EF%B8%8F+I'm+**Vikram**;Crafting+AI+Systems+with+Purpose;RAG+%E2%80%A2+LLMs+%E2%80%A2+Full-Stack+ML+%E2%80%A2+Agents&duration=6000&pause=3500" alt="Typing SVG" />
-</p>
-
-<!-- Live stats row — dynamic shields.io badges (all verified) -->
-<p align="center">
-  <img src="https://img.shields.io/github/followers/vikrambtech2025-png?style=for-the-badge&logo=github&logoColor=white&label=FOLLOWERS&color=10B981&labelColor=0d1117" alt="Followers"/>
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/github/repos/vikrambtech2025-png?style=for-the-badge&label=PUBLIC%20REPOS&color=8B5CF6&labelColor=0d1117" alt="Public repos"/>
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/github/stars/vikrambtech2025-png?style=for-the-badge&label=TOTAL%20STARS&color=F59E0B&labelColor=0d1117" alt="Total stars"/>
-  &nbsp;&nbsp;
-  <img src="https://komarev.com/ghpvc/?username=vikrambtech2025-png&style=for-the-badge&color=22C55E&label=PROFILE+VIEWS&labelColor=0d1117" alt="Profile views"/>
-</p>
+<!-- ══ LIVE TERMINAL ══ -->
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/terminal.svg" width="88%" alt="Animated terminal session"/>
 
 </div>
 
-<br>
-
-<!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  HOLOGRAPHIC ASCII AVATAR — standalone animated SVG (self-hosted) -->
-<!-- ══════════════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/ascii-hologram.svg" width="340px" alt="Holographic ASCII avatar"/>
-
-<br>
-<sub>Hologram · 57×57 ASCII avatar — generated from GitHub profile picture</sub>
-
-</div>
-
-<br>
-
-<details>
-<summary><b>&#x2699; Raw ASCII source — 57×57 (original)</b></summary>
-
-```
-  +=========================================================+
-  |  @vikrambtech2025-png  |
-  +=========================================================+
-  |%##*****+++++++++===+++++++++++++++++#######**********#%@|
-  |%##*****+++++++++=+==++++++++++++++++#####************#%@|
-  |%##*****++++++++===========+++===+=++###**************#%@|
-  |%%*****++++++===+===================+##***************#%@|
-  |%%#**++++++++==============+***+++===#####************#%@|
-  |%%#*++++++++==============**+==+++**+*###*************#%@|
-  |%%##*+++++++==============+++++==+=+**##**************#%@|
-  |%%###*++++++===============--==-=--==+**#*************#%@|
-  |%##*#*+++==+==============+=::-:-:=---=*##************#%@|
-  |%##****+===+==========----=+=-::.:::----*#************#%@|
-  |%#******+==+==----====-:::-==+=......---=*************#%@|
-  |##*******==+==-------=-::::-=%%+-.  ..:-=+*****#******#%@|
-  |##********=+=--------=-::.:-+@@@%=.  ..:=******#******#%@|
-  |##********++=----------::.:-*@@@@%*: ..:+*************#%@|
-  |##**********=---------+-::=%@@@@@@@#++=-**************#%@|
-  |#***********=--------+**--%@@@@@@@@@@%*=#**************#@|
-  |#***********=--------#%*#+@@@%*#@@@@@%++***************#@|
-  |#***********=--------#+=%%@@%*#=:*%@@%+****************#@|
-  |#***********=--------*%%@@@@@*+=::+#**+=***************#%|
-  |#***********=---------@@%%@@@%-:=*=::---+**************#%|
-  |************=---------+%%@%@@@@%@@+.-=---+*************#%|
-  |+***********=:--------:*%@%#%@@@@@%=**----+************#%|
-  |++**********=:--:----:-#@@#%@@@@@@@%%+-----+***********#%|
-  |++**********=:----::::-%%%%%@@@@++#%*-------+**********#%|
-  |*++*********=:--::::::-%##%%@%#%#+**+*+-----:+**********#|
-  |*++*********+:::::::::=@*+#%##*=::::**==:-----+**********|
-  |++++********+:::::::::@%*++*%%+-::::-*#==-----:**********|
-  |++++********+:::::::::+@*=+#%#+-:::-%#+=:-::---+*******+*|
-  |+++++*******+:::::::::*%#+=+#%%-:-:-@*+=:-::::--+*****++*|
-  |++++++******+:-:::::-:%%%*+-=+*-:-:-@#+=::::::-:-+**++++*|
-  |++++==******+::::::-=-%#%#*=:::::::-@#+=-::::::::-++++++*|
-  |*+====+*****+::::::+=+%%#%*=-:--::::%@@+=-::::::---=++++*|
-  |*+=====+****+:::::=*-+%%###+--+-::--:=#@#=-:::::----++++*|
-  |**+=====*****:::-+*+-+#%#**=-=+=+=:...:#%+=-:::::----+++*|
-  |+*+======****:-++**=-*%%##*====*@@%#=:.=**==-::::-----++*|
-  |+**+====+****++==+.--+%@@%#++**-:-*@@#--*#===-::::-----+*|
-  |++**==++++*+++=-+: .--+@@@%%%%@-...:+#%#*#+=+=-:::-----=*|
-  |=++*+==-=+++++-==.  .::#@@@@@@@=::::.-+#@@*====-::-----=+|
-  |===**===+++==---=::. ::-@@@@@@@@%@@%#+*#%%#-++==-:-----==|
-  |-==+*+====-=-:-==--:..-:#@@@@@%=-=++*%%@@*#=======-----==|
-  |--==+*==-------==---:.:-=@@@@@=:.....-+###%=--===+------=|
-  |+--==*+-----:--==----:.--*@@@%-:::...+%@*#%*--=+=+-:----=|
-  |*-:==+=-:--::--=------:.:=@@@*:..:-+#%####%#:--==+-:----=|
-  |=+:-==--::-::----------:.-#@@=. +#*+=-==*#%%+-:=-+-:----=|
-  |-+=:-=-::.:::-----------. +@%: :-=--::=++#%%%-:==+-:----=|
-  |--+-:=-::.::------------: :@+ ::----:::=+*#%@+:--+-:-----|
-  |=:=+:-:.:...:..:--------:..*-.::-----:::==+%@%-..+-:::--=|
-  |+::+--:.:.    .::-----:--:.:.::------::::==*%%+::=-::----|
-  |=::+--::..   .::::::---::::.:::::--:::::.-++*%#-=+-:::---|
-  |-:-+:-::...   :::::::::::::.:::::::::::.::+++#%+:--:::---|
-  |-:+=:-::...   ...::::::::::::::::::..::.:.=++*%*-=-:::---|
-  |--+:--:::..   ....::::::...::..:::....:...-*+*#%++-:::---|
-  |-+=::--::..   .. .:.:..::.:::..:::....... :*+*#%#=-::::--|
-  |-+::-::::..   . .:......:.:-::.:::..  ... .+++*#%*=:::---|
-  |+=::--::::..   ..:......:.::::::::..  ... .+++*##@=:::---|
-  |+-:-=-:.::.   ..::. ...::.:::::::....  ..  =++*##%*::::--|
-  |=::---::...   .:::..:..::.:::::::.....     =++**#@%*-::--|
-  |-::=---:..   ..::. ..:::::::::.::.....   ..-*++*%##%=:::-|
-  +=========================================================+
-```
-
-</details>
-
-<br>
-<!-- Animated AI-core emblem — self-hosted animated SVG (fully standalone) -->
-<div align="center">
-  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-ai-core.svg" width="430px" alt="AI Core Emblem"/>
-</div>
-
-<br>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
-</p>
-
-<!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  ABOUT ME                                                        -->
-<!-- ══════════════════════════════════════════════════════════════════ -->
+<br/>
 
 <table align="center" width="100%">
 <tr>
-<td width="100%" valign="top">
+<td width="34%" align="center" valign="middle">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/ascii-hologram.svg" width="240px" alt="Holographic ASCII avatar"/>
+  <br/>
+  <sub><code>@vikrambtech2025-png</code></sub>
+</td>
+<td width="66%" valign="top">
 
 ### 🤝 About Me
 
 > *"Building AI that doesn't just work — it understands."*
 
-I'm an **AI/ML Engineer** who turns research into **production-grade systems** — from RAG pipelines that chat with your documents, to ML models that predict market trends and computer-vision apps that see the world. I build the full stack of intelligent applications, and 200+ repos on GitHub show the journey.
+I'm an **AI/ML Engineer** who turns research into **production-grade systems** — retrieval-augmented pipelines that cite their sources, autonomous agents that plan, and vision models that see. I don't stop at a notebook: I ship the full stack.
 
-```
+```text
 ╔══════════════════════════════════════════════════════════════╗
-║  👨‍💻  AI/ML Engineer                                        ║
-║  🎯  RAG Systems  •  LLM Applications  •  AI Agents         ║
-║  🛠️  Python  •  FastAPI  •  React  •  LangChain              ║
-║  🌱  Currently: Advanced RAG & Autonomous Agents            ║
+║  👤  AI/ML Engineer                                          ║
+║  🎯  RAG Systems · LLM Applications · Autonomous Agents      ║
+║  🛠️  Python · FastAPI · LangChain · LangGraph · React        ║
+║  🌱  Currently: advanced RAG + agentic evals                 ║
 ║  📫  vikrambtech2025@gmail.com                               ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
 <p align="left">
-  <a href="mailto:vikrambtech2025@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
-  <a href="https://www.linkedin.com/in/vikram-sathya-829a57379/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://github.com/vikrambtech2025-png"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-</p>
-
-<!-- Animated shimmer tagline — self-hosted animated SVG -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-shine-text.svg" width="96%" alt="From data to intelligence"/>
+  <a href="mailto:vikrambtech2025@gmail.com"><b>✉️ Email</b></a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/vikram-sathya-829a57379/"><b>💼 LinkedIn</b></a> &nbsp;·&nbsp;
+  <a href="https://instagram.com/vikrambtech2025"><b>📸 Instagram</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/vikrambtech2025-png"><b>🐙 GitHub</b></a>
 </p>
 
 </td>
 </tr>
 </table>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
-</p>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/matrix-divider.svg" width="100%" alt="divider"/>
+</div>
 
-<!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  FEATURED PROJECTS — static cards (no flaky APIs, all public)     -->
-<!-- ══════════════════════════════════════════════════════════════════ -->
+## ⚙️ What I Actually Build
+
+<table align="center" width="100%">
+<tr>
+<td width="50%" valign="top" align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/neural-core.svg" width="100%" alt="Neural core"/>
+</td>
+<td width="50%" valign="top" align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/rag-pipeline.svg" width="100%" alt="RAG pipeline"/>
+</td>
+</tr>
+</table>
+
+<table align="center" width="100%">
+<tr>
+<td width="56%" valign="middle" align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/training-loss.svg" width="100%" alt="Training telemetry"/>
+</td>
+<td width="44%" valign="top">
+
+#### 🧠 The craft
+
+- **Retrieval that proves itself** — every claim in `citecheck` is programmatically verified, with guardrails at the capability layer and an eval suite that publishes its own failures.
+- **Agents that plan** — multi-agent LangGraph workflows run parallel interviews and synthesise cited reports.
+- **Multimodal RAG** — ColPali late-interaction visual retrieval + hybrid dense/BM25 over Qdrant.
+- **Frugal by design** — real models on a 6 GB GPU, no API key required.
+
+> *No fluff. No fake dashboards. Real systems.*
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/matrix-divider.svg" width="100%" alt="divider"/>
+</div>
+
+## 📊 Live Telemetry <sub><i>— generated from real GitHub data, hosted in this repo</i></sub>
 
 <div align="center">
 
-## 🚀 Featured Projects
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/stats.svg" width="100%" alt="GitHub stats"/>
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/contribution-city.svg" width="100%" alt="Isometric contribution city"/>
+
+<sub>🏙️ <b>Contribution City</b> — every tower is a real day of code. Regenerated daily by a GitHub Action.</sub>
 
 </div>
+
+<br/>
+
+## 🚀 Featured Systems
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/featured-projects.svg" width="100%" alt="Featured projects"/>
 
 <table align="center" width="100%">
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/vikrambtech2025-png/resume-analyzer">
-<b>🔍 Resume Analyzer</b><br/>
-<span>ATS-style resume checker — scores resume↔job fit, keyword matching, section &amp; formatting checks.</span><br/>
-<img src="https://img.shields.io/github/stars/vikrambtech2025-png/resume-analyzer?style=flat-square&label=stars&color=22C55E&labelColor=0d1117"/>&nbsp;<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0d1117"/>
-</a>
+<a href="https://github.com/vikrambtech2025-png/citecheck"><b>🔍 citecheck</b></a><br/>
+<sub>Research agent where every citation is verified. 6 GB GPU, no API key.</sub>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/vikrambtech2025-png/RAG-type-app">
-<b>📚 RAG Chat</b><br/>
-<span>Chat with your documents — PDF/DOCX/TXT/CSV/HTML via LangChain + FAISS + OpenAI/Ollama.</span><br/>
-<img src="https://img.shields.io/github/stars/vikrambtech2025-png/RAG-type-app?style=flat-square&label=stars&color=22C55E&labelColor=0d1117"/>&nbsp;<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0d1117"/>
-</a>
+<a href="https://github.com/vikrambtech2025-png/LangGraph-Agent"><b>🕸️ LangGraph-Agent</b></a><br/>
+<sub>Multi-agent research workflow — parallel interviews + cited synthesis.</sub>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/vikrambtech2025-png/Auto-EDA-Dashboard">
-<b>📊 Auto EDA Dashboard</b><br/>
-<span>Upload CSV/XLS/XLSX → automated EDA: quality score, missing values, correlations, JSON export.</span><br/>
-<img src="https://img.shields.io/github/stars/vikrambtech2025-png/Auto-EDA-Dashboard?style=flat-square&label=stars&color=22C55E&labelColor=0d1117"/>&nbsp;<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0d1117"/>
-</a>
+<a href="https://github.com/vikrambtech2025-png/production-rag"><b>⚡ production-rag</b></a><br/>
+<sub>Event-driven RAG on Inngest + FastAPI + Qdrant.</sub>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/vikrambtech2025-png/NVIDIA-PREDICTION-USING-ALPACA-AND-API-OF-ALPACA">
-<b>📈 AI Stock Oracle</b><br/>
-<span>NVIDIA stock-prediction dashboard — Gemini AI + technical indicators (RSI, MACD, Bollinger, MA).</span><br/>
-<img src="https://img.shields.io/github/stars/vikrambtech2025-png/NVIDIA-PREDICTION-USING-ALPACA-AND-API-OF-ALPACA?style=flat-square&label=stars&color=22C55E&labelColor=0d1117"/>&nbsp;<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white&labelColor=0d1117"/>
-</a>
+<a href="https://github.com/vikrambtech2025-png/colpali-rag"><b>🖼️ colpali-rag</b></a><br/>
+<sub>Multimodal visual retrieval, hybrid dense + BM25.</sub>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/vikrambtech2025-png/open-cv-projects">
-<b>👁️ OpenCV Projects</b><br/>
-<span>Real-time face detection, authorized-face matching, and hand-gesture segmentation.</span><br/>
-<img src="https://img.shields.io/github/stars/vikrambtech2025-png/open-cv-projects?style=flat-square&label=stars&color=22C55E&labelColor=0d1117"/>&nbsp;<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0d1117"/>
-</a>
+<a href="https://github.com/vikrambtech2025-png/MOIL-Manganese-AI"><b>⛏️ MOIL-Manganese-AI</b></a><br/>
+<sub>AI + space-tech decision platform (SIH 2026).</sub>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/vikrambtech2025-png/Machine-Learning-Models">
-<b>🤖 ML Models</b><br/>
-<span>Transfusion prediction, TMDB movie recommender, SMS spam, and student score models.</span><br/>
-<img src="https://img.shields.io/github/stars/vikrambtech2025-png/Machine-Learning-Models?style=flat-square&label=stars&color=22C55E&labelColor=0d1117"/>&nbsp;<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white&labelColor=0d1117"/>
-</a>
+<a href="https://github.com/vikrambtech2025-png/alpaka-mcp"><b>📈 alpaka-mcp</b></a><br/>
+<sub>MCP server + CLI for the Alpaca Trading API.</sub>
 </td>
 </tr>
 </table>
 
-<p align="center">
-  <i>All repos above are public and viewable — click any card to explore it on GitHub.</i>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
-</p>
-
-<!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  TECH STACK — built from the actual dependencies across all repos -->
-<!-- ══════════════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-## 🛠️ Tech Stack
-
-*Every badge below maps to real dependencies found across my 200+ repos.*
+<sub>→ <a href="https://github.com/vikrambtech2025-png?tab=repositories">Explore all 199 repositories</a></sub>
 
 </div>
 
-<table align="center" width="100%">
-<tr>
-<td align="center" width="50%">
+<br/>
 
-#### 🐍 Languages
-
-<p>
-<img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
-<img src="https://img.shields.io/badge/java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
-<img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-</p>
-
-#### 🤖 ML & Computer Vision
-
-<p>
-<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
-<img src="https://img.shields.io/badge/tensorflow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
-<img src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
-<img src="https://img.shields.io/badge/opencv-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/>
-<img src="https://img.shields.io/badge/mediapipe-7C4DFF?style=for-the-badge&logo=mediapipe&logoColor=white"/>
-</p>
-
-#### 🧠 LLM & RAG
-
-<p>
-<img src="https://img.shields.io/badge/langchain-333?style=for-the-badge&logo=langchain&logoColor=white"/>
-<img src="https://img.shields.io/badge/openai-412991?style=for-the-badge&logo=openai&logoColor=white"/>
-<img src="https://img.shields.io/badge/huggingface-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black"/>
-<img src="https://img.shields.io/badge/faiss-4A90D9?style=for-the-badge&logo=meta&logoColor=white"/>
-</p>
-
-</td>
-<td align="center" width="50%">
-
-#### 🖥️ Web Frameworks
-
-<p>
-<img src="https://img.shields.io/badge/gradio-FF7A00?style=for-the-badge&logo=gradio&logoColor=white"/>
-<img src="https://img.shields.io/badge/streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
-<img src="https://img.shields.io/badge/fastapi-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
-<img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white"/>
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>
-</p>
-
-#### 🗄️ Data & Storage
-
-<p>
-<img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
-<img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
-<img src="https://img.shields.io/badge/matplotlib-FFFFFF?style=for-the-badge&logo=matplotlib&logoColor=black"/>
-<img src="https://img.shields.io/badge/seaborn-63A375?style=for-the-badge&logo=seaborn&logoColor=white"/>
-<img src="https://img.shields.io/badge/sqlite-003B57?style=for-the-badge&logo=sqlite&logoColor=white"/>
-</p>
-
-#### ⚙️ DevOps & Tools
-
-<p>
-<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-<img src="https://img.shields.io/badge/github%20actions-2671E5?style=for-the-badge&logo=githubactions&logoColor=white"/>
-<img src="https://img.shields.io/badge/git-F05033?style=for-the-badge&logo=git&logoColor=white"/>
-<img src="https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
-</p>
-
-</td>
-</tr>
-</table>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
-</p>
-
-<!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  GITHUB ANALYTICS — verified-live badges + animated pulse + streak  -->
-<!-- ══════════════════════════════════════════════════════════════════ -->
+## 🛠️ Tech Arsenal
 
 <div align="center">
-
-## 📊 GitHub Analytics
-
-<p align="center">
-  <img src="https://img.shields.io/github/followers/vikrambtech2025-png?style=for-the-badge&logo=github&logoColor=white&label=FOLLOWERS&color=10B981&labelColor=0d1117" alt="Followers"/>
-  <img src="https://img.shields.io/github/repos/vikrambtech2025-png?style=for-the-badge&label=PUBLIC%20REPOS&color=8B5CF6&labelColor=0d1117" alt="Public repos"/>
-  <img src="https://img.shields.io/github/stars/vikrambtech2025-png?style=for-the-badge&label=TOTAL%20STARS&color=F59E0B&labelColor=0d1117" alt="Total stars"/>
-  <img src="https://komarev.com/ghpvc/?username=vikrambtech2025-png&style=for-the-badge&color=22C55E&label=PROFILE+VIEWS&labelColor=0d1117" alt="Profile views"/>
-</p>
-
-<p><b>Language mix across 200+ repos:</b> Python &amp; Jupyter dominate — 191 repos · Java 3 · JavaScript 3 · TypeScript 1</p>
-
-<!-- Animated pulse ring (self-hosted) + live streak card (verified service) -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-stats-pulse.svg" width="200px" alt="Project pulse"/>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://streak-stats.demolab.com/?user=vikrambtech2025-png&theme=github-dark-blue&hide_border=true" width="430px" alt="GitHub Streak"/>
-</p>
-
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/tech-stack.svg" width="100%" alt="Tech stack"/>
 </div>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
-</p>
-
-<!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  CONTRIBUTION SNAKE — verified working                            -->
-<!-- ══════════════════════════════════════════════════════════════════ -->
-
-<div align="center">
+<br/>
 
 ## 🐍 Contribution Snake
 
-<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Snake"/>
-
-</div>
-
-<!-- Random quote — verified live service (animated typing) -->
 <div align="center">
-
-## 💬 Random Quote
-
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" width="90%" alt="Random quote"/>
-
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution snake"/>
 </div>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/animation-wave-divider.svg" width="70%" alt="divider"/>
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/matrix-divider.svg" width="100%" alt="divider"/>
 </p>
 
-<!-- ══════════════════════════════════════════════════════════════════ -->
-<!--  FOOTER — standalone closing                                      -->
-<!-- ══════════════════════════════════════════════════════════════════ -->
-
+<!-- ══════════════════════════════════════════════════════════════════
+     EASTER EGG #1 — if you found this, you read the source. legend.
+     ══════════════════════════════════════════════════════════════════ -->
+<details>
+<summary><b>🚨 Do not click this. Seriously.</b></summary>
+<br/>
 <div align="center">
 
-<br/>
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/signal-lock.svg" width="80%" alt="Access granted"/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,10:0a192f,20:112240,30:1a1a2e,40:1e3a5f,50:0f3460,60:112240,70:0a192f,80:16213e,90:0d1117,100:00b4d8&height=200&section=footer&animation=2"/>
-
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=vikrambtech2025-png&style=flat-square&color=22C55E&label=VISITORS&labelColor=0d1117" alt="Visitors"/>
-
-<br/>
-
-<p align="center">
-  <sub>Made with <b>Python</b> & <b>Passion</b> for AI</sub>
-</p>
+<sub>You clicked anyway. Main-character energy. ⭐ this repo if the terminal blew your mind.</sub>
 
 </div>
+</details>
+
+<br/>
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/footer-void.svg" width="100%" alt="footer"/>
+</div>
+
+<!--
+  EASTER EGG #2 — passphrase: "the terminal never lies"
+  You inspected a README. That's a builder's instinct. Say hi: vikrambtech2025@gmail.com
+-->

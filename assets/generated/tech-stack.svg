@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1002 424" width="1002" height="424" role="img" aria-label="Tech stack">
+
+  <defs>
+    <linearGradient id="tbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="1" stop-color="#05070d"/>
+    </linearGradient>
+    <filter id="tglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+<rect width="1002" height="424" fill="url(#tbg)"/>
+<rect x="1" y="1" width="1000" height="422" rx="14" fill="none" stroke="#16203a" stroke-width="2"/>
+<text x="26" y="38" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#00E5FF">TECH ARSENAL</text>
+<text x="976" y="38" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="11.5" fill="#5A6B85">mapped to real dependencies</text>
+<rect x="26" y="56" width="150" height="40" rx="8" fill="#070c16" stroke="#00E5FF" stroke-opacity="0.55"/>
+<rect x="26" y="64" width="3" height="24" rx="1.5" fill="#00E5FF"/>
+<text x="40" y="81" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Python</text>
+<rect x="186" y="56" width="150" height="40" rx="8" fill="#070c16" stroke="#FFB300" stroke-opacity="0.55"/>
+<rect x="186" y="64" width="3" height="24" rx="1.5" fill="#FFB300"/>
+<text x="200" y="81" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Jupyter</text>
+<rect x="346" y="56" width="150" height="40" rx="8" fill="#070c16" stroke="#00E5FF" stroke-opacity="0.55"/>
+<rect x="346" y="64" width="3" height="24" rx="1.5" fill="#00E5FF"/>
+<text x="360" y="81" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">TypeScript</text>
+<rect x="506" y="56" width="150" height="40" rx="8" fill="#070c16" stroke="#FF1F4B" stroke-opacity="0.55"/>
+<rect x="506" y="64" width="3" height="24" rx="1.5" fill="#FF1F4B"/>
+<text x="520" y="81" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Java</text>
+<rect x="666" y="56" width="150" height="40" rx="8" fill="#070c16" stroke="#FFB300" stroke-opacity="0.55"/>
+<rect x="666" y="64" width="3" height="24" rx="1.5" fill="#FFB300"/>
+<text x="680" y="81" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">JavaScript</text>
+<rect x="826" y="56" width="150" height="40" rx="8" fill="#070c16" stroke="#22C55E" stroke-opacity="0.55"/>
+<rect x="826" y="64" width="3" height="24" rx="1.5" fill="#22C55E"/>
+<text x="840" y="81" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">LangChain</text>
+<rect x="26" y="106" width="150" height="40" rx="8" fill="#070c16" stroke="#22C55E" stroke-opacity="0.55"/>
+<rect x="26" y="114" width="3" height="24" rx="1.5" fill="#22C55E"/>
+<text x="40" y="131" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">LangGraph</text>
+<rect x="186" y="106" width="150" height="40" rx="8" fill="#070c16" stroke="#8B5CF6" stroke-opacity="0.55"/>
+<rect x="186" y="114" width="3" height="24" rx="1.5" fill="#8B5CF6"/>
+<text x="200" y="131" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">OpenAI</text>
+<rect x="346" y="106" width="150" height="40" rx="8" fill="#070c16" stroke="#FFB300" stroke-opacity="0.55"/>
+<rect x="346" y="114" width="3" height="24" rx="1.5" fill="#FFB300"/>
+<text x="360" y="131" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Hugging Face</text>
+<rect x="506" y="106" width="150" height="40" rx="8" fill="#070c16" stroke="#FF1F4B" stroke-opacity="0.55"/>
+<rect x="506" y="114" width="3" height="24" rx="1.5" fill="#FF1F4B"/>
+<text x="520" y="131" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">ColPali</text>
+<rect x="666" y="106" width="150" height="40" rx="8" fill="#070c16" stroke="#00E5FF" stroke-opacity="0.55"/>
+<rect x="666" y="114" width="3" height="24" rx="1.5" fill="#00E5FF"/>
+<text x="680" y="131" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Unsloth</text>
+<rect x="826" y="106" width="150" height="40" rx="8" fill="#070c16" stroke="#00E5FF" stroke-opacity="0.55"/>
+<rect x="826" y="114" width="3" height="24" rx="1.5" fill="#00E5FF"/>
+<text x="840" y="131" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">FAISS</text>
+<rect x="26" y="156" width="150" height="40" rx="8" fill="#070c16" stroke="#FF1F4B" stroke-opacity="0.55"/>
+<rect x="26" y="164" width="3" height="24" rx="1.5" fill="#FF1F4B"/>
+<text x="40" y="181" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Qdrant</text>
+<rect x="186" y="156" width="150" height="40" rx="8" fill="#070c16" stroke="#8B5CF6" stroke-opacity="0.55"/>
+<rect x="186" y="164" width="3" height="24" rx="1.5" fill="#8B5CF6"/>
+<text x="200" y="181" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">ChromaDB</text>
+<rect x="346" y="156" width="150" height="40" rx="8" fill="#070c16" stroke="#FF1F4B" stroke-opacity="0.55"/>
+<rect x="346" y="164" width="3" height="24" rx="1.5" fill="#FF1F4B"/>
+<text x="360" y="181" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">PyTorch</text>
+<rect x="506" y="156" width="150" height="40" rx="8" fill="#070c16" stroke="#FFB300" stroke-opacity="0.55"/>
+<rect x="506" y="164" width="3" height="24" rx="1.5" fill="#FFB300"/>
+<text x="520" y="181" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">TensorFlow</text>
+<rect x="666" y="156" width="150" height="40" rx="8" fill="#070c16" stroke="#00E5FF" stroke-opacity="0.55"/>
+<rect x="666" y="164" width="3" height="24" rx="1.5" fill="#00E5FF"/>
+<text x="680" y="181" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">scikit-learn</text>
+<rect x="826" y="156" width="150" height="40" rx="8" fill="#070c16" stroke="#22C55E" stroke-opacity="0.55"/>
+<rect x="826" y="164" width="3" height="24" rx="1.5" fill="#22C55E"/>
+<text x="840" y="181" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">XGBoost</text>
+<rect x="26" y="206" width="150" height="40" rx="8" fill="#070c16" stroke="#FF1F4B" stroke-opacity="0.55"/>
+<rect x="26" y="214" width="3" height="24" rx="1.5" fill="#FF1F4B"/>
+<text x="40" y="231" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">OpenCV</text>
+<rect x="186" y="206" width="150" height="40" rx="8" fill="#070c16" stroke="#8B5CF6" stroke-opacity="0.55"/>
+<rect x="186" y="214" width="3" height="24" rx="1.5" fill="#8B5CF6"/>
+<text x="200" y="231" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">MediaPipe</text>
+<rect x="346" y="206" width="150" height="40" rx="8" fill="#070c16" stroke="#00E5FF" stroke-opacity="0.55"/>
+<rect x="346" y="214" width="3" height="24" rx="1.5" fill="#00E5FF"/>
+<text x="360" y="231" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">FastAPI</text>
+<rect x="506" y="206" width="150" height="40" rx="8" fill="#070c16" stroke="#FF1F4B" stroke-opacity="0.55"/>
+<rect x="506" y="214" width="3" height="24" rx="1.5" fill="#FF1F4B"/>
+<text x="520" y="231" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Streamlit</text>
+<rect x="666" y="206" width="150" height="40" rx="8" fill="#070c16" stroke="#FFB300" stroke-opacity="0.55"/>
+<rect x="666" y="214" width="3" height="24" rx="1.5" fill="#FFB300"/>
+<text x="680" y="231" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Gradio</text>
+<rect x="826" y="206" width="150" height="40" rx="8" fill="#070c16" stroke="#E6F1FF" stroke-opacity="0.55"/>
+<rect x="826" y="214" width="3" height="24" rx="1.5" fill="#E6F1FF"/>
+<text x="840" y="231" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Flask</text>
+<rect x="26" y="256" width="150" height="40" rx="8" fill="#070c16" stroke="#00E5FF" stroke-opacity="0.55"/>
+<rect x="26" y="264" width="3" height="24" rx="1.5" fill="#00E5FF"/>
+<text x="40" y="281" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">React</text>
+<rect x="186" y="256" width="150" height="40" rx="8" fill="#070c16" stroke="#5A6B85" stroke-opacity="0.55"/>
+<rect x="186" y="264" width="3" height="24" rx="1.5" fill="#5A6B85"/>
+<text x="200" y="281" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Express</text>
+<rect x="346" y="256" width="150" height="40" rx="8" fill="#070c16" stroke="#8B5CF6" stroke-opacity="0.55"/>
+<rect x="346" y="264" width="3" height="24" rx="1.5" fill="#8B5CF6"/>
+<text x="360" y="281" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">pandas</text>
+<rect x="506" y="256" width="150" height="40" rx="8" fill="#070c16" stroke="#00E5FF" stroke-opacity="0.55"/>
+<rect x="506" y="264" width="3" height="24" rx="1.5" fill="#00E5FF"/>
+<text x="520" y="281" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">NumPy</text>
+<rect x="666" y="256" width="150" height="40" rx="8" fill="#070c16" stroke="#FFB300" stroke-opacity="0.55"/>
+<rect x="666" y="264" width="3" height="24" rx="1.5" fill="#FFB300"/>
+<text x="680" y="281" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Matplotlib</text>
+<rect x="826" y="256" width="150" height="40" rx="8" fill="#070c16" stroke="#22C55E" stroke-opacity="0.55"/>
+<rect x="826" y="264" width="3" height="24" rx="1.5" fill="#22C55E"/>
+<text x="840" y="281" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Seaborn</text>
+<rect x="26" y="306" width="150" height="40" rx="8" fill="#070c16" stroke="#8B5CF6" stroke-opacity="0.55"/>
+<rect x="26" y="314" width="3" height="24" rx="1.5" fill="#8B5CF6"/>
+<text x="40" y="331" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Inngest</text>
+<rect x="186" y="306" width="150" height="40" rx="8" fill="#070c16" stroke="#00E5FF" stroke-opacity="0.55"/>
+<rect x="186" y="314" width="3" height="24" rx="1.5" fill="#00E5FF"/>
+<text x="200" y="331" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Docker</text>
+<rect x="346" y="306" width="150" height="40" rx="8" fill="#070c16" stroke="#22C55E" stroke-opacity="0.55"/>
+<rect x="346" y="314" width="3" height="24" rx="1.5" fill="#22C55E"/>
+<text x="360" y="331" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Supabase</text>
+<rect x="506" y="306" width="150" height="40" rx="8" fill="#070c16" stroke="#5A6B85" stroke-opacity="0.55"/>
+<rect x="506" y="314" width="3" height="24" rx="1.5" fill="#5A6B85"/>
+<text x="520" y="331" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">SQLite</text>
+<rect x="666" y="306" width="150" height="40" rx="8" fill="#070c16" stroke="#8B5CF6" stroke-opacity="0.55"/>
+<rect x="666" y="314" width="3" height="24" rx="1.5" fill="#8B5CF6"/>
+<text x="680" y="331" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">GitHub Actions</text>
+<rect x="826" y="306" width="150" height="40" rx="8" fill="#070c16" stroke="#22C55E" stroke-opacity="0.55"/>
+<rect x="826" y="314" width="3" height="24" rx="1.5" fill="#22C55E"/>
+<text x="840" y="331" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Tavily</text>
+<rect x="26" y="356" width="150" height="40" rx="8" fill="#070c16" stroke="#FFB300" stroke-opacity="0.55"/>
+<rect x="26" y="364" width="3" height="24" rx="1.5" fill="#FFB300"/>
+<text x="40" y="381" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Alpaca API</text>
+<rect x="186" y="356" width="150" height="40" rx="8" fill="#070c16" stroke="#FFB300" stroke-opacity="0.55"/>
+<rect x="186" y="364" width="3" height="24" rx="1.5" fill="#FFB300"/>
+<text x="200" y="381" font-family="Consolas, 'Courier New', monospace" font-size="12.5" fill="#dce9f7">Linux</text>
+</svg>

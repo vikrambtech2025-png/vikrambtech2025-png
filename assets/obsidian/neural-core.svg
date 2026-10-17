@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="1000" height="320" role="img" aria-label="Neural core">
+  <defs>
+    <linearGradient id="nbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="1" stop-color="#05070d"/>
+    </linearGradient>
+    <radialGradient id="ncore" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#00E5FF" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#8B5CF6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="nglow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="ngrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#0c1424" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <style><![CDATA[
+    .e{stroke-dasharray:5 9;animation:flow 4.5s linear infinite}
+    @keyframes flow{to{stroke-dashoffset:-140}}
+    .n{animation:pulse 3s ease-in-out infinite}
+    .n2{animation:pulse 3s ease-in-out infinite;animation-delay:.5s}
+    .n3{animation:pulse 3s ease-in-out infinite;animation-delay:1s}
+    @keyframes pulse{0%,100%{opacity:.4;r:5}50%{opacity:1;r:7}}
+    .ring{animation:ring 3s ease-out infinite}
+    @keyframes ring{0%{r:26;opacity:.7}100%{r:74;opacity:0}}
+    .spin{transform-origin:500px 165px;animation:spin 18s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .label{animation:fade 3s ease-in-out infinite}
+    @keyframes fade{0%,100%{opacity:.55}50%{opacity:1}}
+  ]]></style>
+
+  <rect width="1000" height="320" fill="url(#nbg)"/>
+  <rect width="1000" height="320" fill="url(#ngrid)" opacity="0.7"/>
+  <rect x="1" y="1" width="998" height="318" rx="14" fill="none" stroke="#16203a" stroke-width="2"/>
+
+  <!-- edges: layer1 -> layer2 -->
+  <g stroke="#00E5FF" stroke-width="1.1" opacity="0.55">
+    <line class="e" x1="200" y1="110" x2="500" y2="90"/>
+    <line class="e" x1="200" y1="110" x2="500" y2="140" style="animation-delay:.4s"/>
+    <line class="e" x1="200" y1="160" x2="500" y2="140" style="animation-delay:.8s"/>
+    <line class="e" x1="200" y1="160" x2="500" y2="190" style="animation-delay:.2s"/>
+    <line class="e" x1="200" y1="210" x2="500" y2="190" style="animation-delay:.6s"/>
+    <line class="e" x1="200" y1="210" x2="500" y2="240" style="animation-delay:1s"/>
+    <line class="e" x1="200" y1="110" x2="500" y2="190" style="animation-delay:.9s"/>
+    <line class="e" x1="200" y1="210" x2="500" y2="140" style="animation-delay:.3s"/>
+  </g>
+  <!-- edges: layer2 -> layer3 -->
+  <g stroke="#FF1F4B" stroke-width="1.1" opacity="0.5">
+    <line class="e" x1="500" y1="90" x2="800" y2="120" style="animation-delay:.25s"/>
+    <line class="e" x1="500" y1="140" x2="800" y2="120" style="animation-delay:.65s"/>
+    <line class="e" x1="500" y1="140" x2="800" y2="170" style="animation-delay:.15s"/>
+    <line class="e" x1="500" y1="190" x2="800" y2="170" style="animation-delay:.55s"/>
+    <line class="e" x1="500" y1="190" x2="800" y2="220" style="animation-delay:.35s"/>
+    <line class="e" x1="500" y1="240" x2="800" y2="220" style="animation-delay:.75s"/>
+    <line class="e" x1="500" y1="90" x2="800" y2="170" style="animation-delay:1.05s"/>
+    <line class="e" x1="500" y1="240" x2="800" y2="120" style="animation-delay:.45s"/>
+  </g>
+
+  <!-- core -->
+  <circle cx="500" cy="165" r="60" fill="url(#ncore)"/>
+  <circle class="ring" cx="500" cy="165" r="26" fill="none" stroke="#00E5FF" stroke-width="1.6"/>
+  <circle class="ring" cx="500" cy="165" r="26" fill="none" stroke="#8B5CF6" stroke-width="1.6" style="animation-delay:1.1s"/>
+  <g class="spin" opacity="0.9">
+    <polygon points="500,120 539,142 539,188 500,210 461,188 461,142" fill="none" stroke="#FFB300" stroke-width="1.4"/>
+  </g>
+  <circle cx="500" cy="165" r="16" fill="#050a12" stroke="#00E5FF" stroke-width="2" filter="url(#nglow)"/>
+  <text class="label" x="500" y="170" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="12" font-weight="700" fill="#00E5FF">AI</text>
+
+  <!-- nodes -->
+  <g fill="#00E5FF" filter="url(#nglow)">
+    <circle class="n" cx="200" cy="110" r="5"/>
+    <circle class="n2" cx="200" cy="160" r="5"/>
+    <circle class="n3" cx="200" cy="210" r="5"/>
+  </g>
+  <g fill="#8B5CF6" filter="url(#nglow)">
+    <circle class="n" cx="500" cy="90" r="5"/>
+    <circle class="n2" cx="500" cy="140" r="5"/>
+    <circle class="n3" cx="500" cy="190" r="5"/>
+    <circle class="n" cx="500" cy="240" r="5"/>
+  </g>
+  <g fill="#FF1F4B" filter="url(#nglow)">
+    <circle class="n2" cx="800" cy="120" r="5"/>
+    <circle class="n3" cx="800" cy="170" r="5"/>
+    <circle class="n" cx="800" cy="220" r="5"/>
+  </g>
+
+  <text x="200" y="290" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#5A6B85">INPUT</text>
+  <text x="500" y="290" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#5A6B85">ATTENTION</text>
+  <text x="800" y="290" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#5A6B85">OUTPUT</text>
+
+  <text x="30" y="34" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#00E5FF">NEURAL CORE</text>
+  <circle class="n" cx="905" cy="30" r="5" fill="#22C55E" filter="url(#nglow)"/>
+  <text x="970" y="34" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#22C55E">ONLINE</text>
+</svg>
