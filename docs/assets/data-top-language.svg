@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 231 22" width="231" height="22" role="img" aria-label="top language: Jupyter Notebook">
+<defs><linearGradient id='gl' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='.12'/><stop offset='1' stop-color='#ffffff' stop-opacity='0'/></linearGradient><clipPath id='cp'><rect width='231' height='22' rx='4'/></clipPath></defs>
+<g clip-path='url(#cp)'>
+<rect width='231' height='22' fill='#0b1220'/>
+<rect x='102' width='129' height='22' fill='#FFB300'/>
+<rect width='231' height='22' fill='url(#gl)'/>
+</g>
+<rect x='.5' y='.5' width='230' height='21' rx='3.5' fill='none' stroke='#FFB300' stroke-opacity='.8'/>
+<text x='51.0' y='15' text-anchor='middle' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#dce9f7'>top language</text>
+<text x='166.5' y='15' text-anchor='middle' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#ffffff'>Jupyter Notebook</text>
+</svg>

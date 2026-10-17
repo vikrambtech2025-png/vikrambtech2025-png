@@ -411,7 +411,7 @@ def mirror_to_docs():
     # Copy every SVG into docs/assets so the GitHub Pages site is live too.
     dst = os.path.join("docs", "assets")
     os.makedirs(dst, exist_ok=True)
-    for src_dir in (os.path.join("assets", "obsidian"), OUT_DIR):
+    for src_dir in (os.path.join("assets", "obsidian"), OUT_DIR, os.path.join("assets", "badges")):
         if not os.path.isdir(src_dir):
             continue
         for fn in sorted(os.listdir(src_dir)):

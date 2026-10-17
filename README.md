@@ -9,6 +9,13 @@
 
 <div align="center">
 
+<!-- ══ LIVE STATUS BADGES — GitHub-native, self-hosted, zero third-party ══ -->
+<p align="center">
+  <a href="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/profile-art.yml"><img src="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/profile-art.yml/badge.svg" alt="Profile Art workflow status"/></a>
+  <a href="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/snake.yml"><img src="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/snake.yml/badge.svg" alt="Snake workflow status"/></a>
+  <a href="https://vikrambtech2025-png.github.io/vikrambtech2025-png/"><img src="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/pages/pages-build-deployment/badge.svg" alt="GitHub Pages deployment status"/></a>
+</p>
+
 <!-- ══ HERO ══ -->
 <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/hero-void.svg" width="100%" alt="Vikram — AI/ML Engineer"/>
 
@@ -70,6 +77,40 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 <div align="center">
   <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/matrix-divider.svg" width="100%" alt="divider"/>
 </div>
+
+## 🎖️ Badges <sub><i>— self-hosted: rendered by my own GitHub Action, never fetched from shields.io</i></sub>
+
+<div align="center">
+
+![building idealistic AI agents for real-world problems](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/status-agents.svg)
+
+<br/><br/>
+
+![contributions](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/data-contributions.svg)
+![current streak](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/data-current-streak.svg)
+![longest streak](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/data-longest-streak.svg)
+![public repos](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/data-public-repos.svg)
+![followers](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/data-followers.svg)
+![top language](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/data-top-language.svg)
+
+<br/>
+
+![Python](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-python.svg)
+![LangChain](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-langchain.svg)
+![LangGraph](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-langgraph.svg)
+![PyTorch](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-pytorch.svg)
+![Hugging Face](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-hugging-face.svg)
+![ColPali](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-colpali.svg)
+![FAISS](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-faiss.svg)
+![Qdrant](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-qdrant.svg)
+![FastAPI](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-fastapi.svg)
+![OpenCV](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-opencv.svg)
+![Unsloth](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-unsloth.svg)
+![Streamlit](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-streamlit.svg)
+
+</div>
+
+<br/>
 
 ## ⚙️ What I Actually Build
 

@@ -482,6 +482,118 @@ def build_og():
     wfile(os.path.join("docs", "og-card.svg"), "\n".join(out))
 
 
+# ----------------------------------------------------------------- self-hosted badges
+#  100% self-hosted replacement for shields.io — rendered here, not fetched.
+BADGE_SKILLS = [
+    ("Python", "#00E5FF"), ("LangChain", "#22C55E"), ("LangGraph", "#22C55E"),
+    ("PyTorch", "#FF1F4B"), ("Hugging Face", "#FFB300"), ("ColPali", "#FF1F4B"),
+    ("FAISS", "#00E5FF"), ("Qdrant", "#FF1F4B"), ("FastAPI", "#00E5FF"),
+    ("OpenCV", "#8B5CF6"), ("Unsloth", "#00E5FF"), ("Streamlit", "#FF1F4B"),
+]
+
+
+def write_badge(name, content):
+    d = os.path.join("assets", "badges")
+    os.makedirs(d, exist_ok=True)
+    p = os.path.join(d, name)
+    with open(p, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(content)
+    print("wrote", p)
+
+
+def _width(s, fs, cw, pad):
+    return int(len(s) * cw) + pad
+
+
+def two_tone(label, value, color, label_color="#dce9f7", value_color="#ffffff"):
+    fs, cw, pad, h = 11, 6.7, 22, 22
+    lw = _width(label, fs, cw, pad)
+    rw = _width(value, fs, cw, pad)
+    total = lw + rw
+    o = [g.svg_header(total, h, "%s: %s" % (label, value)),
+         "<defs><linearGradient id='gl' x1='0' y1='0' x2='0' y2='1'>"
+         "<stop offset='0' stop-color='#ffffff' stop-opacity='.12'/>"
+         "<stop offset='1' stop-color='#ffffff' stop-opacity='0'/></linearGradient>"
+         "<clipPath id='cp'><rect width='%d' height='%d' rx='4'/></clipPath></defs>" % (total, h),
+         "<g clip-path='url(#cp)'>",
+         "<rect width='%d' height='%d' fill='#0b1220'/>" % (total, h),
+         "<rect x='%d' width='%d' height='%d' fill='%s'/>" % (lw, rw, h, color),
+         "<rect width='%d' height='%d' fill='url(#gl)'/>" % (total, h),
+         "</g>",
+         "<rect x='.5' y='.5' width='%d' height='%d' rx='3.5' fill='none' stroke='%s' stroke-opacity='.8'/>"
+         % (total - 1, h - 1, color),
+         "<text x='%.1f' y='15' text-anchor='middle' font-family=\"%s\" font-size='%d' fill='%s'>%s</text>"
+         % (lw / 2.0, MONO, fs, label_color, g.esc(label)),
+         "<text x='%.1f' y='15' text-anchor='middle' font-family=\"%s\" font-size='%d' fill='%s'>%s</text>"
+         % (lw + rw / 2.0, MONO, fs, value_color, g.esc(value)),
+         "</svg>"]
+    return "\n".join(o)
+
+
+def skill_pill(name, color):
+    fs, cw, pad, h = 11, 6.7, 22, 22
+    total = _width(name, fs, cw, pad)
+    o = [g.svg_header(total, h, name),
+         "<defs><linearGradient id='gl' x1='0' y1='0' x2='0' y2='1'>"
+         "<stop offset='0' stop-color='#ffffff' stop-opacity='.12'/>"
+         "<stop offset='1' stop-color='#ffffff' stop-opacity='0'/></linearGradient>"
+         "<clipPath id='cp'><rect width='%d' height='%d' rx='4'/></clipPath></defs>" % (total, h),
+         "<g clip-path='url(#cp)'>",
+         "<rect width='%d' height='%d' fill='#0b1220'/>" % (total, h),
+         "<rect width='3' height='%d' fill='%s'/>" % (h, color),
+         "<rect width='%d' height='%d' fill='url(#gl)'/>" % (total, h),
+         "</g>",
+         "<rect x='.5' y='.5' width='%d' height='%d' rx='3.5' fill='none' stroke='%s' stroke-opacity='.85'/>"
+         % (total - 1, h - 1, color),
+         "<text x='%.1f' y='15' text-anchor='middle' font-family=\"%s\" font-size='%d' fill='%s'>%s</text>"
+         % (total / 2.0 + 1, MONO, fs, color, g.esc(name)),
+         "</svg>"]
+    return "\n".join(o)
+
+
+def filled(text, color, text_color="#000000"):
+    fs, cw, pad, h = 11, 6.7, 26, 22
+    total = _width(text, fs, cw, pad)
+    o = [g.svg_header(total, h, text),
+         "<defs><linearGradient id='fg' x1='0' y1='0' x2='0' y2='1'>"
+         "<stop offset='0' stop-color='#ffffff' stop-opacity='.22'/>"
+         "<stop offset='1' stop-color='#ffffff' stop-opacity='0'/></linearGradient>"
+         "<clipPath id='cp'><rect width='%d' height='%d' rx='4'/></clipPath></defs>" % (total, h),
+         "<g clip-path='url(#cp)'>",
+         "<rect width='%d' height='%d' fill='%s'/>" % (total, h, color),
+         "<rect width='%d' height='%d' fill='url(#fg)'/>" % (total, h),
+         "</g>",
+         "<rect x='.5' y='.5' width='%d' height='%d' rx='3.5' fill='none' stroke='#000000' stroke-opacity='.2'/>"
+         % (total - 1, h - 1),
+         "<text x='%.1f' y='15' text-anchor='middle' font-family=\"%s\" font-size='%d' font-weight='700' fill='%s'>%s</text>"
+         % (total / 2.0, MONO, fs, text_color, g.esc(text)),
+         "</svg>"]
+    return "\n".join(o)
+
+
+def build_badges(agg, contrib, followers, repos):
+    total, longest, cur = g.streaks(contrib)
+    top_lang = max(agg.items(), key=lambda kv: kv[1])[0] if agg else "-"
+    pub = sum(1 for r in repos if not r.get("fork"))
+
+    # status chip — the one-liner that says what you're about
+    write_badge("status-agents.svg", filled("building idealistic AI agents for real-world problems", "#00E5FF"))
+
+    # live data badges
+    data = [("contributions", str(total), "#22C55E"),
+            ("current streak", "%dd" % cur, "#FF1F4B"),
+            ("longest streak", "%dd" % longest, "#00E5FF"),
+            ("public repos", str(pub), "#8B5CF6"),
+            ("followers", str(followers), "#00E5FF"),
+            ("top language", str(top_lang), "#FFB300")]
+    for label, value, col in data:
+        write_badge("data-%s.svg" % label.replace(" ", "-"), two_tone(label, value, col))
+
+    # skill pills
+    for name, col in BADGE_SKILLS:
+        write_badge("skill-%s.svg" % name.lower().replace(" ", "-"), skill_pill(name, col))
+
+
 # --------------------------------------------------------------------- main
 def main():
     repos = g.fetch_all_repos()
@@ -521,6 +633,7 @@ def main():
     g.write("reactions.svg", build_reactions(react))
 
     build_data(repos, followers, following, contrib, agg)
+    build_badges(agg, contrib, followers, repos)
     build_blog()
     build_og()
 

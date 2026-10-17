@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 22" width="150" height="22" role="img" aria-label="current streak: 1d">
+<defs><linearGradient id='gl' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#ffffff' stop-opacity='.12'/><stop offset='1' stop-color='#ffffff' stop-opacity='0'/></linearGradient><clipPath id='cp'><rect width='150' height='22' rx='4'/></clipPath></defs>
+<g clip-path='url(#cp)'>
+<rect width='150' height='22' fill='#0b1220'/>
+<rect x='115' width='35' height='22' fill='#FF1F4B'/>
+<rect width='150' height='22' fill='url(#gl)'/>
+</g>
+<rect x='.5' y='.5' width='149' height='21' rx='3.5' fill='none' stroke='#FF1F4B' stroke-opacity='.8'/>
+<text x='57.5' y='15' text-anchor='middle' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#dce9f7'>current streak</text>
+<text x='132.5' y='15' text-anchor='middle' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#ffffff'>1d</text>
+</svg>
