@@ -6,8 +6,8 @@
 <text x='34' y='38' font-family="Consolas, 'Courier New', monospace" font-size='14' fill='#00E5FF'>LANGUAGE DONUT</text>
 <text x='946' y='38' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11.5' fill='#5A6B85'>real bytes across 199 repos</text>
 <style><![CDATA[.spin{transform-origin:300px 224px;animation:sp 26s linear infinite}@keyframes sp{to{transform:rotate(360deg)}}]]></style>
-<circle cx='300.0' cy='224.0' r='132.0' fill='none' stroke='#00E5FF' stroke-width='44.0' stroke-dasharray='800.72 28.66' stroke-dashoffset='-0.00' transform='rotate(-90 300.0 224.0)'/>
-<circle cx='300.0' cy='224.0' r='132.0' fill='none' stroke='#FF1F4B' stroke-width='44.0' stroke-dasharray='24.56 804.82' stroke-dashoffset='-800.72' transform='rotate(-90 300.0 224.0)'/>
+<circle cx='300.0' cy='224.0' r='132.0' fill='none' stroke='#00E5FF' stroke-width='44.0' stroke-dasharray='800.48 28.90' stroke-dashoffset='-0.00' transform='rotate(-90 300.0 224.0)'/>
+<circle cx='300.0' cy='224.0' r='132.0' fill='none' stroke='#FF1F4B' stroke-width='44.0' stroke-dasharray='24.81 804.58' stroke-dashoffset='-800.48' transform='rotate(-90 300.0 224.0)'/>
 <circle cx='300.0' cy='224.0' r='132.0' fill='none' stroke='#8B5CF6' stroke-width='44.0' stroke-dasharray='1.45 827.93' stroke-dashoffset='-825.28' transform='rotate(-90 300.0 224.0)'/>
 <circle cx='300.0' cy='224.0' r='132.0' fill='none' stroke='#FFB300' stroke-width='44.0' stroke-dasharray='0.81 828.57' stroke-dashoffset='-826.73' transform='rotate(-90 300.0 224.0)'/>
 <circle cx='300.0' cy='224.0' r='132.0' fill='none' stroke='#22C55E' stroke-width='44.0' stroke-dasharray='0.70 828.68' stroke-dashoffset='-827.55' transform='rotate(-90 300.0 224.0)'/>
