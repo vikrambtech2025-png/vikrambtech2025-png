@@ -1,0 +1,63 @@
+{
+  "name": "Vikram",
+  "username": "vikrambtech2025-png",
+  "headline": "AI/ML Engineer — idealistic AI agents that solve real-world problems",
+  "email": "vikrambtech2025@gmail.com",
+  "links": {
+    "github": "https://github.com/vikrambtech2025-png",
+    "linkedin": "https://www.linkedin.com/in/vikram-sathya-829a57379/",
+    "instagram": "https://instagram.com/vikrambtech2025",
+    "site": "https://vikrambtech2025-png.github.io/vikrambtech2025-png/"
+  },
+  "focus": [
+    "Autonomous AI agents with guardrails",
+    "Retrieval-augmented generation (RAG)",
+    "Multimodal / visual retrieval",
+    "Applied LLM evaluation"
+  ],
+  "stack": {
+    "languages": ["Python", "TypeScript", "Java", "JavaScript", "SQL"],
+    "ai_ml": ["LangChain", "LangGraph", "Hugging Face", "ColPali", "Unsloth", "FAISS", "Qdrant", "ChromaDB", "PyTorch", "TensorFlow", "scikit-learn", "XGBoost"],
+    "vision": ["OpenCV", "MediaPipe"],
+    "web": ["FastAPI", "React", "Streamlit", "Gradio", "Flask"],
+    "infra": ["Docker", "GitHub Actions", "SQLite", "Qdrant", "Inngest"]
+  },
+  "selected_work": [
+    {
+      "name": "citecheck",
+      "url": "https://github.com/vikrambtech2025-png/citecheck",
+      "summary": "Research agent where every citation is programmatically verified. Guardrails at the capability layer; eval suite publishes its own failures. Runs on a 6 GB GPU with no API key."
+    },
+    {
+      "name": "LangGraph-Agent",
+      "url": "https://github.com/vikrambtech2025-png/LangGraph-Agent",
+      "summary": "Multi-agent research workflow: analyst personas, parallel interview loops with Tavily web search, cited report synthesis."
+    },
+    {
+      "name": "production-rag",
+      "url": "https://github.com/vikrambtech2025-png/production-rag",
+      "summary": "Event-driven RAG pipeline on Inngest workflows with FastAPI and Qdrant vector search."
+    },
+    {
+      "name": "colpali-rag",
+      "url": "https://github.com/vikrambtech2025-png/colpali-rag",
+      "summary": "Multimodal RAG using ColPali late-interaction visual retrieval and hybrid dense + BM25 search."
+    },
+    {
+      "name": "MOIL-Manganese-AI",
+      "url": "https://github.com/vikrambtech2025-png/MOIL-Manganese-AI",
+      "summary": "AI + space-tech decision-support platform for MOIL Ltd: reserve mapping, production forecasting, shortfall-risk prediction (SIH 2026)."
+    },
+    {
+      "name": "alpaka-mcp",
+      "url": "https://github.com/vikrambtech2025-png/alpaka-mcp",
+      "summary": "MCP server + CLI for the Alpaca Trading API — drive trades from AI assistants and the terminal."
+    }
+  ],
+  "principles": [
+    "It must run — a demo that only works on my laptop is a story, not a system.",
+    "It must prove itself — evals, guardrails, and citations are part of the product.",
+    "It must be frugal — real models on a 6 GB GPU, no expensive API key required to reproduce."
+  ],
+  "contact": "vikrambtech2025@gmail.com"
+}

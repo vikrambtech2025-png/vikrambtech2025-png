@@ -17,6 +17,13 @@
 <!-- ══ LIVE TERMINAL ══ -->
 <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/terminal.svg" width="88%" alt="Animated terminal session"/>
 
+<br/>
+
+<p align="center">
+  <a href="https://vikrambtech2025-png.github.io/vikrambtech2025-png/"><b>⚡ Enter the live site</b></a>
+  &nbsp;— interactive terminal, <kbd>⌘K</kbd> command palette, live project explorer.
+</p>
+
 </div>
 
 <br/>
@@ -36,10 +43,13 @@
 
 I'm an **AI/ML Engineer** who turns research into **production-grade systems** — retrieval-augmented pipelines that cite their sources, autonomous agents that plan, and vision models that see. I don't stop at a notebook: I ship the full stack.
 
+> **I love creating idealistic AI agents that solve real-world problems.** Optimism is cheap — shipping an agent that survives contact with a real user is not. That gap is the only place worth working in.
+
 ```text
 ╔══════════════════════════════════════════════════════════════╗
 ║  👤  AI/ML Engineer                                          ║
 ║  🎯  RAG Systems · LLM Applications · Autonomous Agents      ║
+║  ❤️  Idealistic AI agents for REAL-WORLD problems            ║
 ║  🛠️  Python · FastAPI · LangChain · LangGraph · React        ║
 ║  🌱  Currently: advanced RAG + agentic evals                 ║
 ║  📫  vikrambtech2025@gmail.com                               ║
@@ -83,6 +93,7 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 
 #### 🧠 The craft
 
+- **Idealistic agents, real problems** — I aim agents at problems that actually matter, then hold them to a hard bar: it must run, prove itself, and be frugal.
 - **Retrieval that proves itself** — every claim in `citecheck` is programmatically verified, with guardrails at the capability layer and an eval suite that publishes its own failures.
 - **Agents that plan** — multi-agent LangGraph workflows run parallel interviews and synthesise cited reports.
 - **Multimodal RAG** — ColPali late-interaction visual retrieval + hybrid dense/BM25 over Qdrant.
@@ -110,9 +121,51 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 
 <sub>🏙️ <b>Contribution City</b> — every tower is a real day of code. Regenerated daily by a GitHub Action.</sub>
 
+<br/>
+
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/language-donut.svg" width="100%" alt="Language donut chart by real bytes of code"/>
+
+<table align="center" width="100%">
+<tr>
+<td width="50%" align="center"><img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/activity.svg" width="100%" alt="Live public activity stream"/></td>
+<td width="50%" align="center"><img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/wrapped.svg" width="100%" alt="GitHub Wrapped — year in code"/></td>
+</tr>
+<tr>
+<td width="50%" align="center"><img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/traffic.svg" width="100%" alt="Repository traffic and latest builds"/></td>
+<td width="50%" align="center"><img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/galaxy.svg" width="100%" alt="Contribution galaxy — one star per commit"/></td>
+</tr>
+</table>
+
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/constellation.svg" width="100%" alt="Repository constellation map"/>
+
 </div>
 
 <br/>
+
+## ✍️ Guestbook <sub><i>— real people, real words, rendered from a pinned issue</i></sub>
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/guestbook.svg" width="100%" alt="Guestbook wall — signatures from the pinned issue"/>
+
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/reactions.svg" width="45%" alt="Reaction meter — reactions on the pinned issue"/>
+
+<p>👋 <a href="https://github.com/vikrambtech2025-png/vikrambtech2025-png/issues/3"><b>Sign the guestbook</b></a> — your comment lands on the wall above. Hit a reaction on the issue to move the meter.</p>
+
+</div>
+
+<br/>
+
+## 🗒️ Notes
+
+<p align="center">
+  <a href="https://vikrambtech2025-png.github.io/vikrambtech2025-png/blog/">Field reports</a> ·
+  <a href="https://vikrambtech2025-png.github.io/vikrambtech2025-png/feed.xml">RSS</a> ·
+  <a href="https://vikrambtech2025-png.github.io/vikrambtech2025-png/data.json">data.json</a> ·
+  <a href="https://vikrambtech2025-png.github.io/vikrambtech2025-png/resume/">résumé</a>
+</p>
+
+> I write about shipping **idealistic agents for real-world problems** — self-hosted, reproducible, no API key required.
 
 ## 🚀 Featured Systems
 

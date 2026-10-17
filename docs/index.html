@@ -3,17 +3,27 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vikram — AI/ML Engineer</title>
-<meta name="description" content="AI/ML Engineer building production RAG systems, LLM applications, and autonomous agents."/>
+<title>Vikram — AI/ML Engineer · idealistic agents for real-world problems</title>
+<meta name="description" content="AI/ML Engineer building idealistic AI agents that solve real-world problems — production RAG systems, LLM applications, and autonomous agents."/>
+<meta name="theme-color" content="#000000"/>
 <meta property="og:title" content="Vikram — AI/ML Engineer"/>
-<meta property="og:description" content="Production RAG · LLM applications · autonomous agents."/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23000'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%2300E5FF' font-family='monospace'%3EV%3C/text%3E%3C/svg%3E"/>
+<meta property="og:description" content="I build idealistic AI agents that solve real-world problems. Production RAG · LLM applications · autonomous agents."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="manifest" href="site.webmanifest"/>
+<link rel="alternate" type="application/rss+xml" title="Vikram — Notes" href="feed.xml"/>
 <style>
   :root{
     --void:#000000; --coal:#05070d; --panel:#070c16; --edge:#16203a;
     --cyan:#00E5FF; --violet:#8B5CF6; --crimson:#FF1F4B; --gold:#FFB300; --green:#22C55E;
     --ink:#dce9f7; --dim:#5A6B85; --mid:#8ea3bd;
+    --accent:var(--cyan); --accent2:var(--violet);
   }
+  body.ember{ --accent:var(--crimson); --accent2:var(--gold); }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
@@ -21,72 +31,93 @@
     font:15px/1.65 ui-monospace,Consolas,"Courier New",monospace;
     overflow-x:hidden;
   }
-  a{color:var(--cyan); text-decoration:none}
-  a:hover{text-shadow:0 0 12px rgba(0,229,255,.8)}
-  #bg{position:fixed; inset:0; z-index:0; opacity:.55}
+  ::selection{background:var(--accent); color:#000}
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-shadow:0 0 12px color-mix(in srgb,var(--accent) 80%,transparent)}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px}
+  .skip{position:absolute; left:-999px; top:0; background:#000; color:var(--accent); padding:10px 16px; z-index:100}
+  .skip:focus{left:8px; top:8px}
+  #bg{position:fixed; inset:0; z-index:0; opacity:.55; pointer-events:none}
   .wrap{position:relative; z-index:1; max-width:1080px; margin:0 auto; padding:0 22px}
   header.top{
     position:sticky; top:0; z-index:5; backdrop-filter:blur(10px);
     background:linear-gradient(180deg,rgba(0,0,0,.92),rgba(0,0,0,.55));
     border-bottom:1px solid var(--edge);
   }
-  .top .wrap{display:flex; align-items:center; justify-content:space-between; height:60px}
-  .logo{font-weight:700; letter-spacing:3px}
-  .logo b{color:var(--cyan)}
-  nav a{margin-left:18px; color:var(--mid); font-size:13px; letter-spacing:1px}
-  nav a:hover{color:var(--cyan)}
-  .hero{padding:88px 0 40px; text-align:center}
-  .kicker{color:var(--cyan); letter-spacing:6px; font-size:12px; margin-bottom:14px}
+  .top .wrap{display:flex; align-items:center; justify-content:space-between; height:60px; gap:14px}
+  .logo{font-weight:700; letter-spacing:3px; white-space:nowrap}
+  .logo b{color:var(--accent)}
+  nav{display:flex; align-items:center; gap:4px; flex-wrap:wrap}
+  nav a{margin-left:14px; color:var(--mid); font-size:13px; letter-spacing:1px}
+  nav a:hover{color:var(--accent)}
+  .tools{display:flex; align-items:center; gap:8px}
+  .kbtn{
+    border:1px solid var(--edge); background:#070c16; color:var(--mid);
+    padding:6px 10px; border-radius:8px; font:inherit; font-size:12px; cursor:pointer;
+  }
+  .kbtn:hover{border-color:var(--accent); color:var(--accent)}
+  kbd{border:1px solid var(--edge); border-bottom-width:2px; border-radius:5px; padding:1px 6px; font-size:11px; color:var(--mid)}
+  .hero{padding:80px 0 34px; text-align:center}
+  .kicker{color:var(--accent); letter-spacing:6px; font-size:12px; margin-bottom:14px}
   h1{
     font-size:clamp(38px,8vw,86px); margin:0; letter-spacing:8px; line-height:1;
-    background:linear-gradient(92deg,#fff,#cfe9ff 40%,var(--violet) 70%,var(--crimson));
+    background:linear-gradient(92deg,#fff,#cfe9ff 40%,var(--accent2) 70%,var(--accent));
     -webkit-background-clip:text; background-clip:text; color:transparent;
     text-shadow:0 0 40px rgba(139,92,246,.25);
   }
-  .role{margin-top:16px; color:var(--cyan); letter-spacing:5px; font-size:clamp(12px,2.4vw,16px)}
+  .role{margin-top:16px; color:var(--accent); letter-spacing:5px; font-size:clamp(12px,2.4vw,16px)}
   .type{margin-top:18px; color:var(--mid); min-height:24px}
-  .type .cur{color:var(--cyan); animation:blink 1s steps(1) infinite}
+  .type .cur{color:var(--accent); animation:blink 1s steps(1) infinite}
   @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
   .fig{width:100%; display:block; border:1px solid var(--edge); border-radius:14px; background:#000; margin:0 0 22px}
   .banner{border:none; border-radius:0; margin:0 auto 8px; max-width:1000px}
   .cta{margin-top:30px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
   .btn{
     border:1px solid var(--edge); background:#070c16; color:var(--ink);
-    padding:11px 20px; border-radius:9px; font-size:13px; letter-spacing:1px; cursor:pointer;
+    padding:11px 20px; border-radius:9px; font:inherit; font-size:13px; letter-spacing:1px; cursor:pointer;
     transition:.25s;
   }
-  .btn:hover{border-color:var(--cyan); box-shadow:0 0 22px rgba(0,229,255,.28); color:var(--cyan)}
-  .btn.primary{border-color:var(--cyan); color:var(--cyan)}
-  section{padding:56px 0; border-top:1px solid rgba(22,32,58,.7)}
-  h2{font-size:20px; letter-spacing:4px; color:var(--cyan); margin:0 0 22px}
+  .btn:hover{border-color:var(--accent); box-shadow:0 0 22px color-mix(in srgb,var(--accent) 28%,transparent); color:var(--accent)}
+  .btn.primary{border-color:var(--accent); color:var(--accent)}
+  section{padding:52px 0; border-top:1px solid rgba(22,32,58,.7)}
+  h2{font-size:20px; letter-spacing:4px; color:var(--accent); margin:0 0 22px}
   h2 span{color:var(--dim); font-size:12px; letter-spacing:2px}
+  /* terminal */
   .term{
     background:linear-gradient(180deg,#05070d,#000); border:1px solid var(--edge);
-    border-radius:12px; overflow:hidden; box-shadow:0 30px 60px -30px rgba(0,229,255,.25);
+    border-radius:12px; overflow:hidden; box-shadow:0 30px 60px -30px color-mix(in srgb,var(--accent) 25%,transparent);
   }
   .term .bar{display:flex; align-items:center; gap:8px; padding:10px 14px; background:#080c16; border-bottom:1px solid var(--edge)}
+  .term .bar .title{margin-left:8px; color:var(--dim); font-size:12px}
   .dot{width:11px; height:11px; border-radius:50%}
-  .term pre{margin:0; padding:18px; font-size:13.5px; color:var(--ink); white-space:pre-wrap; word-break:break-word}
-  .term .p{color:var(--cyan)} .term .c{color:#fff} .term .k{color:var(--gold)}
+  .term .out{margin:0; padding:18px 18px 6px; font-size:13.5px; color:var(--ink); white-space:pre-wrap; word-break:break-word; max-height:340px; overflow:auto}
+  .term .line{display:flex; gap:6px; padding:0 18px 16px; align-items:center}
+  .term .ps1{color:var(--accent); white-space:nowrap}
+  .term input{
+    flex:1; background:transparent; border:none; outline:none;
+    color:#fff; font:inherit; font-size:13.5px; caret-color:var(--accent);
+  }
+  .term .p{color:var(--accent)} .term .c{color:#fff} .term .k{color:var(--gold)}
   .term .ok{color:var(--green)} .term .m{color:var(--violet)} .term .r{color:var(--crimson)}
+  .term .dimc{color:var(--dim)}
   .grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
   .card{
     background:#070c16; border:1px solid var(--edge); border-radius:12px; padding:18px;
-    transition:.28s; position:relative; overflow:hidden;
+    transition:.28s; position:relative; overflow:hidden; display:block;
   }
-  .card::before{content:""; position:absolute; left:0; top:14px; bottom:14px; width:3px; background:var(--cyan)}
+  .card::before{content:""; position:absolute; left:0; top:14px; bottom:14px; width:3px; background:var(--accent)}
   .card.c2::before{background:var(--violet)} .card.c3::before{background:var(--crimson)}
   .card.c4::before{background:var(--gold)} .card.c5::before{background:var(--green)}
-  .card:hover{transform:translateY(-4px); border-color:var(--cyan); box-shadow:0 20px 40px -24px rgba(0,229,255,.5)}
-  .card h3{margin:0 0 8px; font-size:15px; letter-spacing:1px}
+  .card:hover{transform:translateY(-4px); border-color:var(--accent); box-shadow:0 20px 40px -24px color-mix(in srgb,var(--accent) 50%,transparent)}
+  .card h3{margin:0 0 8px; font-size:15px; letter-spacing:1px; color:var(--ink)}
   .card p{margin:0; color:var(--mid); font-size:13px}
   .card .meta{margin-top:12px; color:var(--dim); font-size:12px}
   .chips{display:flex; flex-wrap:wrap; gap:9px}
   .chip{border:1px solid var(--edge); border-radius:99px; padding:7px 14px; font-size:12.5px; color:var(--ink); background:#070c16}
-  .chip:hover{border-color:var(--cyan); color:var(--cyan); box-shadow:0 0 16px rgba(0,229,255,.25)}
+  .chip:hover{border-color:var(--accent); color:var(--accent); box-shadow:0 0 16px color-mix(in srgb,var(--accent) 25%,transparent)}
   .stat{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px}
   .stat div{background:#070c16; border:1px solid var(--edge); border-radius:12px; padding:16px}
-  .stat b{display:block; font-size:26px; color:var(--cyan)}
+  .stat b{display:block; font-size:26px; color:var(--accent)}
   .stat span{color:var(--dim); font-size:12px; letter-spacing:2px}
   footer{padding:44px 0 70px; text-align:center; color:var(--dim); border-top:1px solid var(--edge)}
   .reveal{opacity:0; transform:translateY(22px); transition:.7s cubic-bezier(.2,.8,.2,1)}
@@ -94,25 +125,59 @@
   .egg{color:var(--dim); cursor:help}
   .glitch:hover{animation:glitch .3s steps(2) infinite}
   @keyframes glitch{0%{transform:translate(0)}25%{transform:translate(-2px,1px)}50%{transform:translate(2px,-1px)}100%{transform:translate(0)}}
+  /* explorer */
+  .filters{display:flex; gap:8px; flex-wrap:wrap; margin:0 0 16px}
+  .filters button{border:1px solid var(--edge); background:#070c16; color:var(--mid); border-radius:99px; padding:6px 13px; font:inherit; font-size:12px; cursor:pointer}
+  .filters button[aria-pressed="true"]{border-color:var(--accent); color:var(--accent)}
+  .repo{font-size:12.5px}
+  .repo .lang{color:var(--gold); font-size:11.5px}
+  .repo .stars{float:right; color:var(--gold)}
+  /* palette */
+  .palette{position:fixed; inset:0; z-index:60; display:none; background:rgba(0,0,0,.72); backdrop-filter:blur(6px)}
+  .palette.open{display:block}
+  .palette .box{max-width:600px; margin:12vh auto 0; background:#05070d; border:1px solid var(--accent); border-radius:14px; overflow:hidden; box-shadow:0 40px 80px -30px color-mix(in srgb,var(--accent) 50%,transparent)}
+  .palette input{width:100%; padding:18px 20px; background:#000; border:none; border-bottom:1px solid var(--edge); color:#fff; font:inherit; font-size:15px; outline:none}
+  .palette ul{list-style:none; margin:0; padding:8px; max-height:52vh; overflow:auto}
+  .palette li{padding:11px 14px; border-radius:9px; cursor:pointer; display:flex; justify-content:space-between; gap:10px; color:var(--ink); font-size:13.5px}
+  .palette li .hint{color:var(--dim); font-size:11.5px}
+  .palette li[aria-selected="true"], .palette li:hover{background:#0b1220}
+  .palette li[aria-selected="true"]{box-shadow:inset 0 0 0 1px var(--accent)}
+  #trail{position:fixed; width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 14px var(--accent); pointer-events:none; z-index:4; opacity:0; transition:opacity .3s}
+  .note-item{display:flex; gap:14px; align-items:baseline}
+  .note-item .d{color:var(--dim); font-size:12px; min-width:96px}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important}
+    .reveal{opacity:1; transform:none}
+    #trail{display:none}
+  }
 </style>
 </head>
 <body>
-<canvas id="bg"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div id="trail" aria-hidden="true"></div>
 
 <header class="top">
   <div class="wrap">
     <div class="logo">V<b>I</b>KRAM</div>
-    <nav>
+    <nav aria-label="Primary">
       <a href="#about">about</a>
       <a href="#live">live</a>
       <a href="#work">work</a>
+      <a href="#wall">wall</a>
       <a href="#stack">stack</a>
+      <a href="#notes">notes</a>
       <a href="#contact">contact</a>
     </nav>
+    <div class="tools">
+      <button class="kbtn" id="themeBtn" type="button" aria-label="Toggle accent theme">◐ theme</button>
+      <button class="kbtn" id="palBtn" type="button" aria-label="Open command palette">⌘K</button>
+    </div>
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main">
   <section class="hero" style="border:none">
     <img class="fig banner" src="assets/hero-void.svg" alt="Vikram — AI/ML Engineer"/>
     <div class="type"><span id="typed"></span><span class="cur">▊</span></div>
@@ -121,34 +186,57 @@
       <a class="btn" href="mailto:vikrambtech2025@gmail.com">Email</a>
       <a class="btn" href="https://www.linkedin.com/in/vikram-sathya-829a57379/">LinkedIn</a>
       <a class="btn" href="https://instagram.com/vikrambtech2025">Instagram</a>
+      <button class="btn" id="dlResume" type="button">Résumé (JSON)</button>
     </div>
   </section>
 
-  <section>
+  <section aria-label="Interactive terminal">
     <div class="term reveal">
-      <div class="bar"><span class="dot" style="background:var(--crimson)"></span><span class="dot" style="background:var(--gold)"></span><span class="dot" style="background:var(--green)"></span></div>
-      <pre id="boot"></pre>
+      <div class="bar">
+        <span class="dot" style="background:var(--crimson)"></span>
+        <span class="dot" style="background:var(--gold)"></span>
+        <span class="dot" style="background:var(--green)"></span>
+        <span class="title">vikram@obsidian — zsh — type <b>help</b></span>
+      </div>
+      <pre class="out" id="boot" aria-live="polite"></pre>
+      <form class="line" id="termForm" autocomplete="off">
+        <span class="ps1">vikram@obsidian:~$</span>
+        <input id="termInput" aria-label="Terminal input" spellcheck="false" placeholder="help"/>
+      </form>
     </div>
   </section>
 
   <section id="about">
     <h2>ABOUT <span>// whoami</span></h2>
-    <p class="reveal" style="color:var(--mid); max-width:760px">
-      I turn research into <b style="color:var(--ink)">production-grade systems</b> — retrieval pipelines that cite
-      their sources, agents that plan, and vision models that see. 199 repositories deep, and every one is a lesson.
-      I care about systems that <b style="color:var(--cyan)">prove</b> what they claim.
+    <p class="reveal" style="color:var(--mid); max-width:780px">
+      I build <b style="color:var(--ink)">idealistic AI agents that solve real-world problems</b> — retrieval
+      pipelines that cite their sources, agents that plan, and vision models that see. 199 repositories deep,
+      and every one is a lesson. I don't stop at a notebook: I ship the full stack, and I care about systems
+      that <b style="color:var(--accent)">prove</b> what they claim.
     </p>
-    <img class="fig reveal" src="assets/stats.svg" alt="GitHub stats" style="margin-top:22px"/>
+    <div class="stat reveal" id="statRow" style="margin-top:24px"></div>
+    <img class="fig reveal" src="assets/stats.svg" alt="GitHub stats: repositories, stars, followers, contributions, streaks" style="margin-top:22px"/>
   </section>
 
   <section id="live">
-    <h2>LIVE CITY <span>// every tower is a real day of code</span></h2>
-    <img class="fig reveal" src="assets/contribution-city.svg" alt="Isometric 3D contribution city"/>
+    <h2>LIVE TELEMETRY <span>// regenerated daily from real GitHub data</span></h2>
+    <p class="reveal" style="color:var(--dim); margin:-8px 0 22px; font-size:12.5px">
+      No shields.io. No third parties. Every pixel below is rendered by a GitHub Action inside this repo.
+    </p>
+    <img class="fig reveal" src="assets/contribution-city.svg" alt="Isometric 3D contribution city — every tower is a real day of code"/>
+    <div class="grid">
+      <img class="fig reveal" src="assets/language-donut.svg" alt="Language donut chart by real bytes of code"/>
+      <img class="fig reveal" src="assets/activity.svg" alt="Live public activity stream"/>
+      <img class="fig reveal" src="assets/wrapped.svg" alt="GitHub Wrapped year in code"/>
+      <img class="fig reveal" src="assets/galaxy.svg" alt="Contribution galaxy — one star per commit"/>
+      <img class="fig reveal" src="assets/traffic.svg" alt="Repository traffic and latest build status"/>
+      <img class="fig reveal" src="assets/constellation.svg" alt="Repository constellation map"/>
+    </div>
   </section>
 
   <section id="work">
     <h2>FEATURED SYSTEMS <span>// shipped</span></h2>
-    <img class="fig reveal" src="assets/rag-pipeline.svg" alt="RAG pipeline"/>
+    <img class="fig reveal" src="assets/rag-pipeline.svg" alt="Retrieval augmented generation pipeline"/>
     <div class="grid">
       <a class="card reveal" href="https://github.com/vikrambtech2025-png/citecheck">
         <h3>🔍 citecheck</h3>
@@ -181,6 +269,25 @@
         <div class="meta">mcp · cli · trading</div>
       </a>
     </div>
+
+    <h3 style="margin:34px 0 12px; letter-spacing:2px; color:var(--accent)">PROJECT EXPLORER <span style="color:var(--dim); font-size:12px">// live from data.json</span></h3>
+    <div class="filters" id="langFilters" role="group" aria-label="Filter projects by language"></div>
+    <div class="grid" id="repoGrid" aria-live="polite">
+      <div class="card repo"><p>Loading projects…</p></div>
+    </div>
+  </section>
+
+  <section id="wall">
+    <h2>GUESTBOOK <span>// sign it, I read every one</span></h2>
+    <img class="fig reveal" src="assets/guestbook.svg" alt="Guestbook wall — signatures from the pinned issue"/>
+    <div class="grid">
+      <img class="fig reveal" src="assets/reactions.svg" alt="Reaction meter — reactions on the pinned issue"/>
+      <div class="card reveal">
+        <h3>✍️ Add your name</h3>
+        <p>Comment on the pinned guestbook issue and you appear on the wall above within a day. Hit a reaction to move the meter. Be honest — <i>would you hire me?</i></p>
+        <div class="meta"><a href="https://github.com/vikrambtech2025-png/vikrambtech2025-png/issues/3">→ Open the guestbook issue</a></div>
+      </div>
+    </div>
   </section>
 
   <section id="stack">
@@ -197,6 +304,16 @@
     </div>
   </section>
 
+  <section id="notes">
+    <h2>NOTES <span>// field reports</span></h2>
+    <ul id="notesList" style="list-style:none; padding:0; margin:0">
+      <li class="note-item"><span class="d">2026-10-12</span><a href="blog/idealistic-agents-real-problems.html">Idealistic agents, real-world problems</a></li>
+      <li class="note-item"><span class="d">2026-10-05</span><a href="blog/rag-that-cites-itself.html">RAG that cites itself</a></li>
+      <li class="note-item"><span class="d">2026-09-24</span><a href="blog/shipping-on-6gb.html">Shipping real AI on a 6 GB GPU</a></li>
+    </ul>
+    <p style="margin-top:14px"><a href="blog/">→ All notes</a> &nbsp;·&nbsp; <a href="feed.xml">RSS</a></p>
+  </section>
+
   <section id="contact">
     <h2>CONTACT <span>// ping me</span></h2>
     <p class="reveal" style="color:var(--mid)">
@@ -205,19 +322,96 @@
       📸 <a href="https://instagram.com/vikrambtech2025">Instagram</a> &nbsp;·&nbsp;
       🐙 <a href="https://github.com/vikrambtech2025-png">GitHub</a>
     </p>
+    <p class="reveal" style="color:var(--dim); font-size:12.5px">
+      Machine-readable profile: <a href="data.json">data.json</a> · <a href="resume.json">resume.json</a> ·
+      <a href="resume/">résumé</a> · API-style endpoint, no auth.
+    </p>
   </section>
 
-  <img class="fig reveal" src="assets/footer-void.svg" alt="footer" style="margin-bottom:0"/>
+  <img class="fig reveal" src="assets/footer-void.svg" alt="" style="margin-bottom:0"/>
 
   <footer>
     <div><span class="egg glitch" title="the terminal never lies">built with python + obsession</span></div>
     <div style="margin-top:8px">© <span id="yr"></span> Vikram · self-hosted · zero third-party services</div>
+    <div style="margin-top:8px"><a href="devnull.html" class="egg" title="where deleted files go">/dev/null</a></div>
   </footer>
 </main>
 
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Command palette">
+  <div class="box">
+    <input id="palInput" placeholder="Type a command… (projects, résumé, notes, email, theme)" aria-label="Command palette search"/>
+    <ul id="palList" role="listbox" aria-label="Commands"></ul>
+  </div>
+</div>
+
 <script>
+/* ── command palette ── */
+const COMMANDS = [
+  { label: 'Go: About',       hint: 'whoami',  run: () => go('#about') },
+  { label: 'Go: Live telemetry', hint: 'live', run: () => go('#live') },
+  { label: 'Go: Featured systems', hint: 'work', run: () => go('#work') },
+  { label: 'Go: Guestbook wall', hint: 'wall', run: () => go('#wall') },
+  { label: 'Go: Stack', hint: 'stack', run: () => go('#stack') },
+  { label: 'Go: Notes', hint: 'blog', run: () => go('#notes') },
+  { label: 'Open: Résumé', hint: 'resume.json', url: 'resume/' },
+  { label: 'Open: Profile API', hint: 'data.json', url: 'data.json' },
+  { label: 'Open: RSS feed', hint: 'feed.xml', url: 'feed.xml' },
+  { label: 'Open: GitHub', hint: 'external', url: 'https://github.com/vikrambtech2025-png' },
+  { label: 'Open: LinkedIn', hint: 'external', url: 'https://www.linkedin.com/in/vikram-sathya-829a57379/' },
+  { label: 'Email me', hint: 'mailto', url: 'mailto:vikrambtech2025@gmail.com' },
+  { label: 'Sign the guestbook', hint: 'issue #3', url: 'https://github.com/vikrambtech2025-png/vikrambtech2025-png/issues/3' },
+  { label: 'Theme: toggle accent', hint: 'obsidian / ember', run: toggleTheme },
+];
+function go(sel){ const el = document.querySelector(sel); if (el) el.scrollIntoView({behavior:'smooth'}); }
+(function(){
+  const pal = document.getElementById('palette'), input = document.getElementById('palInput'), list = document.getElementById('palList');
+  let filtered = COMMANDS.slice(), sel = 0;
+  function render(){
+    list.innerHTML = '';
+    filtered.forEach((c, i) => {
+      const li = document.createElement('li');
+      li.setAttribute('role', 'option');
+      li.setAttribute('aria-selected', i === sel ? 'true' : 'false');
+      li.innerHTML = '<span>' + c.label + '</span><span class="hint">' + c.hint + '</span>';
+      li.addEventListener('click', () => pick(i));
+      list.appendChild(li);
+    });
+  }
+  function pick(i){ const c = filtered[i]; if (!c) return; close(); if (c.url) window.open(c.url, c.url.startsWith('http') ? '_blank' : '_self'); else if (c.run) c.run(); }
+  function open(){ pal.classList.add('open'); input.value = ''; filtered = COMMANDS.slice(); sel = 0; render(); input.focus(); }
+  function close(){ pal.classList.remove('open'); }
+  function filter(){
+    const q = input.value.trim().toLowerCase();
+    filtered = COMMANDS.filter(c => (c.label + ' ' + c.hint).toLowerCase().includes(q));
+    sel = 0; render();
+  }
+  input.addEventListener('input', filter);
+  input.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown'){ sel = Math.min(sel + 1, filtered.length - 1); render(); e.preventDefault(); }
+    else if (e.key === 'ArrowUp'){ sel = Math.max(sel - 1, 0); render(); e.preventDefault(); }
+    else if (e.key === 'Enter'){ pick(sel); e.preventDefault(); }
+    else if (e.key === 'Escape'){ close(); }
+  });
+  pal.addEventListener('click', e => { if (e.target === pal) close(); });
+  document.getElementById('palBtn').addEventListener('click', open);
+  addEventListener('keydown', e => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k'){ e.preventDefault(); pal.classList.contains('open') ? close() : open(); }
+  });
+})();
+
+/* ── theme toggle ── */
+function toggleTheme(){
+  document.body.classList.toggle('ember');
+  try { localStorage.setItem('vk-theme', document.body.classList.contains('ember') ? 'ember' : 'obsidian'); } catch(e){}
+}
+(function(){
+  try { if (localStorage.getItem('vk-theme') === 'ember') document.body.classList.add('ember'); } catch(e){}
+  document.getElementById('themeBtn').addEventListener('click', toggleTheme);
+})();
+
 /* ── particle field ── */
 (function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const c = document.getElementById('bg'), x = c.getContext('2d');
   let w, h, parts = [];
   const colors = ['#00E5FF','#8B5CF6','#FF1F4B','#FFB300'];
@@ -229,7 +423,7 @@
       r: Math.random()*1.9+.6, c: colors[(Math.random()*colors.length)|0]
     }));
   }
-  function tick(){
+  function draw(){
     x.clearRect(0,0,w,h);
     for (const p of parts){
       p.x += p.vx; p.y += p.vy;
@@ -242,36 +436,115 @@
       const a=parts[i], b=parts[j], d=Math.hypot(a.x-b.x,a.y-b.y);
       if (d<120){ x.globalAlpha=(1-d/120)*.16; x.strokeStyle=a.c; x.beginPath(); x.moveTo(a.x,a.y); x.lineTo(b.x,b.y); x.stroke(); }
     }
-    requestAnimationFrame(tick);
   }
-  size(); seed(); tick();
-  addEventListener('resize', ()=>{ size(); seed(); });
+  function tick(){ draw(); requestAnimationFrame(tick); }
+  size(); seed();
+  if (reduce){ draw(); } else { tick(); }
+  addEventListener('resize', ()=>{ size(); seed(); if (reduce) draw(); });
 })();
 
-/* ── terminal boot ── */
+/* ── interactive terminal ── */
 (function(){
-  const el = document.getElementById('boot');
-  const script = [
-    ['p','vikram@obsidian',':~$ '],['c','whoami',''],
-    ['','\n'],['m','ai/ml engineer','  ::  '],['dim','building intelligence with receipts',''],
-    ['','\n\n'],['p','vikram@obsidian',':~$ '],['c','cat stack.txt',''],
-    ['','\n'],['src','python · langchain · fastapi · qdrant',''],
-    ['','\n\n'],['p','vikram@obsidian',':~$ '],['c','run agent --verify',''],
-    ['','\n'],['ok','[ok]',' sources fetched\n'],['ok','[ok]',' citations verified 12/12\n'],
-    ['ok','[ok]',' report synthesised in 4.2s\n'],['p','vikram@obsidian',':~$ '],['c','_',''],
+  const out = document.getElementById('boot');
+  const form = document.getElementById('termForm');
+  const input = document.getElementById('termInput');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const DATA = { stack: 'python · langchain · langgraph · fastapi · qdrant · pytorch', email: 'vikrambtech2025@gmail.com' };
+  let history = [], hi = -1;
+
+  function line(html){ out.innerHTML += html + '\n'; out.scrollTop = out.scrollHeight; }
+  function esc(s){ return String(s).replace(/[&<>]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[m])); }
+  const P = '<span class="p">vikram@obsidian:~$</span> ';
+
+  function run(cmd){
+    const c = cmd.trim().toLowerCase();
+    line(P + '<span class="c">' + esc(cmd) + '</span>');
+    if (!c) return;
+    if (c === 'help') {
+      line('<span class="m">commands:</span> whoami · about · projects · project &lt;name&gt; · stack · social · wrapped · guestbook · resume · clear · matrix · sudo · dev/null · contact');
+    } else if (c === 'whoami') {
+      line('<span class="ok">vikram</span> — AI/ML engineer');
+      line('<span class="dimc">I build idealistic AI agents that solve real-world problems.</span>');
+      line('<span class="dimc">RAG systems · LLM applications · autonomous agents.</span>');
+    } else if (c === 'about') {
+      line('Turns research into <span class="k">production-grade systems</span> — pipelines that cite their sources,');
+      line('agents that plan, vision models that see. 199 repos deep. Ships the full stack.');
+    } else if (c === 'projects') {
+      'citecheck LangGraph-Agent production-rag colpali-rag MOIL-Manganese-AI alpaka-mcp'.split(' ').forEach(p => line('  <span class="k">▸</span> ' + p));
+      line('<span class="dimc">try: project citecheck</span>');
+    } else if (c.startsWith('project ')) {
+      const n = c.slice(8).trim();
+      const blurb = {
+        citecheck: 'research agent where every citation is programmatically verified.',
+        'langgraph-agent': 'multi-agent research workflow, parallel interviews + cited synthesis.',
+        'production-rag': 'event-driven RAG on Inngest + FastAPI + Qdrant.',
+        'colpali-rag': 'multimodal visual retrieval, hybrid dense + BM25.',
+        'moil-manganese-ai': 'AI + space-tech decision platform (SIH 2026).',
+        'alpaka-mcp': 'MCP server + CLI for the Alpaca Trading API.'
+      }[n];
+      line(blurb ? '<span class="ok">' + esc(n) + '</span> — ' + blurb : '<span class="r">unknown project:</span> ' + esc(n));
+    } else if (c === 'stack') {
+      line('<span class="k">' + DATA.stack + '</span>');
+    } else if (c === 'social' || c === 'contact') {
+      line('email    → <a href="mailto:' + DATA.email + '">' + DATA.email + '</a>');
+      line('linkedin → <a href="https://www.linkedin.com/in/vikram-sathya-829a57379/" target="_blank" rel="noopener">in/vikram-sathya</a>');
+      line('github   → <a href="https://github.com/vikrambtech2025-png" target="_blank" rel="noopener">@vikrambtech2025-png</a>');
+      line('instagram→ <a href="https://instagram.com/vikrambtech2025" target="_blank" rel="noopener">@vikrambtech2025</a>');
+    } else if (c === 'wrapped') {
+      fetch('data.json').then(r => r.json()).then(d => {
+        line('<span class="k">GITHUB WRAPPED</span> ' + d.stats.contributions + ' contributions · ' + d.stats.longest_streak + 'd longest streak · ' + d.stats.repos + ' repos');
+      }).catch(() => line('<span class="r">data.json unavailable</span>'));
+    } else if (c === 'guestbook') {
+      line('sign it → <a href="https://github.com/vikrambtech2025-png/vikrambtech2025-png/issues/3" target="_blank" rel="noopener">issue #3</a>');
+    } else if (c === 'resume') {
+      line('open → <a href="resume/">/resume/</a> &nbsp; raw → <a href="resume.json">resume.json</a>');
+    } else if (c === 'ls') {
+      line('<span class="k">about  live  work  wall  stack  notes  contact</span>');
+    } else if (c === 'dev/null' || c === '/dev/null') {
+      line('<span class="dimc">everything is fine here. nothing to see. false → true.</span>');
+    } else if (c === 'sudo' || c.startsWith('sudo ')) {
+      line('<span class="r">nice try.</span> <span class="dimc">you are not in the sudoers file. this incident has been logged. 😉</span>');
+    } else if (c === 'matrix') {
+      line('<span class="ok">wake up, neo…</span> <span class="dimc">follow the cyan pixel trail.</span>');
+    } else if (c === 'clear') {
+      out.innerHTML = '';
+    } else if (c === 'exit') {
+      line('<span class="dimc">there is no exit. only the guestbook.</span>');
+    } else {
+      line('<span class="r">command not found:</span> ' + esc(c) + ' <span class="dimc">— type help</span>');
+    }
+  }
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const v = input.value;
+    if (v.trim()) { history.push(v); hi = history.length; }
+    run(v); input.value = '';
+  });
+  input.addEventListener('keydown', e => {
+    if (e.key === 'ArrowUp' && history.length){ hi = Math.max(0, hi - 1); input.value = history[hi]; e.preventDefault(); }
+    else if (e.key === 'ArrowDown'){ hi = Math.min(history.length, hi + 1); input.value = history[hi] || ''; e.preventDefault(); }
+  });
+
+  const boot = [
+    ['p','vikram@obsidian:~$ '], ['c','whoami'], ['','\n'],
+    ['m','idealistic AI agents for real-world problems'], ['','\n'], ['dimc','RAG · LLM apps · autonomous agents'], ['','\n\n'],
+    ['p','vikram@obsidian:~$ '], ['c','run agent --verify'], ['','\n'],
+    ['ok','[ok] '], ['c',' sources fetched\n'], ['ok','[ok] '], ['c',' citations verified 12/12\n'],
+    ['ok','[ok] '], ['c',' report synthesised in 4.2s\n'],
+    ['dimc','live terminal — type help\n'],
   ];
-  const cls = {p:'p', c:'c', m:'m', ok:'ok', src:'k', dim:''};
+  const cls = {p:'p', c:'c', m:'m', ok:'ok', src:'k', dim:'', dimc:'dimc'};
+  if (reduce){ boot.forEach(([t, s]) => { out.innerHTML += '<span class="' + (cls[t]||'') + '">' + s + '</span>'; }); return; }
   let i = 0, j = 0, html = '';
   function step(){
-    if (i >= script.length) return;
-    const [type, text] = script[i];
-    if (j === 0 && type === 'c' && text === '_'){ html += '<span class="c">_</span>'; el.innerHTML = html; return; }
+    if (i >= boot.length) return;
+    const [type, text] = boot[i];
     if (j <= text.length){
-      el.innerHTML = html + '<span class="' + (cls[type]||'') + '">' + text.slice(0, j) + '</span>';
-      j++; setTimeout(step, type === 'c' ? 38 : 14);
+      out.innerHTML = html + '<span class="' + (cls[type]||'') + '">' + esc(text.slice(0, j)) + '</span>';
+      j++; setTimeout(step, type === 'c' ? 34 : 12);
     } else {
-      html += '<span class="' + (cls[type]||'') + '">' + text + '</span>';
-      el.innerHTML = html; i++; j = 0; setTimeout(step, 180);
+      html += '<span class="' + (cls[type]||'') + '">' + esc(text) + '</span>';
+      out.innerHTML = html; i++; j = 0; setTimeout(step, 140);
     }
   }
   step();
@@ -279,9 +552,11 @@
 
 /* ── typing tagline ── */
 (function(){
-  const lines = ['production RAG systems', 'LLM applications', 'autonomous agents', 'systems that prove themselves'];
+  const lines = ['idealistic AI agents', 'real-world problem solving', 'production RAG systems', 'LLM applications', 'systems that prove themselves'];
   const el = document.getElementById('typed');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let li = 0, ch = 0, del = false;
+  if (reduce){ el.textContent = lines[0]; return; }
   function loop(){
     const t = lines[li];
     el.textContent = t.slice(0, ch);
@@ -293,17 +568,85 @@
   loop();
 })();
 
-/* ── reveal on scroll ── */
+/* ── project explorer + stat cards (from data.json) ── */
+(function(){
+  const grid = document.getElementById('repoGrid');
+  const filterBar = document.getElementById('langFilters');
+  const statRow = document.getElementById('statRow');
+  fetch('data.json').then(r => r.json()).then(d => {
+    const s = d.stats || {};
+    const cards = [['REPOS', s.repos], ['CONTRIBUTIONS', s.contributions], ['FOLLOWERS', s.followers], ['LONGEST STREAK', (s.longest_streak || 0) + 'd']];
+    statRow.innerHTML = cards.map(([k, v]) => '<div><b data-count="' + (v || 0) + '">0</b><span>' + k + '</span></div>').join('');
+    const langs = ['All', ...Array.from(new Set((d.repos || []).map(r => r.language || 'Other')))];
+    filterBar.innerHTML = langs.map((l, i) => '<button type="button" data-lang="' + l + '" aria-pressed="' + (i === 0) + '">' + l + '</button>').join('');
+    function paint(lang){
+      grid.innerHTML = (d.repos || []).filter(r => lang === 'All' || (r.language || 'Other') === lang).map((r, i) =>
+        '<a class="card repo c' + ((i % 5) + 1) + '" href="' + r.url + '">' +
+        '<h3>' + r.name + '</h3>' +
+        '<p>' + (r.description || 'No description yet.') + '</p>' +
+        '<div class="meta"><span class="lang">' + (r.language || 'Code') + '</span>' +
+        '<span class="stars">★ ' + (r.stars || 0) + '</span></div></a>').join('') || '<div class="card repo"><p>No projects for this language.</p></div>';
+      countUp();
+    }
+    filterBar.addEventListener('click', e => {
+      const b = e.target.closest('button'); if (!b) return;
+      filterBar.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed', 'true'); paint(b.dataset.lang);
+    });
+    paint('All');
+    function countUp(){
+      statRow.querySelectorAll('[data-count]').forEach(el => {
+        const target = +el.dataset.count, start = performance.now(), dur = 900;
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches){ el.textContent = target; return; }
+        (function frame(t){ const p = Math.min(1, (t - start) / dur); el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(frame); })(start);
+      });
+    }
+  }).catch(() => {
+    if (grid) grid.innerHTML = '<div class="card repo"><p>Project data is generated by a GitHub Action. Check back after the next run.</p></div>';
+  });
+})();
+
+/* ── notes from feed.xml (progressive enhancement) ── */
+(function(){
+  const list = document.getElementById('notesList');
+  fetch('feed.xml').then(r => r.text()).then(t => {
+    const doc = new DOMParser().parseFromString(t, 'application/xml');
+    const items = [...doc.querySelectorAll('item')].slice(0, 6);
+    if (!items.length) return;
+    list.innerHTML = items.map(it => {
+      const d = it.querySelector('pubDate') ? it.querySelector('pubDate').textContent : '';
+      const link = it.querySelector('link') ? it.querySelector('link').textContent : '#';
+      const title = it.querySelector('title') ? it.querySelector('title').textContent : 'note';
+      const href = link.replace(/^https?:\/\/[^/]+\/[^/]+\//, '');
+      return '<li class="note-item"><span class="d">' + d + '</span><a href="' + href + '">' + title + '</a></li>';
+    }).join('');
+  }).catch(() => {});
+})();
+
+/* ── reveal + count-up + year ── */
 (function(){
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold:.14});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   document.getElementById('yr').textContent = new Date().getFullYear();
 })();
 
-/* ── easter egg: konami-ish ── */
+/* ── cursor trail (subtle, pointer-fine only) ── */
+(function(){
+  if (!matchMedia('(pointer:fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const t = document.getElementById('trail'); let x = 0, y = 0, tx = 0, ty = 0;
+  addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; t.style.opacity = '.7'; });
+  addEventListener('pointerdown', () => t.style.opacity = '0');
+  (function loop(){ x += (tx - x) * .18; y += (ty - y) * .18; t.style.transform = 'translate(' + (x - 4) + 'px,' + (y - 4) + 'px)'; requestAnimationFrame(loop); })();
+})();
+
+/* ── résumé button ── */
+document.getElementById('dlResume').addEventListener('click', () => { location.href = 'resume/'; });
+
+/* ── easter eggs ── */
 (function(){
   const seq = ['v','i','k','r','a','m']; let k = 0;
   addEventListener('keydown', e => {
+    if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) return;
     k = (e.key.toLowerCase() === seq[k]) ? k+1 : 0;
     if (k === seq.length){
       k = 0;
@@ -313,8 +656,7 @@
       document.body.appendChild(b); setTimeout(()=>b.remove(), 3200);
     }
   });
-  console.log('%cACCESS GRANTED%c\nYou opened devtools. The terminal never lies. — Vikram',
-    'color:#00E5FF;font-weight:700;font-size:16px', 'color:#8B5CF6');
+  console.log('%cACCESS GRANTED%c\nYou opened devtools. The terminal never lies. — Vikram', 'color:#00E5FF;font-weight:700;font-size:16px', 'color:#8B5CF6');
 })();
 </script>
 </body>

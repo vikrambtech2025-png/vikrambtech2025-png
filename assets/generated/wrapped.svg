@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" width="980" height="360" role="img" aria-label="GITHUB WRAPPED 2026">
+<defs><linearGradient id='bg' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='#000000'/><stop offset='1' stop-color='#05070d'/></linearGradient></defs>
+<rect width='980' height='360' fill='url(#bg)'/>
+<rect x='1' y='1' width='978' height='358' rx='14' fill='none' stroke='#16203a' stroke-width='2'/>
+<text x='34' y='38' font-family="Consolas, 'Courier New', monospace" font-size='14' fill='#00E5FF'>GITHUB WRAPPED 2026</text>
+<text x='946' y='38' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11.5' fill='#5A6B85'>your year in code</text>
+<rect x='34' y='66' width='288' height='100' rx='12' fill='#070c16' stroke='#16203a'/>
+<rect x='34' y='76' width='4' height='80' rx='2' fill='#22C55E'/>
+<text x='54' y='96' font-family="Consolas, 'Courier New', monospace" font-size='11' letter-spacing='2' fill='#5A6B85'>CONTRIBUTIONS</text>
+<text x='54' y='136' font-family="Consolas, 'Courier New', monospace" font-size='21' font-weight='700' fill='#22C55E'>453</text>
+<rect x='340' y='66' width='288' height='100' rx='12' fill='#070c16' stroke='#16203a'/>
+<rect x='340' y='76' width='4' height='80' rx='2' fill='#00E5FF'/>
+<text x='360' y='96' font-family="Consolas, 'Courier New', monospace" font-size='11' letter-spacing='2' fill='#5A6B85'>ACTIVE DAYS</text>
+<text x='360' y='136' font-family="Consolas, 'Courier New', monospace" font-size='21' font-weight='700' fill='#00E5FF'>56</text>
+<rect x='646' y='66' width='288' height='100' rx='12' fill='#070c16' stroke='#16203a'/>
+<rect x='646' y='76' width='4' height='80' rx='2' fill='#FF1F4B'/>
+<text x='666' y='96' font-family="Consolas, 'Courier New', monospace" font-size='11' letter-spacing='2' fill='#5A6B85'>LONGEST STREAK</text>
+<text x='666' y='136' font-family="Consolas, 'Courier New', monospace" font-size='21' font-weight='700' fill='#FF1F4B'>4 d</text>
+<rect x='34' y='184' width='288' height='100' rx='12' fill='#070c16' stroke='#16203a'/>
+<rect x='34' y='194' width='4' height='80' rx='2' fill='#8B5CF6'/>
+<text x='54' y='214' font-family="Consolas, 'Courier New', monospace" font-size='11' letter-spacing='2' fill='#5A6B85'>TOP LANGUAGE</text>
+<text x='54' y='254' font-family="Consolas, 'Courier New', monospace" font-size='21' font-weight='700' fill='#8B5CF6'>Jupyter Notebook</text>
+<rect x='340' y='184' width='288' height='100' rx='12' fill='#070c16' stroke='#16203a'/>
+<rect x='340' y='194' width='4' height='80' rx='2' fill='#FFB300'/>
+<text x='360' y='214' font-family="Consolas, 'Courier New', monospace" font-size='11' letter-spacing='2' fill='#5A6B85'>BUSIEST DAY</text>
+<text x='360' y='254' font-family="Consolas, 'Courier New', monospace" font-size='21' font-weight='700' fill='#FFB300'>2026-08-01</text>
+<rect x='646' y='184' width='288' height='100' rx='12' fill='#070c16' stroke='#16203a'/>
+<rect x='646' y='194' width='4' height='80' rx='2' fill='#00A3FF'/>
+<text x='666' y='214' font-family="Consolas, 'Courier New', monospace" font-size='11' letter-spacing='2' fill='#5A6B85'>TOP REPO</text>
+<text x='666' y='254' font-family="Consolas, 'Courier New', monospace" font-size='21' font-weight='700' fill='#00A3FF'>vikrambtech2025-pn</text>
+<text x='490' y='342' text-anchor='middle' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#5A6B85'>regenerated automatically every day</text>
+</svg>

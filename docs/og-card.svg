@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Social card">
+<defs><linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='#000000'/><stop offset='0.6' stop-color='#05070d'/><stop offset='1' stop-color='#0a0f1a'/></linearGradient><linearGradient id='rz' x1='0' y1='0' x2='1' y2='0'><stop offset='0' stop-color='#00E5FF'/><stop offset='0.5' stop-color='#8B5CF6'/><stop offset='1' stop-color='#FF1F4B'/></linearGradient></defs>
+<rect width='1200' height='630' fill='url(#bg)'/>
+<rect x='40' y='40' width='1120' height='550' rx='18' fill='none' stroke='#16203a' stroke-width='2'/>
+<text x='600' y='300' text-anchor='middle' font-family="Consolas, 'Courier New', monospace" font-size='120' font-weight='700' letter-spacing='14' fill='#E6F1FF'>VIKRAM</text>
+<text x='600' y='360' text-anchor='middle' font-family="Consolas, 'Courier New', monospace" font-size='26' letter-spacing='9' fill='#00E5FF'>AI / ML ENGINEER</text>
+<text x='600' y='410' text-anchor='middle' font-family="Consolas, 'Courier New', monospace" font-size='16' fill='#8ea3bd'>IDEALISTIC AI AGENTS SOLVING REAL-WORLD PROBLEMS</text>
+<rect x='340' y='470' width='520' height='3' rx='1.5' fill='url(#rz)'/>
+<text x='600' y='520' text-anchor='middle' font-family="Consolas, 'Courier New', monospace" font-size='15' fill='#5A6B85'>github.com/vikrambtech2025-png</text>
+</svg>

@@ -1,0 +1,149 @@
+{
+  "user": "vikrambtech2025-png",
+  "generated_at": "2026-10-17T17:55:34Z",
+  "stats": {
+    "repos": 199,
+    "followers": 6,
+    "following": 24,
+    "stars": 0,
+    "contributions": 453,
+    "current_streak": 1,
+    "longest_streak": 4
+  },
+  "languages": [
+    {
+      "name": "Jupyter Notebook",
+      "bytes": 87582848
+    },
+    {
+      "name": "Python",
+      "bytes": 2686613
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 158655
+    },
+    {
+      "name": "HTML",
+      "bytes": 88788
+    },
+    {
+      "name": "Dockerfile",
+      "bytes": 76536
+    },
+    {
+      "name": "TypeScript",
+      "bytes": 60408
+    },
+    {
+      "name": "CSS",
+      "bytes": 37798
+    },
+    {
+      "name": "Java",
+      "bytes": 13995
+    },
+    {
+      "name": "Makefile",
+      "bytes": 5938
+    },
+    {
+      "name": "PowerShell",
+      "bytes": 4444
+    },
+    {
+      "name": "Shell",
+      "bytes": 1412
+    },
+    {
+      "name": "Procfile",
+      "bytes": 192
+    }
+  ],
+  "repos": [
+    {
+      "name": "vikrambtech2025-png",
+      "description": "AI/ML Engineer building production RAG systems, LLM applications, and autonomous agents.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/vikrambtech2025-png"
+    },
+    {
+      "name": "citecheck",
+      "description": "A research agent where every citation is programmatically verified. Hand-rolled tool loop, guardrails at the capability layer, and an eval suite that publishes its own failures. Runs on a 6 GB GPU with no API key.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/citecheck"
+    },
+    {
+      "name": "LangGraph-Agent",
+      "description": "A multi-agent LangGraph research workflow: analyst personas, parallel interview loops with Tavily web search, and cited report synthesis.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/LangGraph-Agent"
+    },
+    {
+      "name": "colpali-rag",
+      "description": "Multimodal RAG with ColPali late-interaction visual retrieval, hybrid dense+BM25 search over Qdrant, pytest suite and retrieval evals.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/colpali-rag"
+    },
+    {
+      "name": "production-rag",
+      "description": "Production-style RAG pipeline built on Inngest event-driven workflows, FastAPI function host, OpenAI embeddings, and Qdrant vector search.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/production-rag"
+    },
+    {
+      "name": "heart-failure-prediction",
+      "description": "Heart Failure Prediction - tabular classification ML service using PyTorch on the heart failure clinical data dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/heart-failure-prediction"
+    },
+    {
+      "name": "xgboost-implementation",
+      "description": "XGBoost Implementation - ML service using Other on the Not required (see project). dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/xgboost-implementation"
+    },
+    {
+      "name": "winequalitytest",
+      "description": "WineQualityTest - tabular classification ML service using XGBoost on the red wine quality cortez cortez dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/winequalitytest"
+    },
+    {
+      "name": "white-wine-quality-prediction",
+      "description": "White Wine Quality Prediction - tabular classification ML service using scikit-learn on the white wine quality dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/white-wine-quality-prediction"
+    },
+    {
+      "name": "weather-forecasting",
+      "description": "Weather Forecasting - time series ML service using XGBoost on the weather data of all countries dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/weather-forecasting"
+    },
+    {
+      "name": "water-soil-wetness-prediction",
+      "description": "Water Soil Wetness Prediction - tabular regression ML service using TensorFlow on the soil moisture dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/water-soil-wetness-prediction"
+    },
+    {
+      "name": "walmart-sales-prediction",
+      "description": "Walmart Sales Prediction - time series ML service using scikit-learn on the walmart dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/walmart-sales-prediction"
+    }
+  ]
+}
