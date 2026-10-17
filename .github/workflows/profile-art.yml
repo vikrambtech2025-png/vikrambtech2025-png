@@ -55,6 +55,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to publish."
           else
-            git commit -m "chore(art): refresh generated profile art [skip ci]"
+            git commit -m "chore(art): refresh generated profile art"
             git push
           fi
