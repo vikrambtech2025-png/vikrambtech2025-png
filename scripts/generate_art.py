@@ -17,6 +17,7 @@ import html
 import json
 import os
 import re
+import shutil
 import sys
 import urllib.request
 from datetime import datetime, timedelta
@@ -406,6 +407,19 @@ def write(name, content):
     print("wrote", path, len(content), "bytes")
 
 
+def mirror_to_docs():
+    # Copy every SVG into docs/assets so the GitHub Pages site is live too.
+    dst = os.path.join("docs", "assets")
+    os.makedirs(dst, exist_ok=True)
+    for src_dir in (os.path.join("assets", "obsidian"), OUT_DIR):
+        if not os.path.isdir(src_dir):
+            continue
+        for fn in sorted(os.listdir(src_dir)):
+            if fn.endswith(".svg"):
+                shutil.copyfile(os.path.join(src_dir, fn), os.path.join(dst, fn))
+    print("mirrored svgs ->", dst)
+
+
 def main():
     try:
         user = api("/users/" + USER)
@@ -426,6 +440,7 @@ def main():
     write("stats.svg", build_stats(repos, followers, following, contrib))
     write("tech-stack.svg", build_tech())
     write("featured-projects.svg", build_projects(repos))
+    mirror_to_docs()
 
 
 if __name__ == "__main__":

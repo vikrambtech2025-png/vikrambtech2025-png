@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 976 410" width="976" height="410" role="img" aria-label="Featured projects">
+
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="1" stop-color="#05070d"/>
+    </linearGradient>
+  </defs>
+<rect width="976" height="410" fill="url(#pbg)"/>
+<rect x="1" y="1" width="974" height="408" rx="14" fill="none" stroke="#16203a" stroke-width="2"/>
+<text x="26" y="38" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#00E5FF">FEATURED SYSTEMS</text>
+<text x="950" y="38" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="11.5" fill="#5A6B85">live star counts</text>
+<rect x="26" y="56" width="454" height="96" rx="10" fill="#070c16" stroke="#16203a"/>
+<rect x="26" y="66" width="4" height="76" rx="2" fill="#00E5FF"/>
+<text x="44" y="84" font-family="Consolas, 'Courier New', monospace" font-size="14.5" font-weight="700" fill="#00E5FF">LangGraph-Agent</text>
+<text x="44" y="106" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#8ea3bd">A multi-agent LangGraph research workflow: analyst personas, parallel inter...</text>
+<text x="44" y="132" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#5A6B85">Python</text>
+<text x="462" y="132" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#FFB300">0 stars</text>
+<rect x="496" y="56" width="454" height="96" rx="10" fill="#070c16" stroke="#16203a"/>
+<rect x="496" y="66" width="4" height="76" rx="2" fill="#8B5CF6"/>
+<text x="514" y="84" font-family="Consolas, 'Courier New', monospace" font-size="14.5" font-weight="700" fill="#8B5CF6">citecheck</text>
+<text x="514" y="106" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#8ea3bd">A research agent where every citation is programmatically verified. Hand-ro...</text>
+<text x="514" y="132" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#5A6B85">Python</text>
+<text x="932" y="132" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#FFB300">0 stars</text>
+<rect x="26" y="168" width="454" height="96" rx="10" fill="#070c16" stroke="#16203a"/>
+<rect x="26" y="178" width="4" height="76" rx="2" fill="#FF1F4B"/>
+<text x="44" y="196" font-family="Consolas, 'Courier New', monospace" font-size="14.5" font-weight="700" fill="#FF1F4B">production-rag</text>
+<text x="44" y="218" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#8ea3bd">Production-style RAG pipeline built on Inngest event-driven workflows, Fast...</text>
+<text x="44" y="244" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#5A6B85">Python</text>
+<text x="462" y="244" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#FFB300">0 stars</text>
+<rect x="496" y="168" width="454" height="96" rx="10" fill="#070c16" stroke="#16203a"/>
+<rect x="496" y="178" width="4" height="76" rx="2" fill="#FFB300"/>
+<text x="514" y="196" font-family="Consolas, 'Courier New', monospace" font-size="14.5" font-weight="700" fill="#FFB300">colpali-rag</text>
+<text x="514" y="218" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#8ea3bd">Multimodal RAG with ColPali late-interaction visual retrieval, hybrid dense...</text>
+<text x="514" y="244" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#5A6B85">Python</text>
+<text x="932" y="244" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#FFB300">0 stars</text>
+<rect x="26" y="280" width="454" height="96" rx="10" fill="#070c16" stroke="#16203a"/>
+<rect x="26" y="290" width="4" height="76" rx="2" fill="#22C55E"/>
+<text x="44" y="308" font-family="Consolas, 'Courier New', monospace" font-size="14.5" font-weight="700" fill="#22C55E">MOIL-Manganese-AI</text>
+<text x="44" y="330" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#8ea3bd">AI/ML + Space Technology decision-support platform for MOIL Limited (Minist...</text>
+<text x="44" y="356" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#5A6B85">Python</text>
+<text x="462" y="356" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#FFB300">0 stars</text>
+<rect x="496" y="280" width="454" height="96" rx="10" fill="#070c16" stroke="#16203a"/>
+<rect x="496" y="290" width="4" height="76" rx="2" fill="#00E5FF"/>
+<text x="514" y="308" font-family="Consolas, 'Courier New', monospace" font-size="14.5" font-weight="700" fill="#00E5FF">alpaka-mcp</text>
+<text x="514" y="330" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#8ea3bd">MCP server + CLI for Alpaca Trading API — trade stocks, ETFs, and crypto th...</text>
+<text x="514" y="356" font-family="Consolas, 'Courier New', monospace" font-size="10.8" fill="#5A6B85">Python</text>
+<text x="932" y="356" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#FFB300">0 stars</text>
+</svg>

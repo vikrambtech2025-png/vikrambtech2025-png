@@ -47,6 +47,8 @@
   .type{margin-top:18px; color:var(--mid); min-height:24px}
   .type .cur{color:var(--cyan); animation:blink 1s steps(1) infinite}
   @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  .fig{width:100%; display:block; border:1px solid var(--edge); border-radius:14px; background:#000; margin:0 0 22px}
+  .banner{border:none; border-radius:0; margin:0 auto 8px; max-width:1000px}
   .cta{margin-top:30px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
   .btn{
     border:1px solid var(--edge); background:#070c16; color:var(--ink);
@@ -102,6 +104,7 @@
     <div class="logo">V<b>I</b>KRAM</div>
     <nav>
       <a href="#about">about</a>
+      <a href="#live">live</a>
       <a href="#work">work</a>
       <a href="#stack">stack</a>
       <a href="#contact">contact</a>
@@ -111,9 +114,7 @@
 
 <main class="wrap">
   <section class="hero" style="border:none">
-    <div class="kicker">AI / ML ENGINEER</div>
-    <h1>VIKRAM</h1>
-    <div class="role">RAG SYSTEMS · LLM APPLICATIONS · AUTONOMOUS AGENTS</div>
+    <img class="fig banner" src="assets/hero-void.svg" alt="Vikram — AI/ML Engineer"/>
     <div class="type"><span id="typed"></span><span class="cur">▊</span></div>
     <div class="cta">
       <a class="btn primary" href="https://github.com/vikrambtech2025-png">GitHub</a>
@@ -137,16 +138,17 @@
       their sources, agents that plan, and vision models that see. 199 repositories deep, and every one is a lesson.
       I care about systems that <b style="color:var(--cyan)">prove</b> what they claim.
     </p>
-    <div class="stat reveal" style="margin-top:22px">
-      <div><b>199</b><span>PUBLIC REPOS</span></div>
-      <div><b>449</b><span>CONTRIBUTIONS / YR</span></div>
-      <div><b>6 GB</b><span>GPU BUDGET</span></div>
-      <div><b>0</b><span>THIRD-PARTY DEPS</span></div>
-    </div>
+    <img class="fig reveal" src="assets/stats.svg" alt="GitHub stats" style="margin-top:22px"/>
+  </section>
+
+  <section id="live">
+    <h2>LIVE CITY <span>// every tower is a real day of code</span></h2>
+    <img class="fig reveal" src="assets/contribution-city.svg" alt="Isometric 3D contribution city"/>
   </section>
 
   <section id="work">
     <h2>FEATURED SYSTEMS <span>// shipped</span></h2>
+    <img class="fig reveal" src="assets/rag-pipeline.svg" alt="RAG pipeline"/>
     <div class="grid">
       <a class="card reveal" href="https://github.com/vikrambtech2025-png/citecheck">
         <h3>🔍 citecheck</h3>
@@ -183,6 +185,7 @@
 
   <section id="stack">
     <h2>STACK <span>// real deps</span></h2>
+    <img class="fig reveal" src="assets/tech-stack.svg" alt="Tech stack"/>
     <div class="chips reveal">
       <span class="chip">Python</span><span class="chip">LangChain</span><span class="chip">LangGraph</span>
       <span class="chip">OpenAI</span><span class="chip">Hugging Face</span><span class="chip">ColPali</span>
@@ -203,6 +206,8 @@
       🐙 <a href="https://github.com/vikrambtech2025-png">GitHub</a>
     </p>
   </section>
+
+  <img class="fig reveal" src="assets/footer-void.svg" alt="footer" style="margin-bottom:0"/>
 
   <footer>
     <div><span class="egg glitch" title="the terminal never lies">built with python + obsession</span></div>

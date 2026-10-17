@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Animated RAG pipeline">
+  <defs>
+    <linearGradient id="rbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset="1" stop-color="#05070d"/>
+    </linearGradient>
+    <linearGradient id="rbox" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#060a13"/>
+    </linearGradient>
+    <linearGradient id="rline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00E5FF"/>
+      <stop offset="0.5" stop-color="#FF1F4B"/>
+      <stop offset="1" stop-color="#FFB300"/>
+    </linearGradient>
+    <filter id="rglow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="rgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#0c1424" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <style><![CDATA[
+    .flow{stroke-dasharray:6 8;animation:rflow 2.6s linear infinite}
+    @keyframes rflow{to{stroke-dashoffset:-140}}
+    .pkt{animation:pkt 6s cubic-bezier(.5,0,.5,1) infinite}
+    @keyframes pkt{0%{transform:translateX(0);opacity:0}6%{opacity:1}94%{opacity:1}100%{transform:translateX(800px);opacity:0}}
+    .lit{animation:lit 6s linear infinite}
+    @keyframes lit{0%,100%{opacity:.25}50%{opacity:1}}
+    .pulse{animation:rp 2.4s ease-in-out infinite}
+    .pulse2{animation:rp 2.4s ease-in-out infinite;animation-delay:.4s}
+    .pulse3{animation:rp 2.4s ease-in-out infinite;animation-delay:.8s}
+    @keyframes rp{0%,100%{opacity:.4}50%{opacity:1}}
+  ]]></style>
+
+  <rect width="1200" height="300" fill="url(#rbg)"/>
+  <rect width="1200" height="300" fill="url(#rgrid)" opacity="0.7"/>
+  <rect x="1" y="1" width="1198" height="298" rx="14" fill="none" stroke="#16203a" stroke-width="2"/>
+
+  <text x="34" y="40" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#00E5FF">RAG PIPELINE</text>
+  <text x="1166" y="40" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#5A6B85">query &#8594; grounded answer</text>
+
+  <!-- connecting line + packets -->
+  <line x1="190" y1="155" x2="1040" y2="155" stroke="#12203a" stroke-width="4"/>
+  <line class="flow" x1="190" y1="155" x2="1040" y2="155" stroke="url(#rline)" stroke-width="2.4"/>
+  <circle class="pkt" cx="190" cy="155" r="6" fill="#00E5FF" filter="url(#rglow)"/>
+  <circle class="pkt" cx="190" cy="155" r="6" fill="#FFB300" filter="url(#rglow)" style="animation-delay:3s"/>
+
+  <!-- stage boxes -->
+  <g font-family="Consolas, 'Courier New', monospace">
+    <!-- 1 docs -->
+    <rect class="lit" x="40" y="110" width="150" height="90" rx="10" fill="url(#rbox)" stroke="#00E5FF" stroke-width="1.6"/>
+    <text x="115" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#E6F1FF">DOCS</text>
+    <text x="115" y="170" text-anchor="middle" font-size="10.5" fill="#5A6B85">pdf/docx/csv</text>
+    <!-- 2 chunk -->
+    <rect class="lit" x="240" y="110" width="150" height="90" rx="10" fill="url(#rbox)" stroke="#8B5CF6" stroke-width="1.6"/>
+    <text x="315" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#E6F1FF">CHUNK</text>
+    <text x="315" y="170" text-anchor="middle" font-size="10.5" fill="#5A6B85">split + clean</text>
+    <!-- 3 embed -->
+    <rect class="lit" x="440" y="110" width="150" height="90" rx="10" fill="url(#rbox)" stroke="#00E5FF" stroke-width="1.6"/>
+    <text x="515" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#E6F1FF">EMBED</text>
+    <text x="515" y="170" text-anchor="middle" font-size="10.5" fill="#5A6B85">vectorize</text>
+    <!-- 4 vector db -->
+    <rect class="lit" x="640" y="110" width="150" height="90" rx="10" fill="url(#rbox)" stroke="#FF1F4B" stroke-width="1.6"/>
+    <text x="715" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#E6F1FF">VECTOR DB</text>
+    <text x="715" y="170" text-anchor="middle" font-size="10.5" fill="#5A6B85">faiss / qdrant</text>
+    <!-- 5 llm -->
+    <rect class="lit" x="840" y="110" width="150" height="90" rx="10" fill="url(#rbox)" stroke="#FFB300" stroke-width="1.6"/>
+    <text x="915" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#E6F1FF">LLM</text>
+    <text x="915" y="170" text-anchor="middle" font-size="10.5" fill="#5A6B85">reason + cite</text>
+    <!-- 6 answer -->
+    <rect class="lit" x="1040" y="110" width="150" height="90" rx="10" fill="url(#rbox)" stroke="#22C55E" stroke-width="1.6"/>
+    <text x="1115" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#E6F1FF">ANSWER</text>
+    <text x="1115" y="170" text-anchor="middle" font-size="10.5" fill="#5A6B85">verified</text>
+  </g>
+
+  <!-- small nodes -->
+  <g fill="#00E5FF">
+    <circle class="pulse" cx="115" cy="228" r="4"/>
+    <circle class="pulse2" cx="315" cy="228" r="4"/>
+    <circle class="pulse3" cx="515" cy="228" r="4"/>
+  </g>
+  <g fill="#FF1F4B">
+    <circle class="pulse" cx="715" cy="228" r="4"/>
+  </g>
+  <g fill="#FFB300">
+    <circle class="pulse2" cx="915" cy="228" r="4"/>
+  </g>
+  <g fill="#22C55E">
+    <circle class="pulse3" cx="1115" cy="228" r="4"/>
+  </g>
+  <text x="600" y="268" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" fill="#5A6B85">every claim traceable &#183; no hallucinated sources</text>
+</svg>
