@@ -831,14 +831,14 @@ def build_skillbars():
         cx = 20 + (i // rows) * gap_x
         cy = top + (i % rows) * rowh
         fw = int(bar_w * lvl / 100.0)
-        o.append("<text x='%d' y='%d' font-family=\"%s\" font-size='11' fill='%s'>%s</text>"
+        o.append("<text x='%d' y='%d' text-anchor='end' font-family=\"%s\" font-size='11' fill='%s'>%s</text>"
                  % (cx + 116, cy + 9, MONO, col, g.esc(name)))
         o.append("<rect x='%d' y='%d' width='%d' height='9' rx='4.5' fill='#0b1220' stroke='%s' stroke-opacity='.7'/>"
                  % (cx + 122, cy, bar_w, col))
         o.append("<rect x='%d' y='%d' width='%d' height='9' rx='4.5' fill='%s' fill-opacity='.85'/>"
                  % (cx + 122, cy, fw, col))
-        o.append("<text x='%d' y='%d' font-family=\"%s\" font-size='9' fill='#5A6B85'>%d</text>"
-                 % (cx + 122 + bar_w + 8, cy + 9, MONO, lvl))
+        o.append("<text x='%d' y='%d' text-anchor='end' font-family=\"%s\" font-size='9' fill='#5A6B85'>%d</text>"
+                 % (cx + 122 + bar_w + 14, cy + 9, MONO, lvl))
         o.append("<g clip-path='url(#tracks)'><rect x='%d' y='%d' width='26' height='9' fill='url(#shine)'>"
                  "<animate attributeName='x' values='%d;%d' dur='2.8s' begin='%.2fs' repeatCount='infinite'/>"
                  "</rect></g>" % (cx + 122, cy, cx + 122 - 26, cx + 122 + bar_w, i * 0.19))

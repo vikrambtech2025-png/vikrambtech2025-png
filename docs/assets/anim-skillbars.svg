@@ -16,64 +16,64 @@
 <rect x='512' y='164' width='210' height='9' rx='4.5'/>
 </clipPath></defs>
 <text x='370' y='20' text-anchor='middle' font-family="Consolas, 'Courier New', monospace" font-size='11' font-weight='700' fill='#00E5FF'>&#9889; LIVE SKILL MATRIX</text>
-<text x='136' y='43' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#00E5FF'>Python</text>
+<text x='136' y='43' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#00E5FF'>Python</text>
 <rect x='142' y='34' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#00E5FF' stroke-opacity='.7'/>
 <rect x='142' y='34' width='201' height='9' rx='4.5' fill='#00E5FF' fill-opacity='.85'/>
-<text x='360' y='43' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>96</text>
+<text x='366' y='43' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>96</text>
 <g clip-path='url(#tracks)'><rect x='142' y='34' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='116;352' dur='2.8s' begin='0.00s' repeatCount='infinite'/></rect></g>
-<text x='136' y='69' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#22C55E'>LangChain</text>
+<text x='136' y='69' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#22C55E'>LangChain</text>
 <rect x='142' y='60' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#22C55E' stroke-opacity='.7'/>
 <rect x='142' y='60' width='193' height='9' rx='4.5' fill='#22C55E' fill-opacity='.85'/>
-<text x='360' y='69' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>92</text>
+<text x='366' y='69' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>92</text>
 <g clip-path='url(#tracks)'><rect x='142' y='60' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='116;352' dur='2.8s' begin='0.19s' repeatCount='infinite'/></rect></g>
-<text x='136' y='95' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#22C55E'>LangGraph</text>
+<text x='136' y='95' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#22C55E'>LangGraph</text>
 <rect x='142' y='86' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#22C55E' stroke-opacity='.7'/>
 <rect x='142' y='86' width='184' height='9' rx='4.5' fill='#22C55E' fill-opacity='.85'/>
-<text x='360' y='95' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>88</text>
+<text x='366' y='95' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>88</text>
 <g clip-path='url(#tracks)'><rect x='142' y='86' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='116;352' dur='2.8s' begin='0.38s' repeatCount='infinite'/></rect></g>
-<text x='136' y='121' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#FF1F4B'>PyTorch</text>
+<text x='136' y='121' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#FF1F4B'>PyTorch</text>
 <rect x='142' y='112' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#FF1F4B' stroke-opacity='.7'/>
 <rect x='142' y='112' width='178' height='9' rx='4.5' fill='#FF1F4B' fill-opacity='.85'/>
-<text x='360' y='121' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>85</text>
+<text x='366' y='121' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>85</text>
 <g clip-path='url(#tracks)'><rect x='142' y='112' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='116;352' dur='2.8s' begin='0.57s' repeatCount='infinite'/></rect></g>
-<text x='136' y='147' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#FFB300'>Hugging Face</text>
+<text x='136' y='147' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#FFB300'>Hugging Face</text>
 <rect x='142' y='138' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#FFB300' stroke-opacity='.7'/>
 <rect x='142' y='138' width='189' height='9' rx='4.5' fill='#FFB300' fill-opacity='.85'/>
-<text x='360' y='147' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>90</text>
+<text x='366' y='147' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>90</text>
 <g clip-path='url(#tracks)'><rect x='142' y='138' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='116;352' dur='2.8s' begin='0.76s' repeatCount='infinite'/></rect></g>
-<text x='136' y='173' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#FF1F4B'>ColPali</text>
+<text x='136' y='173' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#FF1F4B'>ColPali</text>
 <rect x='142' y='164' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#FF1F4B' stroke-opacity='.7'/>
 <rect x='142' y='164' width='172' height='9' rx='4.5' fill='#FF1F4B' fill-opacity='.85'/>
-<text x='360' y='173' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>82</text>
+<text x='366' y='173' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>82</text>
 <g clip-path='url(#tracks)'><rect x='142' y='164' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='116;352' dur='2.8s' begin='0.95s' repeatCount='infinite'/></rect></g>
-<text x='506' y='43' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#00E5FF'>FAISS</text>
+<text x='506' y='43' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#00E5FF'>FAISS</text>
 <rect x='512' y='34' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#00E5FF' stroke-opacity='.7'/>
 <rect x='512' y='34' width='176' height='9' rx='4.5' fill='#00E5FF' fill-opacity='.85'/>
-<text x='730' y='43' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>84</text>
+<text x='736' y='43' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>84</text>
 <g clip-path='url(#tracks)'><rect x='512' y='34' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='486;722' dur='2.8s' begin='1.14s' repeatCount='infinite'/></rect></g>
-<text x='506' y='69' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#FF1F4B'>Qdrant</text>
+<text x='506' y='69' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#FF1F4B'>Qdrant</text>
 <rect x='512' y='60' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#FF1F4B' stroke-opacity='.7'/>
 <rect x='512' y='60' width='168' height='9' rx='4.5' fill='#FF1F4B' fill-opacity='.85'/>
-<text x='730' y='69' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>80</text>
+<text x='736' y='69' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>80</text>
 <g clip-path='url(#tracks)'><rect x='512' y='60' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='486;722' dur='2.8s' begin='1.33s' repeatCount='infinite'/></rect></g>
-<text x='506' y='95' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#00E5FF'>FastAPI</text>
+<text x='506' y='95' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#00E5FF'>FastAPI</text>
 <rect x='512' y='86' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#00E5FF' stroke-opacity='.7'/>
 <rect x='512' y='86' width='182' height='9' rx='4.5' fill='#00E5FF' fill-opacity='.85'/>
-<text x='730' y='95' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>87</text>
+<text x='736' y='95' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>87</text>
 <g clip-path='url(#tracks)'><rect x='512' y='86' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='486;722' dur='2.8s' begin='1.52s' repeatCount='infinite'/></rect></g>
-<text x='506' y='121' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#8B5CF6'>OpenCV</text>
+<text x='506' y='121' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#8B5CF6'>OpenCV</text>
 <rect x='512' y='112' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#8B5CF6' stroke-opacity='.7'/>
 <rect x='512' y='112' width='163' height='9' rx='4.5' fill='#8B5CF6' fill-opacity='.85'/>
-<text x='730' y='121' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>78</text>
+<text x='736' y='121' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>78</text>
 <g clip-path='url(#tracks)'><rect x='512' y='112' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='486;722' dur='2.8s' begin='1.71s' repeatCount='infinite'/></rect></g>
-<text x='506' y='147' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#00E5FF'>Unsloth</text>
+<text x='506' y='147' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#00E5FF'>Unsloth</text>
 <rect x='512' y='138' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#00E5FF' stroke-opacity='.7'/>
 <rect x='512' y='138' width='155' height='9' rx='4.5' fill='#00E5FF' fill-opacity='.85'/>
-<text x='730' y='147' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>74</text>
+<text x='736' y='147' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>74</text>
 <g clip-path='url(#tracks)'><rect x='512' y='138' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='486;722' dur='2.8s' begin='1.90s' repeatCount='infinite'/></rect></g>
-<text x='506' y='173' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#FF1F4B'>Streamlit</text>
+<text x='506' y='173' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='11' fill='#FF1F4B'>Streamlit</text>
 <rect x='512' y='164' width='210' height='9' rx='4.5' fill='#0b1220' stroke='#FF1F4B' stroke-opacity='.7'/>
 <rect x='512' y='164' width='170' height='9' rx='4.5' fill='#FF1F4B' fill-opacity='.85'/>
-<text x='730' y='173' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>81</text>
+<text x='736' y='173' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#5A6B85'>81</text>
 <g clip-path='url(#tracks)'><rect x='512' y='164' width='26' height='9' fill='url(#shine)'><animate attributeName='x' values='486;722' dur='2.8s' begin='2.09s' repeatCount='infinite'/></rect></g>
 </svg>
