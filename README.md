@@ -83,6 +83,7 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 <div align="center">
 
 ![building idealistic AI agents for real-world problems](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/status-agents.svg)
+![Achievement: YOLO — merged without review](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/achievement-yolo.svg)
 
 <br/><br/>
 
@@ -109,6 +110,16 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 ![Streamlit](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-streamlit.svg)
 
 </div>
+
+<br/>
+
+## 🏆 GitHub Achievements <sub><i>— awarded by GitHub for real activity, verified on my profile</i></sub>
+
+| Badge | Earned by |
+| --- | --- |
+| 🟡 **YOLO** | Merged a pull request without code review — [see it live →](https://github.com/vikrambtech2025-png?tab=achievements) |
+
+*These are awarded by GitHub itself as the work happens — nothing here is imported from a third party, same rule as everything else in this README. New achievements show up here as they land.*
 
 <br/>
 

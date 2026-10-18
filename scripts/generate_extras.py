@@ -571,6 +571,32 @@ def filled(text, color, text_color="#000000"):
     return "\n".join(o)
 
 
+def achievement(name, note, color="#FFB300"):
+    # reversed two-tone: filled name segment on the left, dark note segment on the right
+    fs, cw, pad, h = 11, 6.7, 22, 22
+    lw = _width(name, fs, cw, pad) + 8
+    rw = _width(note, fs, cw, pad)
+    total = lw + rw
+    o = [g.svg_header(total, h, "Achievement: %s" % name),
+         "<defs><linearGradient id='gl' x1='0' y1='0' x2='0' y2='1'>"
+         "<stop offset='0' stop-color='#ffffff' stop-opacity='.22'/>"
+         "<stop offset='1' stop-color='#ffffff' stop-opacity='0'/></linearGradient>"
+         "<clipPath id='cp'><rect width='%d' height='%d' rx='4'/></clipPath></defs>" % (total, h),
+         "<g clip-path='url(#cp)'>",
+         "<rect width='%d' height='%d' fill='#0b1220'/>" % (total, h),
+         "<rect width='%d' height='%d' fill='%s'/>" % (lw, h, color),
+         "<rect width='%d' height='%d' fill='url(#gl)'/>" % (total, h),
+         "</g>",
+         "<rect x='.5' y='.5' width='%d' height='%d' rx='3.5' fill='none' stroke='%s' stroke-opacity='.9'/>"
+         % (total - 1, h - 1, color),
+         "<text x='%.1f' y='15' text-anchor='middle' font-family=\"%s\" font-size='%d' font-weight='700' fill='#000000'>%s</text>"
+         % (lw / 2.0, MONO, fs, g.esc(name)),
+         "<text x='%.1f' y='15' text-anchor='middle' font-family=\"%s\" font-size='%d' fill='%s'>%s</text>"
+         % (lw + rw / 2.0, MONO, fs, color, g.esc(note)),
+         "</svg>"]
+    return "\n".join(o)
+
+
 def build_badges(agg, contrib, followers, repos):
     total, longest, cur = g.streaks(contrib)
     top_lang = max(agg.items(), key=lambda kv: kv[1])[0] if agg else "-"
@@ -578,6 +604,9 @@ def build_badges(agg, contrib, followers, repos):
 
     # status chip — the one-liner that says what you're about
     write_badge("status-agents.svg", filled("building idealistic AI agents for real-world problems", "#00E5FF"))
+
+    # GitHub achievement badge — earned, shown in the README too
+    write_badge("achievement-yolo.svg", achievement("YOLO", "merged without review"))
 
     # live data badges
     data = [("contributions", str(total), "#22C55E"),
