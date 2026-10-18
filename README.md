@@ -206,6 +206,19 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 
 <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/constellation.svg" width="100%" alt="Repository constellation map"/>
 
+<br/>
+
+<table align="center" width="100%">
+<tr>
+<td width="50%" align="center"><img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/heatmap-rolling.gif" width="100%" alt="Rolling 56-day contribution heatmap — one new frame every day"/></td>
+<td width="50%" align="center"><img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/boot-terminal.gif" width="100%" alt="Self-hosted terminal boot sequence"/></td>
+</tr>
+</table>
+
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/stats-flipbook.gif" width="400" alt="Stats flipbook — contributions, streaks, repos, top language, mission"/>
+
+<sub>🎬 All three GIFs are rendered frame-by-frame by the same GitHub Action that draws the SVGs above — no GIF host, no animation service, no third party. The heatmap gets a fresh frame every day as real contributions land.</sub>
+
 </div>
 
 <br/>

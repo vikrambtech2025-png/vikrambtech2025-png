@@ -44,6 +44,14 @@ jobs:
           PROFILE_USER: vikrambtech2025-png
         run: python scripts/generate_extras.py
 
+      - name: Render animated GIFs (heatmap, flipbook, boot)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_USER: vikrambtech2025-png
+        run: |
+          python -m pip install --quiet pillow
+          python scripts/generate_gifs.py
+
       - name: Rasterize social card to PNG
         run: rsvg-convert -w 1200 -h 630 docs/og-card.svg -o docs/og.png
 
