@@ -309,15 +309,6 @@ def build_city(contrib):
         body.append(
             '<polygon points="%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f" fill="%s"%s/>'
             % (x, y + s, x + s, y + s / 2, x + s, y + s / 2 + h, x, y + s + h, f["right"], cls))
-        body.append("</g>")
-        if (x, y) in sl_set:
-            bi = sl_set.index((x, y))
-            body.append("<g class='sl' style='animation-delay:%.1fs'>"
-                        "<polygon points='%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f' fill='url(#cone)' stroke='none'/>"
-                        "</g>" % (-bi * 3.1, x - 3, y + 2, x + 3, y + 2, x + 30, y - 150, x - 30, y - 150))
-        if f["ds"] in uplink_idx:
-            body.append("<rect class='beamup' x='%.1f' y='%.1f' width='2' height='44' fill='url(#upl)' stroke='none' style='animation-delay:%.2fs'/>"
-                        % (x - 1, y - 44, -uplink_idx[f["ds"]] * 0.45))
         if f["lvl"] >= 1:
             wrnd = random.Random(f["w"] * 7919 + f["day"] * 104729 + 13)
             wcol = "#ffd98a" if wrnd.random() < 0.6 else "#bfefff"
@@ -345,6 +336,15 @@ def build_city(contrib):
                                 % (wrnd.choice((5.3, 6.8, 8.1)), -wrnd.uniform(0, 9), "".join(wins)))
                 else:
                     body.append("".join(wins))  # static: no animation budget spent
+        body.append("</g>")
+        if (x, y) in sl_set:
+            bi = sl_set.index((x, y))
+            body.append("<g class='sl' style='animation-delay:%.1fs'>"
+                        "<polygon points='%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f' fill='url(#cone)' stroke='none'/>"
+                        "</g>" % (-bi * 3.1, x - 3, y + 2, x + 3, y + 2, x + 30, y - 150, x - 30, y - 150))
+        if f["ds"] in uplink_idx:
+            body.append("<rect class='beamup' x='%.1f' y='%.1f' width='2' height='44' fill='url(#upl)' stroke='none' style='animation-delay:%.2fs'/>"
+                        % (x - 1, y - 44, -uplink_idx[f["ds"]] * 0.45))
     body.append("</g>")
     body.append("</g>")
 

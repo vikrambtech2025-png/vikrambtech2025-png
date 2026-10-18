@@ -192,6 +192,25 @@
   #matrix{position:fixed; inset:0; z-index:150; pointer-events:none; opacity:0; transition:opacity .5s}
   #matrix.on{opacity:.55}
 
+  /* ── contribution city (inline SVG: parallax + tower inspect) ── */
+  .citywrap{position:relative}
+  .citywrap > svg{width:100%; height:auto; display:block}
+  .cityTip{
+    position:absolute; z-index:3; pointer-events:none; opacity:0;
+    transform:translate(-50%,-140%); transition:opacity .16s ease;
+    background:#04070f; border:1px solid var(--accent); border-radius:8px;
+    padding:7px 11px; font-size:12px; color:var(--ink); white-space:nowrap;
+    box-shadow:0 10px 30px -12px rgba(0,229,255,.55); letter-spacing:.3px;
+  }
+  .cityTip.on{opacity:1}
+  .cityTip .d{color:var(--accent)}
+  .cityTip .rest{color:var(--dim)}
+  .citywrap g[data-d]{cursor:crosshair}
+  .citywrap g[data-d] polygon, .citywrap g[data-d] rect{transition:filter .15s ease}
+  .citywrap g[data-d]:hover polygon, .citywrap g[data-d]:hover rect{
+    filter:brightness(1.8) drop-shadow(0 0 4px rgba(0,229,255,.6));
+  }
+
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto}
     *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important}
@@ -849,6 +868,58 @@ document.getElementById('dlResume').addEventListener('click', () => { location.h
     k = (e.key === seq[k]) ? k + 1 : (e.key === seq[0] ? 1 : 0);
     if (k === seq.length){ k = 0; cv.classList.contains('on') ? off() : on(); }
   });
+})();
+/* ── contribution city: inline SVG, pointer parallax, tower inspect ── */
+(function(){
+  const img = document.querySelector('img[src="assets/contribution-city.svg"]');
+  if (!img) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(pointer:fine)').matches;
+  fetch(img.getAttribute('src')).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(txt => {
+    const wrap = document.createElement('div');
+    wrap.className = 'fig citywrap';             // .citywrap: positioned wrapper + responsive svg; no .reveal (never observed)
+    wrap.setAttribute('role', 'img');
+    wrap.setAttribute('aria-label', img.alt || 'Contribution city');
+    wrap.innerHTML = txt;
+    const tip = document.createElement('div');
+    tip.className = 'cityTip';
+    wrap.appendChild(tip);
+    img.replaceWith(wrap);
+    if (!fine) return;                            // touch: static city, no hover inspect
+    let tx = 0, ty = 0, cx = 0, cy = 0;
+    /* hover inspection — real date + contribution count from the generator's data attrs */
+    wrap.addEventListener('pointermove', e => {
+      const t = e.target.closest ? e.target.closest('g[data-d]') : null;
+      if (!t){ tip.classList.remove('on'); return; }
+      const d = t.dataset, r = wrap.getBoundingClientRect();
+      tip.innerHTML = '<span class="d">' + d.d + '</span> — ' +
+        (d.c === '0' ? '<span class="rest">rest day</span>'
+                     : d.c + ' contribution' + (d.c === '1' ? '' : 's') + ' · level ' + d.l);
+      tip.style.left = Math.min(Math.max(e.clientX - r.left, 70), Math.max(r.width - 70, 70)) + 'px';
+      tip.style.top = (e.clientY - r.top) + 'px';
+      tip.classList.add('on');
+    });
+    wrap.addEventListener('pointerleave', () => { tip.classList.remove('on'); tx = 0; ty = 0; });
+    if (reduce) return;
+    const sky = wrap.querySelector('#Lsky'), city = wrap.querySelector('#Lcity'), front = wrap.querySelector('#Lfront');
+    if (!sky || !city || !front) return;
+    /* parallax — far sky drifts against the cursor, near layers travel with it */
+    wrap.addEventListener('pointermove', e => {
+      const r = wrap.getBoundingClientRect();
+      tx = ((e.clientX - r.left) / r.width - .5) * 2;
+      ty = ((e.clientY - r.top) / r.height - .5) * 2;
+    });
+    (function loop(){
+      if (Math.abs(tx - cx) > .001 || Math.abs(ty - cy) > .001){
+        cx += (tx - cx) * .06;
+        cy += (ty - cy) * .06;
+        sky.setAttribute('transform', 'translate(' + (cx * -3).toFixed(2) + ',' + (cy * -1.5).toFixed(2) + ')');
+        city.setAttribute('transform', 'translate(' + (cx * 4).toFixed(2) + ',' + (cy * 2).toFixed(2) + ')');
+        front.setAttribute('transform', 'translate(' + (cx * 7).toFixed(2) + ',' + (cy * 3.5).toFixed(2) + ')');
+      }
+      requestAnimationFrame(loop);
+    })();
+  }).catch(() => { /* fetch failed: the <img> stays as fallback */ });
 })();
 </script>
 </body>
