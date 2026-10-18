@@ -16,6 +16,7 @@ No pip installs. Standard library only.
 import html
 import json
 import os
+import random
 import re
 import shutil
 import sys
@@ -167,36 +168,90 @@ def build_city(contrib):
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#000000"/>
-      <stop offset="0.55" stop-color="#03060c"/>
-      <stop offset="1" stop-color="#05070d"/>
+      <stop offset="0.55" stop-color="#02040a"/>
+      <stop offset="1" stop-color="#04070f"/>
     </linearGradient>
     <radialGradient id="core" cx="0.5" cy="0.78" r="0.6">
       <stop offset="0" stop-color="#00E5FF" stop-opacity="0.22"/>
       <stop offset="1" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
-    <filter id="cglow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
+    <linearGradient id="cone" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#00E5FF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="upl" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#22C55E" stop-opacity="0"/>
+      <stop offset="1" stop-color="#7CFFB2" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="fog" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9fb6d4" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#9fb6d4" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#9fb6d4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="tglow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
   <style><![CDATA[
     .peak{animation:beacon 2.6s ease-in-out infinite}
     @keyframes beacon{0%,100%{opacity:.55}50%{opacity:1}}
+    .wf{animation:flick 6.8s linear infinite}
+    @keyframes flick{0%,100%{opacity:1}42%{opacity:.3}48%{opacity:.92}74%{opacity:.55}}
+    .tw{animation:tw 3.7s ease-in-out infinite}
+    @keyframes tw{0%,100%{opacity:1}50%{opacity:.2}}
+    .coreg{animation:breathe 12s ease-in-out infinite}
+    @keyframes breathe{0%,100%{opacity:.55}50%{opacity:1}}
+    .shoot{opacity:0;animation:shoot 15s linear infinite;animation-delay:-3s}
+    @keyframes shoot{0%{transform:translate(150px,26px);opacity:0}0.7%{opacity:1}4.2%{transform:translate(360px,132px);opacity:0}100%{transform:translate(360px,132px);opacity:0}}
+    .sl{transform-box:fill-box;transform-origin:50% 100%;animation:sweep 9s ease-in-out infinite alternate}
+    @keyframes sweep{from{transform:rotate(-20deg)}to{transform:rotate(20deg)}}
+    .beamup{opacity:0;animation:uplink 3.4s linear infinite}
+    @keyframes uplink{0%{transform:translateY(0);opacity:0}12%{opacity:.85}80%{opacity:.6}100%{transform:translateY(-46px);opacity:0}}
+    .dash{opacity:0;animation:driveA 7s linear infinite}
+    @keyframes driveA{0%{transform:translateX(-24px);opacity:0}7%{opacity:.95}86%{opacity:.95}100%{transform:translateX(440px);opacity:0}}
+    .dash2{opacity:0;animation:driveB 5s linear infinite}
+    @keyframes driveB{0%{transform:translateX(-14px);opacity:0}9%{opacity:.9}84%{opacity:.9}100%{transform:translateX(92px);opacity:0}}
+    .fogband{animation:drift 22s ease-in-out infinite alternate}
+    @keyframes drift{from{transform:translateX(-26px)}to{transform:translateX(26px)}}
+    @media (prefers-reduced-motion: reduce){
+      .wf,.tw,.shoot,.sl,.beamup,.dash,.dash2,.fogband,.coreg,.peak{animation:none !important}
+      .shoot,.beamup,.dash,.dash2{opacity:0}
+    }
   ]]></style>""")
-    body.append('<rect width="%d" height="%d" fill="url(#sky)"/>' % (W, H))
-    body.append('<rect width="%d" height="%d" fill="url(#core)"/>' % (W, H))
-    body.append('<rect x="1" y="1" width="%d" height="%d" rx="14" fill="none" stroke="#16203a" stroke-width="2"/>'
-                % (W - 2, H - 2))
 
-    # layout grid: 53 weeks x 7 days
+    # ---- sky layer: stars + rare shooting star ----------------------------
+    body.append('<g id="Lsky">')
+    body.append('<rect width="%d" height="%d" fill="url(#sky)"/>' % (W, H))
+    rnd = random.Random(21)
+    phases = [[], [], [], []]
+    for i in range(56):  # main sky band
+        sx, sy = rnd.uniform(16, W - 16), rnd.uniform(10, 86)
+        r = rnd.uniform(0.6, 1.35)
+        pick = rnd.random()
+        col = "#eafff4" if pick < 0.8 else ("#bfefff" if pick < 0.94 else "#ffd98a")
+        phases[i % 4].append("<circle cx='%.1f' cy='%.1f' r='%.1f' fill='%s'/>" % (sx, sy, r, col))
+    for i in range(16):  # open sky right of the skyline
+        sx, sy = rnd.uniform(624, W - 16), rnd.uniform(52, 300)
+        r = rnd.uniform(0.6, 1.2)
+        phases[i % 4].append("<circle cx='%.1f' cy='%.1f' r='%.1f' fill='#eafff4'/>" % (sx, sy, r))
+    for gi, ph in enumerate(phases):
+        body.append("<g class='tw' style='animation-delay:%.1fs'>%s</g>" % (-gi * 0.9, "".join(ph)))
+    body.append("<g class='shoot'>"
+                "<line x1='0' y1='0' x2='30' y2='16' stroke='#eafff4' stroke-width='1.3'/>"
+                "<line x1='-16' y1='-8' x2='0' y2='0' stroke='#00E5FF' stroke-width='1' opacity='.5'/>"
+                "</g>")
+    body.append("</g>")
+
+    # ---- layout grid: 53 weeks x 7 days -----------------------------------
     start = datetime.strptime(min(contrib), "%Y-%m-%d").date() if contrib else datetime.today().date()
     first_sun = (start.weekday() + 1) % 7
     weeks = {}
-    for ds, (lvl, _cnt) in contrib.items():
+    for ds, (lvl, cnt) in contrib.items():
         d = datetime.strptime(ds, "%Y-%m-%d").date()
         idx = (d - start).days + first_sun
         w, day = idx // 7, idx % 7
-        weeks.setdefault(w, {})[day] = lvl
+        weeks.setdefault(w, {})[day] = (lvl, cnt, ds)
     max_week = max(weeks) if weeks else 52
 
     s = 8.0
@@ -206,7 +261,7 @@ def build_city(contrib):
     faces = []
     for w in range(max_week + 1):
         for day in range(7):
-            lvl = weeks.get(w, {}).get(day, 0)
+            lvl, cnt, ds = weeks.get(w, {}).get(day, (0, 0, ""))
             x = (w - day) * s + shift_x + 6 * s
             y = (w + day) * (s / 2) + shift_y
             h = max(lvl * step, 2.5) if lvl > 0 else 2.0
@@ -219,21 +274,95 @@ def build_city(contrib):
                 left = base if lvl >= 3 else "#0b2430"
                 right = "#0a1a24" if lvl < 3 else "#0891a6"
             cls = ' class="peak"' if lvl >= 4 else ""
-            faces.append((w + day, w, x, y, h, top, left, right, cls))
+            faces.append({"w": w, "day": day, "lvl": lvl, "cnt": cnt, "ds": ds,
+                          "x": x, "y": y, "h": h, "top": top, "left": left,
+                          "right": right, "cls": cls})
 
+    # searchlight towers: top 3 by level then recency
+    cands = sorted((f for f in faces if f["lvl"] >= 3),
+                   key=lambda f: (f["lvl"], f["w"] * 7 + f["day"]), reverse=True)
+    sl_set = [(f["x"], f["y"]) for f in cands[:3]]
+
+    # current streak days -> data uplink beams (capped)
+    run_days = []
+    for k in sorted(contrib):
+        if contrib[k][1] > 0:
+            run_days.append(k)
+        else:
+            run_days = []
+    uplink_idx = {k: i for i, k in enumerate(run_days[-14:])}
+
+    # ---- city layer --------------------------------------------------------
+    body.append('<g id="Lcity">')
+    body.append('<rect class="fogband" x="-30" y="112" width="%d" height="20" fill="url(#fog)" stroke="none"/>' % (W + 60))
+    body.append('<rect class="coreg" width="%d" height="%d" fill="url(#core)" stroke="none"/>' % (W, H))
     body.append('<g stroke="#04070d" stroke-width="0.6">')
-    for _d, _w, x, y, h, top, left, right, cls in sorted(faces, key=lambda f: (f[0], f[1])):
+    for f in sorted(faces, key=lambda f: (f["w"] + f["day"], f["w"])):
+        x, y, h, cls = f["x"], f["y"], f["h"], f["cls"]
+        body.append("<g data-d='%s' data-c='%d' data-l='%d'>" % (f["ds"], f["cnt"], f["lvl"]))
         body.append(
             '<polygon points="%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f" fill="%s"%s/>'
-            % (x, y, x + s, y + s / 2, x, y + s, x - s, y + s / 2, top, cls))
+            % (x, y, x + s, y + s / 2, x, y + s, x - s, y + s / 2, f["top"], cls))
         body.append(
             '<polygon points="%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f" fill="%s"%s/>'
-            % (x - s, y + s / 2, x, y + s, x, y + s + h, x - s, y + s / 2 + h, left, cls))
+            % (x - s, y + s / 2, x, y + s, x, y + s + h, x - s, y + s / 2 + h, f["left"], cls))
         body.append(
             '<polygon points="%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f" fill="%s"%s/>'
-            % (x, y + s, x + s, y + s / 2, x + s, y + s / 2 + h, x, y + s + h, right, cls))
+            % (x, y + s, x + s, y + s / 2, x + s, y + s / 2 + h, x, y + s + h, f["right"], cls))
+        body.append("</g>")
+        if (x, y) in sl_set:
+            bi = sl_set.index((x, y))
+            body.append("<g class='sl' style='animation-delay:%.1fs'>"
+                        "<polygon points='%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f' fill='url(#cone)' stroke='none'/>"
+                        "</g>" % (-bi * 3.1, x - 3, y + 2, x + 3, y + 2, x + 30, y - 150, x - 30, y - 150))
+        if f["ds"] in uplink_idx:
+            body.append("<rect class='beamup' x='%.1f' y='%.1f' width='2' height='44' fill='url(#upl)' stroke='none' style='animation-delay:%.2fs'/>"
+                        % (x - 1, y - 44, -uplink_idx[f["ds"]] * 0.45))
+        if f["lvl"] >= 1:
+            wrnd = random.Random(f["w"] * 7919 + f["day"] * 104729 + 13)
+            wcol = "#ffd98a" if wrnd.random() < 0.6 else "#bfefff"
+            if f["lvl"] >= 2:
+                rows = (0.18, 0.42, 0.66, 0.88) if h >= 15 else (0.28, 0.62)
+                dark = 0.18
+            else:
+                rows = (0.45,)  # quiet single window on low blocks
+                dark = 0.3
+            # face top edge at horizontal offset u: y + (s/2)(2-u)
+            u = 0.35
+            ytop = y + s / 2 * (2 - u)
+            wins = []
+            for vf in rows:
+                for side in (-1, 1):
+                    if wrnd.random() < dark:
+                        continue
+                    wy = ytop + 2 + (h - 4.5) * vf
+                    wop = 1.0 if wrnd.random() < 0.7 else 0.45
+                    wins.append("<rect x='%.1f' y='%.1f' width='1.5' height='2' fill='%s' opacity='%.2f' stroke='none'/>"
+                                % (x + side * s * u - 0.75, wy, wcol, wop))
+            if wins:
+                if f["lvl"] >= 2:
+                    body.append("<g class='wf' style='animation-duration:%.1fs;animation-delay:%.1fs'>%s</g>"
+                                % (wrnd.choice((5.3, 6.8, 8.1)), -wrnd.uniform(0, 9), "".join(wins)))
+                else:
+                    body.append("".join(wins))  # static: no animation budget spent
+    body.append("</g>")
     body.append("</g>")
 
+    # ---- front layer: perimeter traffic + foreground haze ------------------
+    body.append('<g id="Lfront">')
+    roads = [(146.0, 136.0, 26.565, "#00E5FF", "dash", 0.0),
+             (158.0, 145.0, 26.565, "#FFB300", "dash", -2.3),
+             (170.0, 153.0, 26.565, "#7CFFB2", "dash", -4.6),
+             (538.0, 332.0, -26.565, "#00E5FF", "dash2", -1.1),
+             (552.0, 325.0, -26.565, "#FFB300", "dash2", -3.4)]
+    for ox, oy, ang, col, dcls, delay in roads:
+        body.append("<g transform='translate(%.1f,%.1f) rotate(%.3f)'>"
+                    "<rect class='%s' x='0' y='0' width='9' height='2' rx='1' fill='%s' stroke='none' filter='url(#tglow)' style='animation-delay:%.1fs'/>"
+                    "</g>" % (ox, oy, ang, dcls, col, delay))
+    body.append('<rect class="fogband" x="-30" y="298" width="%d" height="26" fill="url(#fog)" stroke="none" style="animation-delay:-11s"/>' % (W + 60))
+    body.append("</g>")
+
+    # ---- HUD ----------------------------------------------------------------
     body.append('<text x="34" y="38" font-family="%s" font-size="14" fill="#00E5FF">CONTRIBUTION CITY</text>' % MONO)
     body.append('<text x="%d" y="38" text-anchor="end" font-family="%s" font-size="11.5" fill="#5A6B85">isometric &#183; live from GitHub</text>'
                 % (W - 34, MONO))
@@ -245,6 +374,8 @@ def build_city(contrib):
     for i, c in enumerate(legend):
         body.append('<rect x="%d" y="%d" width="22" height="14" rx="3" fill="%s" stroke="#16203a"/>'
                     % (W - 200 + i * 30, H - 38, c))
+    body.append('<rect x="1" y="1" width="%d" height="%d" rx="14" fill="none" stroke="#16203a" stroke-width="2"/>'
+                % (W - 2, H - 2))
     body.append("</svg>")
     return "\n".join(body)
 
