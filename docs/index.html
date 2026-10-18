@@ -145,16 +145,71 @@
   #trail{position:fixed; width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 14px var(--accent); pointer-events:none; z-index:4; opacity:0; transition:opacity .3s}
   .note-item{display:flex; gap:14px; align-items:baseline}
   .note-item .d{color:var(--dim); font-size:12px; min-width:96px}
+
+  /* ── aurora backdrop ── */
+  #aurora{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden}
+  #aurora i{
+    position:absolute; width:60vw; height:60vw; border-radius:50%;
+    filter:blur(90px); opacity:.18; mix-blend-mode:screen;
+    background:radial-gradient(circle at center, var(--accent), transparent 62%);
+  }
+  #aurora i:nth-child(1){top:-18vw; left:-12vw; animation:drift1 26s ease-in-out infinite}
+  #aurora i:nth-child(2){bottom:-22vw; right:-14vw; background:radial-gradient(circle at center, var(--accent2), transparent 62%); animation:drift2 32s ease-in-out infinite}
+  @keyframes drift1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(9vw,7vw) scale(1.16)}}
+  @keyframes drift2{0%,100%{transform:translate(0,0) scale(1.1)}50%{transform:translate(-8vw,-6vw) scale(.92)}}
+
+  /* ── boot overlay ── */
+  #bootOverlay{
+    position:fixed; inset:0; z-index:200; background:#000;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    font-size:14px; color:var(--green); transition:opacity .5s ease; padding:22px;
+  }
+  #bootOverlay.gone{opacity:0; pointer-events:none}
+  #bootOverlay pre{margin:0; white-space:pre-wrap; line-height:1.9; min-height:220px; text-shadow:0 0 10px rgba(34,197,94,.4)}
+  #bootOverlay .skipBoot{margin-top:26px; border:1px solid var(--edge); background:transparent; color:var(--dim); padding:7px 16px; border-radius:8px; font:inherit; font-size:12px; cursor:pointer}
+  #bootOverlay .skipBoot:hover{color:var(--green); border-color:var(--green)}
+
+  /* ── agent log ticker ── */
+  .ticker{
+    border:1px solid var(--edge); border-radius:12px; background:var(--panel);
+    padding:0; overflow:hidden; text-align:left; max-width:640px; margin:0 auto;
+  }
+  .ticker .bar{display:flex; align-items:center; gap:8px; padding:8px 14px; border-bottom:1px solid var(--edge); color:var(--dim); font-size:11.5px; letter-spacing:1px}
+  .ticker .dot{width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 10px var(--green); animation:pulseDot 1.6s ease-in-out infinite}
+  @keyframes pulseDot{0%,100%{opacity:1; transform:scale(1)}50%{opacity:.35; transform:scale(.7)}}
+  .ticker .stream{padding:12px 16px; height:184px; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; gap:5px}
+  .ticker .stream div{font-size:12.5px; color:var(--mid); opacity:0; animation:logIn .3s forwards}
+  .ticker .stream div .t{color:var(--dim)}
+  .ticker .stream div .ok{color:var(--green)}
+  .ticker .stream div .hi{color:var(--accent)}
+  @keyframes logIn{to{opacity:1}}
+
+  /* ── 3D tilt cards ── */
+  .tilt{transition:transform .18s ease, box-shadow .25s ease; transform-style:preserve-3d; will-change:transform}
+  .tilt:hover{box-shadow:0 22px 60px -24px color-mix(in srgb, var(--accent) 55%, transparent)}
+
+  /* ── matrix mode (konami) ── */
+  #matrix{position:fixed; inset:0; z-index:150; pointer-events:none; opacity:0; transition:opacity .5s}
+  #matrix.on{opacity:.55}
+
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto}
     *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important}
     .reveal{opacity:1; transform:none}
     #trail{display:none}
+    #aurora{display:none}
+    .tilt{transform:none !important}
   }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div id="aurora" aria-hidden="true"><i></i><i></i></div>
+<canvas id="matrix" aria-hidden="true"></canvas>
+<div id="bootOverlay" role="status" aria-label="System boot sequence">
+  <pre id="bootLines"></pre>
+  <button class="skipBoot" type="button">skip init [esc]</button>
+</div>
 <canvas id="bg" aria-hidden="true"></canvas>
 <div id="trail" aria-hidden="true"></div>
 
@@ -223,7 +278,21 @@
     <p class="reveal" style="color:var(--dim); margin:-8px 0 22px; font-size:12.5px">
       No shields.io. No third parties. Every pixel below is rendered by a GitHub Action inside this repo.
     </p>
+
+    <div class="ticker reveal" aria-label="Live agent log">
+      <div class="bar"><span class="dot"></span> AGENT LOG // tail -f agent.out</div>
+      <div class="stream" id="agentLog" aria-live="off"></div>
+    </div>
+
+    <div style="height:26px"></div>
     <img class="fig reveal" src="assets/contribution-city.svg" alt="Isometric 3D contribution city — every tower is a real day of code"/>
+    <div style="height:18px"></div>
+    <img class="fig reveal" src="assets/heatmap-rolling.gif" alt="Rolling 56-day contribution heatmap — one new frame every day"/>
+    <div style="height:18px"></div>
+    <div class="grid">
+      <img class="fig reveal" src="assets/boot-terminal.gif" alt="Self-hosted terminal boot sequence"/>
+      <img class="fig reveal" src="assets/stats-flipbook.gif" alt="Stats flipbook — contributions, streaks, repos, top language, mission"/>
+    </div>
     <div class="grid">
       <img class="fig reveal" src="assets/language-donut.svg" alt="Language donut chart by real bytes of code"/>
       <img class="fig reveal" src="assets/activity.svg" alt="Live public activity stream"/>
@@ -657,6 +726,129 @@ document.getElementById('dlResume').addEventListener('click', () => { location.h
     }
   });
   console.log('%cACCESS GRANTED%c\nYou opened devtools. The terminal never lies. — Vikram', 'color:#00E5FF;font-weight:700;font-size:16px', 'color:#8B5CF6');
+})();
+
+/* ── boot sequence overlay ── */
+(function(){
+  const ov = document.getElementById('bootOverlay');
+  const pre = document.getElementById('bootLines');
+  const skip = ov.querySelector('.skipBoot');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let done = false;
+  const seq = [
+    'OBSIDIAN://init profile --user vikrambtech2025-png',
+    '',
+    '[ 0.04s ] mounting self-hosted core ......... [ ok ]',
+    '[ 0.11s ] loading 199 public repos .......... [ ok ]',
+    '[ 0.23s ] calibrating agent runtime ......... [ ok ]',
+    '[ 0.37s ] verifying citations ............... [ ok ]',
+    '[ 0.52s ] warming RAG + colpali index ....... [ ok ]',
+    '',
+    'mission locked:',
+    '  i love to create ai idealistic agents',
+    '  that solves real world problem',
+    '',
+    'handoff -> live profile'
+  ];
+  function finish(){ if (done) return; done = true; ov.classList.add('gone'); setTimeout(()=>ov.remove(), 550); }
+  skip.addEventListener('click', finish);
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !done) finish(); });
+  if (reduce){ pre.textContent = seq.join('\n'); setTimeout(finish, 400); return; }
+  let i = 0, j = 0, out = '';
+  (function type(){
+    if (done) return;
+    if (i >= seq.length){ setTimeout(finish, 620); return; }
+    const line = seq[i];
+    if (j <= line.length){
+      pre.textContent = out + line.slice(0, j);
+      j++; setTimeout(type, line.startsWith('[ 0') ? 9 : 16);
+    } else {
+      out += line + '\n'; i++; j = 0; setTimeout(type, line === '' ? 40 : 130);
+    }
+  })();
+})();
+
+/* ── agent log ticker (from data.json) ── */
+(function(){
+  const box = document.getElementById('agentLog');
+  if (!box) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lines = [], i = 0;
+  const pad = n => String(n).padStart(2, '0');
+  function stamp(){ const d = new Date(); return pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()); }
+  function seed(d){
+    const s = d.stats || {};
+    lines = [
+      '<span class="t">' + stamp() + '</span> <span class="ok">[ok]</span> agent-runtime online',
+      '<span class="t">' + stamp() + '</span> mount <span class="hi">' + (s.repos || 199) + ' repos</span> -> workspace',
+      '<span class="t">' + stamp() + '</span> contributions this year: <span class="hi">' + (s.contributions || 0) + '</span>',
+      '<span class="t">' + stamp() + '</span> longest streak <span class="hi">' + (s.longest_streak || 0) + 'd</span> · current ' + (s.current_streak || 0) + 'd',
+      '<span class="t">' + stamp() + '</span> <span class="ok">[ok]</span> citations verified 12/12',
+      '<span class="t">' + stamp() + '</span> mission -> idealistic agents, real-world problems',
+      '<span class="t">' + stamp() + '</span> <span class="ok">[ok]</span> awaiting next commit …'
+    ];
+  }
+  function push(){ const el = document.createElement('div'); el.innerHTML = lines[i % lines.length]; box.appendChild(el); i++; while (box.children.length > 8) box.removeChild(box.firstChild); }
+  fetch('data.json').then(r => r.json()).then(d => seed(d)).catch(() => seed({}));
+  if (reduce){ lines.forEach(t => { const el = document.createElement('div'); el.innerHTML = t; box.appendChild(el); }); return; }
+  for (let k = 0; k < 4; k++) push();
+  setInterval(push, 2000);
+})();
+
+/* ── 3D tilt on project cards ── */
+(function(){
+  if (!matchMedia('(pointer:fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function attach(card){
+    if (card.dataset.tilt) return; card.dataset.tilt = '1'; card.classList.add('tilt');
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5;
+      card.style.transform = 'perspective(800px) rotateY(' + (px * 9) + 'deg) rotateX(' + (-py * 9) + 'deg) translateZ(6px)';
+    });
+    card.addEventListener('pointerleave', () => { card.style.transform = ''; });
+  }
+  document.querySelectorAll('.card.repo').forEach(attach);
+  new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(n => {
+    if (n.nodeType !== 1) return; if (n.matches && n.matches('.card.repo')) attach(n);
+    if (n.querySelectorAll) n.querySelectorAll('.card.repo').forEach(attach);
+  }))).observe(document.getElementById('repoGrid'), { childList: true });
+})();
+
+/* ── scroll-triggered reveals for section content ── */
+(function(){
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold:.12 });
+  document.querySelectorAll('main section .fig, main section p, .ticker').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+})();
+
+/* ── matrix mode (konami) ── */
+(function(){
+  const cv = document.getElementById('matrix');
+  const x = cv.getContext('2d');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const glyphs = '01ABCDEF#$%&*+<>? Vikram agents idealistic';
+  let cols, drops, fs = 15, raf = null;
+  function size(){ cv.width = innerWidth; cv.height = innerHeight; cols = Math.floor(cv.width / fs); drops = Array(cols).fill(1).map(() => Math.random() * -40); }
+  function frame(){
+    x.fillStyle = 'rgba(0,0,0,.08)'; x.fillRect(0, 0, cv.width, cv.height);
+    x.font = fs + 'px monospace';
+    for (let i = 0; i < cols; i++){
+      const ch = glyphs[(Math.random() * glyphs.length) | 0];
+      x.fillStyle = Math.random() > .93 ? '#eafff4' : '#22C55E';
+      x.fillText(ch, i * fs, drops[i] * fs);
+      if (drops[i] * fs > cv.height && Math.random() > .975) drops[i] = 0;
+      drops[i]++;
+    }
+    raf = requestAnimationFrame(frame);
+  }
+  function on(){ cv.classList.add('on'); if (!raf && !reduce){ size(); frame(); } }
+  function off(){ cv.classList.remove('on'); if (raf){ cancelAnimationFrame(raf); raf = null; } x.clearRect(0, 0, cv.width, cv.height); }
+  addEventListener('resize', () => { if (cv.classList.contains('on')) size(); });
+  const seq = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a']; let k = 0;
+  addEventListener('keydown', e => {
+    if (e.target && /INPUT|TEXTAREA/.test(e.target.tagName)) return;
+    k = (e.key === seq[k]) ? k + 1 : (e.key === seq[0] ? 1 : 0);
+    if (k === seq.length){ k = 0; cv.classList.contains('on') ? off() : on(); }
+  });
 })();
 </script>
 </body>
