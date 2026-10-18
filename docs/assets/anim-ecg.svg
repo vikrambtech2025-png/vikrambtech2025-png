@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 64" width="800" height="64" role="img" aria-label="Animated ECG heartbeat divider">
+<defs><filter id='glow' x='-20%' y='-40%' width='140%' height='180%'><feGaussianBlur stdDeviation='2.2' result='b'/><feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter></defs>
+<path d='M0 34 H160 l12 -20 l10 40 l12 -20 H330 l12 -26 l10 52 l12 -26 H540 l12 -20 l10 40 l12 -20 H800' stroke='#FF1F4B' stroke-opacity='.16' stroke-width='2' fill='none'/>
+<path d='M0 34 H160 l12 -20 l10 40 l12 -20 H330 l12 -26 l10 52 l12 -26 H540 l12 -20 l10 40 l12 -20 H800' pathLength='1000' stroke='#FF1F4B' stroke-width='2.4' fill='none' stroke-linejoin='round' filter='url(#glow)'>
+<animate attributeName='stroke-dasharray' values='0 1000; 260 1000; 1000 0' keyTimes='0;0.25;0.62' dur='2.6s' repeatCount='infinite'/>
+<animate attributeName='stroke-opacity' values='1;1;1;0' keyTimes='0;0.7;0.9;1' dur='2.6s' repeatCount='infinite'/>
+</path>
+<circle r='3.4' fill='#FF1F4B' filter='url(#glow)'>
+<animateMotion path='M0 34 H160 l12 -20 l10 40 l12 -20 H330 l12 -26 l10 52 l12 -26 H540 l12 -20 l10 40 l12 -20 H800' dur='2.6s' keyPoints='0;1' keyTimes='0;0.62' repeatCount='infinite'/>
+<animate attributeName='opacity' values='0;1;1;0' keyTimes='0;0.04;0.62;0.7' dur='2.6s' repeatCount='infinite'/>
+</circle>
+<text x='788' y='15' text-anchor='end' font-family="Consolas, 'Courier New', monospace" font-size='9' fill='#FF1F4B' opacity='.8'>BPM 72 // AGENT ONLINE</text>
+</svg>

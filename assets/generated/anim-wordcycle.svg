@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 206 32" width="206" height="32" role="img" aria-label="Cycling focus: idealistic ai agents, rag pipelines, vision models, colpali search, agentic evals">
+<defs><clipPath id='cp'><rect width='206' height='32' rx='4'/></clipPath></defs>
+<rect width='206' height='32' fill='#0b1220'/>
+<rect x='.5' y='.5' width='205' height='31' rx='3.5' fill='none' stroke='#8B5CF6' stroke-opacity='.85'/>
+<circle cx='12' cy='16' r='3.5' fill='none' stroke='#8B5CF6' stroke-width='1.5'><animate attributeName='r' values='3.5;9' dur='1.7s' repeatCount='infinite'/><animate attributeName='stroke-opacity' values='.9;0' dur='1.7s' repeatCount='infinite'/></circle>
+<circle cx='12' cy='16' r='3.5' fill='#8B5CF6'/>
+<text x='26' y='20' font-family="Consolas, 'Courier New', monospace" font-size='12' fill='#8B5CF6'>&#9656;</text>
+<text x='44' y='21' font-family="Consolas, 'Courier New', monospace" font-size='12' fill='#dce9f7' opacity='0'>idealistic ai agents<animate attributeName='opacity' values='0;1;1;0' keyTimes='0;0.06;0.88;0.94' dur='2s' begin='0.0s' repeatCount='infinite'/></text>
+<text x='44' y='21' font-family="Consolas, 'Courier New', monospace" font-size='12' fill='#dce9f7' opacity='0'>rag pipelines<animate attributeName='opacity' values='0;1;1;0' keyTimes='0;0.06;0.88;0.94' dur='2s' begin='2.0s' repeatCount='infinite'/></text>
+<text x='44' y='21' font-family="Consolas, 'Courier New', monospace" font-size='12' fill='#dce9f7' opacity='0'>vision models<animate attributeName='opacity' values='0;1;1;0' keyTimes='0;0.06;0.88;0.94' dur='2s' begin='4.0s' repeatCount='infinite'/></text>
+<text x='44' y='21' font-family="Consolas, 'Courier New', monospace" font-size='12' fill='#dce9f7' opacity='0'>colpali search<animate attributeName='opacity' values='0;1;1;0' keyTimes='0;0.06;0.88;0.94' dur='2s' begin='6.0s' repeatCount='infinite'/></text>
+<text x='44' y='21' font-family="Consolas, 'Courier New', monospace" font-size='12' fill='#dce9f7' opacity='0'>agentic evals<animate attributeName='opacity' values='0;1;1;0' keyTimes='0;0.06;0.88;0.94' dur='2s' begin='8.0s' repeatCount='infinite'/></text>
+</svg>

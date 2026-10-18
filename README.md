@@ -16,6 +16,11 @@
   <a href="https://vikrambtech2025-png.github.io/vikrambtech2025-png/"><img src="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/pages/pages-build-deployment/badge.svg" alt="GitHub Pages deployment status"/></a>
 </p>
 
+<br/>
+
+<!-- ══ ANIMATED MATRIX HEADER — SMIL rain loop, drawn by the profile-art Action ══ -->
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/anim-matrix-header.svg" width="100%" alt="Animated matrix rain header: VIKRAM SATHYA — idealistic AI agents for real-world problems"/>
+
 <!-- ══ HERO ══ -->
 <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/hero-void.svg" width="100%" alt="Vikram — AI/ML Engineer"/>
 
@@ -63,6 +68,8 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/anim-typewriter.svg" width="100%" alt="Typewriter animation: i love to create ai idealistic agents that solves real world problem"/>
+
 <p align="left">
   <a href="mailto:vikrambtech2025@gmail.com"><b>✉️ Email</b></a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/vikram-sathya-829a57379/"><b>💼 LinkedIn</b></a> &nbsp;·&nbsp;
@@ -75,7 +82,7 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 </table>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/obsidian/matrix-divider.svg" width="100%" alt="divider"/>
+  <img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/anim-ecg.svg" width="100%" alt="Animated ECG heartbeat divider — BPM 72, agent online"/>
 </div>
 
 ## 🎖️ Badges <sub><i>— self-hosted: rendered by my own GitHub Action, never fetched from shields.io</i></sub>
@@ -84,6 +91,7 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 
 ![building idealistic AI agents for real-world problems](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/status-agents.svg)
 ![Achievement: YOLO — merged without review](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/achievement-yolo.svg)
+![Cycling focus: ai agents, rag pipelines, vision models, colpali search, agentic evals](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/anim-wordcycle.svg)
 
 <br/><br/>
 
@@ -109,6 +117,10 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 ![Unsloth](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-unsloth.svg)
 ![Streamlit](https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/badges/skill-streamlit.svg)
 
+<br/>
+
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/anim-skillbars.svg" width="640" alt="Animated live skill matrix — 12 skills with shimmering bars"/>
+
 </div>
 
 <br/>
@@ -120,6 +132,10 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 | 🟡 **YOLO** | Merged a pull request without code review — [see it live →](https://github.com/vikrambtech2025-png?tab=achievements) |
 
 *These are awarded by GitHub itself as the work happens — nothing here is imported from a third party, same rule as everything else in this README. New achievements show up here as they land.*
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/anim-radar.svg" width="190" alt="Animated radar scan — always watching"/>
+</div>
 
 <br/>
 

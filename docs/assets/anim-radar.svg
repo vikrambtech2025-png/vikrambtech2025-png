@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Animated radar scan">
+<defs><radialGradient id='swg' cx='.5' cy='.5' r='.5'><stop offset='0' stop-color='#00E5FF' stop-opacity='.5'/><stop offset='1' stop-color='#00E5FF' stop-opacity='0'/></radialGradient></defs>
+<circle cx='100' cy='100' r='93' fill='#04070d' stroke='#00E5FF' stroke-opacity='.6'/>
+<circle cx='100' cy='100' r='31' fill='none' stroke='#00E5FF' stroke-opacity='.18'/>
+<circle cx='100' cy='100' r='61' fill='none' stroke='#00E5FF' stroke-opacity='.18'/>
+<line x1='100' y1='7' x2='100' y2='193' stroke='#00E5FF' stroke-opacity='.12'/>
+<line x1='7' y1='100' x2='193' y2='100' stroke='#00E5FF' stroke-opacity='.12'/>
+<g><path d='M100 100 L100 12 A88 88 0 0 1 168 44 Z' fill='url(#swg)'/><animateTransform attributeName='transform' type='rotate' from='0 100 100' to='360 100 100' dur='4s' repeatCount='infinite'/></g>
+<circle cx='116.4' cy='153.3' r='2.6' fill='#22C55E'><animate attributeName='opacity' values='0;1;1;0' keyTimes='0;.05;.18;.26' dur='4s' begin='-1.81s' repeatCount='infinite'/></circle>
+<circle cx='76.8' cy='55.0' r='2.6' fill='#22C55E'><animate attributeName='opacity' values='0;1;1;0' keyTimes='0;.05;.18;.26' dur='4s' begin='-3.70s' repeatCount='infinite'/></circle>
+<circle cx='97.2' cy='157.2' r='2.6' fill='#22C55E'><animate attributeName='opacity' values='0;1;1;0' keyTimes='0;.05;.18;.26' dur='4s' begin='-2.03s' repeatCount='infinite'/></circle>
+<circle cx='148.7' cy='78.8' r='2.6' fill='#22C55E'><animate attributeName='opacity' values='0;1;1;0' keyTimes='0;.05;.18;.26' dur='4s' begin='-0.74s' repeatCount='infinite'/></circle>
+<circle cx='100' cy='100' r='4' fill='none' stroke='#FF1F4B' stroke-opacity='.9'><animate attributeName='r' values='4;16' dur='2s' repeatCount='infinite'/><animate attributeName='stroke-opacity' values='.9;0' dur='2s' repeatCount='infinite'/></circle>
+<circle cx='100' cy='100' r='2.6' fill='#FF1F4B'/>
+</svg>

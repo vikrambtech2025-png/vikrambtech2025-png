@@ -573,6 +573,7 @@ def filled(text, color, text_color="#000000"):
 
 def achievement(name, note, color="#FFB300"):
     # reversed two-tone: filled name segment on the left, dark note segment on the right
+    # + a gold shimmer sweep on loop so earned badges visibly glint
     fs, cw, pad, h = 11, 6.7, 22, 22
     lw = _width(name, fs, cw, pad) + 8
     rw = _width(note, fs, cw, pad)
@@ -580,6 +581,10 @@ def achievement(name, note, color="#FFB300"):
     o = [g.svg_header(total, h, "Achievement: %s" % name),
          "<defs><linearGradient id='gl' x1='0' y1='0' x2='0' y2='1'>"
          "<stop offset='0' stop-color='#ffffff' stop-opacity='.22'/>"
+         "<stop offset='1' stop-color='#ffffff' stop-opacity='0'/></linearGradient>"
+         "<linearGradient id='shine' x1='0' y1='0' x2='1' y2='0'>"
+         "<stop offset='0' stop-color='#ffffff' stop-opacity='0'/>"
+         "<stop offset='.5' stop-color='#ffffff' stop-opacity='.5'/>"
          "<stop offset='1' stop-color='#ffffff' stop-opacity='0'/></linearGradient>"
          "<clipPath id='cp'><rect width='%d' height='%d' rx='4'/></clipPath></defs>" % (total, h),
          "<g clip-path='url(#cp)'>",
@@ -593,6 +598,35 @@ def achievement(name, note, color="#FFB300"):
          % (lw / 2.0, MONO, fs, g.esc(name)),
          "<text x='%.1f' y='15' text-anchor='middle' font-family=\"%s\" font-size='%d' fill='%s'>%s</text>"
          % (lw + rw / 2.0, MONO, fs, color, g.esc(note)),
+         "<g clip-path='url(#cp)'><rect x='-40' y='0' width='32' height='%d' fill='url(#shine)'>" % h,
+         "<animate attributeName='x' values='-40;%d' dur='3.4s' begin='-1.1s' repeatCount='infinite'/>" % (total + 10),
+         "</rect></g>",
+         "</svg>"]
+    return "\n".join(o)
+
+
+def status_chip(text, color, text_color="#000000"):
+    # filled chip + pulsing LED dot — the "always on" signal
+    fs, cw, pad, h = 11, 6.7, 40, 22
+    total = _width(text, fs, cw, pad)
+    o = [g.svg_header(total, h, text),
+         "<defs><linearGradient id='fg' x1='0' y1='0' x2='0' y2='1'>"
+         "<stop offset='0' stop-color='#ffffff' stop-opacity='.22'/>"
+         "<stop offset='1' stop-color='#ffffff' stop-opacity='0'/></linearGradient>"
+         "<clipPath id='cp'><rect width='%d' height='%d' rx='4'/></clipPath></defs>" % (total, h),
+         "<g clip-path='url(#cp)'>",
+         "<rect width='%d' height='%d' fill='%s'/>" % (total, h, color),
+         "<rect width='%d' height='%d' fill='url(#fg)'/>" % (total, h),
+         "<circle cx='13' cy='11' r='3.5' fill='none' stroke='#0b1220' stroke-width='1.6'>"
+         "<animate attributeName='r' values='3.5;10' dur='1.7s' repeatCount='infinite'/>"
+         "<animate attributeName='stroke-opacity' values='.85;0' dur='1.7s' repeatCount='infinite'/>"
+         "</circle>",
+         "<circle cx='13' cy='11' r='3.5' fill='#0b1220'/>",
+         "</g>",
+         "<rect x='.5' y='.5' width='%d' height='%d' rx='3.5' fill='none' stroke='#000000' stroke-opacity='.2'/>"
+         % (total - 1, h - 1),
+         "<text x='%.1f' y='15' text-anchor='middle' font-family=\"%s\" font-size='%d' font-weight='700' fill='%s'>%s</text>"
+         % (total / 2.0 + 10, MONO, fs, text_color, g.esc(text)),
          "</svg>"]
     return "\n".join(o)
 
@@ -602,8 +636,8 @@ def build_badges(agg, contrib, followers, repos):
     top_lang = max(agg.items(), key=lambda kv: kv[1])[0] if agg else "-"
     pub = sum(1 for r in repos if not r.get("fork"))
 
-    # status chip — the one-liner that says what you're about
-    write_badge("status-agents.svg", filled("building idealistic AI agents for real-world problems", "#00E5FF"))
+    # status chip — the one-liner that says what you're about (with live LED)
+    write_badge("status-agents.svg", status_chip("building idealistic AI agents for real-world problems", "#00E5FF"))
 
     # GitHub achievement badge — earned, shown in the README too
     write_badge("achievement-yolo.svg", achievement("YOLO", "merged without review"))
@@ -621,6 +655,204 @@ def build_badges(agg, contrib, followers, repos):
     # skill pills
     for name, col in BADGE_SKILLS:
         write_badge("skill-%s.svg" % name.lower().replace(" ", "-"), skill_pill(name, col))
+
+
+# ------------------------------------------------- animated README art (loops)
+#  SMIL animation drawn here. GitHub serves these SVGs through camo and the
+#  browser plays the loops inside plain <img> tags — no JS, no third parties.
+#  Curated, deterministic (fixed seeds) so daily CI runs don't churn the art.
+ANIM_SKILLS = [  # name, color, level 0-100 (curated showcase values)
+    ("Python", "#00E5FF", 96), ("LangChain", "#22C55E", 92), ("LangGraph", "#22C55E", 88),
+    ("PyTorch", "#FF1F4B", 85), ("Hugging Face", "#FFB300", 90), ("ColPali", "#FF1F4B", 82),
+    ("FAISS", "#00E5FF", 84), ("Qdrant", "#FF1F4B", 80), ("FastAPI", "#00E5FF", 87),
+    ("OpenCV", "#8B5CF6", 78), ("Unsloth", "#00E5FF", 74), ("Streamlit", "#FF1F4B", 81),
+]
+
+
+def build_matrix_header():
+    W, H = 800, 160
+    rnd = random.Random(7)
+    glyphs = "0123456789ABCDEF#$%&*+<>?"
+    row_h = 17
+    o = [g.svg_header(W, H, "Animated matrix rain: VIKRAM SATHYA"),
+         "<defs>",
+         "<linearGradient id='mg' x1='0' y1='0' x2='0' y2='1'>"
+         "<stop offset='0' stop-color='#0d5c40'/><stop offset='1' stop-color='#22C55E'/></linearGradient>",
+         "<linearGradient id='tf' x1='0' y1='0' x2='0' y2='1'>"
+         "<stop offset='0' stop-color='#02040a'/><stop offset='1' stop-color='#02040a' stop-opacity='0'/></linearGradient>",
+         "<linearGradient id='bf' x1='0' y1='1' x2='0' y2='0'>"
+         "<stop offset='0' stop-color='#02040a'/><stop offset='1' stop-color='#02040a' stop-opacity='0'/></linearGradient>",
+         "</defs>",
+         "<rect width='%d' height='%d' fill='#02040a'/>" % (W, H)]
+    for i in range(W // 26):
+        x = 13 + i * 26
+        n = rnd.randint(10, 15)
+        chars = [rnd.choice(glyphs) for _ in range(n)]
+        dur = rnd.uniform(2.8, 6.4)
+        delay = -rnd.uniform(0, dur)
+        op = rnd.uniform(.35, .9)
+        inner = []
+        for k, ch in enumerate(chars):
+            fill = "#eafff4" if k == 0 else "url(#mg)"
+            inner.append("<text x='0' y='%d' text-anchor='middle' fill='%s'>%s</text>"
+                         % ((k + 1) * row_h, fill, g.esc(ch)))
+        o.append("<g transform='translate(%d,0)' opacity='%.2f'><g>"
+                 "<animateTransform attributeName='transform' type='translate' values='0 %d; 0 %d' "
+                 "dur='%.1fs' begin='%.1fs' repeatCount='infinite'/>%s</g></g>"
+                 % (x, op, -n * row_h, H + row_h, dur, delay, "".join(inner)))
+    o.append("<rect width='%d' height='28' fill='url(#tf)'/>" % W)
+    o.append("<rect y='%d' width='%d' height='28' fill='url(#bf)'/>" % (H - 28, W))
+    o.append("<rect x='170' y='44' width='460' height='72' rx='6' fill='#02040a' fill-opacity='.92' stroke='#00E5FF' stroke-opacity='.8'/>")
+    o.append("<text x='400' y='76' text-anchor='middle' font-family=\"%s\" font-size='24' font-weight='700' fill='#00E5FF'>VIKRAM SATHYA</text>" % MONO)
+    o.append("<text x='400' y='99' text-anchor='middle' font-family=\"%s\" font-size='11' fill='#22C55E'>// idealistic AI agents &#183; real-world problems</text>" % MONO)
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def build_typewriter():
+    text = "i love to create ai idealistic agents that solves real world problem"
+    fs, cw, x0 = 13, 7.9, 18
+    tw = int(len(text) * cw)
+    W, H = tw + 2 * x0 + 16, 40
+    o = [g.svg_header(W, H, "Typewriter: " + text),
+         "<defs><mask id='wipe'>",
+         "<rect x='%d' y='4' width='%d' height='32' fill='#000'/>" % (x0, tw),
+         "<rect x='%d' y='4' height='32' fill='#fff'>" % x0,
+         "<animate attributeName='width' values='0;0;%d;%d;0' keyTimes='0;0.05;0.62;0.92;1' dur='9s' repeatCount='infinite'/>" % (tw, tw),
+         "</rect></mask></defs>",
+         "<rect width='%d' height='%d' fill='#04070d'/>" % (W, H),
+         "<rect x='.5' y='.5' width='%d' height='%d' rx='6' fill='none' stroke='#22C55E' stroke-opacity='.55'/>" % (W - 1, H - 1),
+         "<text x='%d' y='26' font-family=\"%s\" font-size='%d' fill='#22C55E' mask='url(#wipe)'>%s</text>"
+         % (x0, MONO, fs, g.esc(text)),
+         "<rect x='%d' y='9' width='8' height='22' fill='#22C55E'>" % (x0 + 4),
+         "<animate attributeName='x' values='%d;%d;%d;%d;%d' keyTimes='0;0.05;0.62;0.92;1' dur='9s' repeatCount='infinite'/>"
+         % (x0 + 4, x0 + 4, x0 + tw - 4, x0 + tw - 4, x0 + 4),
+         "<animate attributeName='opacity' values='1;1;0;1' keyTimes='0;0.45;0.5;1' dur='0.9s' repeatCount='infinite'/>",
+         "</rect>",
+         "</svg>"]
+    return "\n".join(o)
+
+
+def build_ecg():
+    W, H = 800, 64
+    d = "M0 34 H160 l12 -20 l10 40 l12 -20 H330 l12 -26 l10 52 l12 -26 H540 l12 -20 l10 40 l12 -20 H800"
+    o = [g.svg_header(W, H, "Animated ECG heartbeat divider"),
+         "<defs><filter id='glow' x='-20%' y='-40%' width='140%' height='180%'>"
+         "<feGaussianBlur stdDeviation='2.2' result='b'/>"
+         "<feMerge><feMergeNode in='b'/><feMergeNode in='SourceGraphic'/></feMerge></filter></defs>",
+         "<path d='%s' stroke='#FF1F4B' stroke-opacity='.16' stroke-width='2' fill='none'/>" % d,
+         "<path d='%s' pathLength='1000' stroke='#FF1F4B' stroke-width='2.4' fill='none' stroke-linejoin='round' filter='url(#glow)'>" % d,
+         "<animate attributeName='stroke-dasharray' values='0 1000; 260 1000; 1000 0' keyTimes='0;0.25;0.62' dur='2.6s' repeatCount='infinite'/>",
+         "<animate attributeName='stroke-opacity' values='1;1;1;0' keyTimes='0;0.7;0.9;1' dur='2.6s' repeatCount='infinite'/>",
+         "</path>",
+         "<circle r='3.4' fill='#FF1F4B' filter='url(#glow)'>",
+         "<animateMotion path='%s' dur='2.6s' keyPoints='0;1' keyTimes='0;0.62' repeatCount='infinite'/>" % d,
+         "<animate attributeName='opacity' values='0;1;1;0' keyTimes='0;0.04;0.62;0.7' dur='2.6s' repeatCount='infinite'/>",
+         "</circle>",
+         "<text x='%d' y='15' text-anchor='end' font-family=\"%s\" font-size='9' fill='#FF1F4B' opacity='.8'>BPM 72 // AGENT ONLINE</text>" % (W - 12, MONO),
+         "</svg>"]
+    return "\n".join(o)
+
+
+def build_radar():
+    W = H = 200
+    o = [g.svg_header(W, H, "Animated radar scan"),
+         "<defs><radialGradient id='swg' cx='.5' cy='.5' r='.5'>"
+         "<stop offset='0' stop-color='#00E5FF' stop-opacity='.5'/>"
+         "<stop offset='1' stop-color='#00E5FF' stop-opacity='0'/></radialGradient></defs>",
+         "<circle cx='100' cy='100' r='93' fill='#04070d' stroke='#00E5FF' stroke-opacity='.6'/>",
+         "<circle cx='100' cy='100' r='31' fill='none' stroke='#00E5FF' stroke-opacity='.18'/>",
+         "<circle cx='100' cy='100' r='61' fill='none' stroke='#00E5FF' stroke-opacity='.18'/>",
+         "<line x1='100' y1='7' x2='100' y2='193' stroke='#00E5FF' stroke-opacity='.12'/>",
+         "<line x1='7' y1='100' x2='193' y2='100' stroke='#00E5FF' stroke-opacity='.12'/>",
+         "<g><path d='M100 100 L100 12 A88 88 0 0 1 168 44 Z' fill='url(#swg)'/>"
+         "<animateTransform attributeName='transform' type='rotate' from='0 100 100' to='360 100 100' dur='4s' repeatCount='infinite'/></g>"]
+    rnd = random.Random(11)
+    for i in range(4):
+        ang = rnd.uniform(0, 360)
+        rad = rnd.uniform(25, 80)
+        bx = 100 + rad * math.sin(math.radians(ang))
+        by = 100 - rad * math.cos(math.radians(ang))
+        o.append("<circle cx='%.1f' cy='%.1f' r='2.6' fill='#22C55E'>"
+                 "<animate attributeName='opacity' values='0;1;1;0' keyTimes='0;.05;.18;.26' dur='4s' begin='-%.2fs' repeatCount='infinite'/>"
+                 "</circle>" % (bx, by, ang / 360.0 * 4.0))
+    o.append("<circle cx='100' cy='100' r='4' fill='none' stroke='#FF1F4B' stroke-opacity='.9'>"
+             "<animate attributeName='r' values='4;16' dur='2s' repeatCount='infinite'/>"
+             "<animate attributeName='stroke-opacity' values='.9;0' dur='2s' repeatCount='infinite'/>"
+             "</circle>")
+    o.append("<circle cx='100' cy='100' r='2.6' fill='#FF1F4B'/>")
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def build_wordcycle():
+    words = ["idealistic ai agents", "rag pipelines", "vision models",
+             "colpali search", "agentic evals"]
+    fs, cw, pad, h = 12, 7.9, 48, 32
+    total = int(max(len(w) for w in words) * cw) + pad
+    o = [g.svg_header(total, h, "Cycling focus: " + ", ".join(words)),
+         "<defs><clipPath id='cp'><rect width='%d' height='%d' rx='4'/></clipPath></defs>" % (total, h),
+         "<rect width='%d' height='%d' fill='#0b1220'/>" % (total, h),
+         "<rect x='.5' y='.5' width='%d' height='%d' rx='3.5' fill='none' stroke='#8B5CF6' stroke-opacity='.85'/>"
+         % (total - 1, h - 1),
+         "<circle cx='12' cy='16' r='3.5' fill='none' stroke='#8B5CF6' stroke-width='1.5'>"
+         "<animate attributeName='r' values='3.5;9' dur='1.7s' repeatCount='infinite'/>"
+         "<animate attributeName='stroke-opacity' values='.9;0' dur='1.7s' repeatCount='infinite'/>"
+         "</circle>",
+         "<circle cx='12' cy='16' r='3.5' fill='#8B5CF6'/>",
+         "<text x='26' y='20' font-family=\"%s\" font-size='%d' fill='#8B5CF6'>&#9656;</text>" % (MONO, fs)]
+    for i, w in enumerate(words):
+        o.append("<text x='44' y='21' font-family=\"%s\" font-size='%d' fill='#dce9f7' opacity='0'>%s"
+                 "<animate attributeName='opacity' values='0;1;1;0' keyTimes='0;0.06;0.88;0.94' dur='2s' begin='%.1fs' repeatCount='infinite'/>"
+                 "</text>" % (MONO, fs, g.esc(w), i * 2.0))
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def build_skillbars():
+    rows, gap_x, bar_w = 6, 370, 210
+    W = 740
+    top, rowh = 34, 26
+    H = top + rows * rowh + 14
+    o = [g.svg_header(W, H, "Animated live skill matrix"),
+         "<defs>",
+         "<linearGradient id='shine' x1='0' y1='0' x2='1' y2='0'>"
+         "<stop offset='0' stop-color='#ffffff' stop-opacity='0'/>"
+         "<stop offset='.5' stop-color='#ffffff' stop-opacity='.55'/>"
+         "<stop offset='1' stop-color='#ffffff' stop-opacity='0'/></linearGradient>",
+         "<clipPath id='tracks'>"]
+    for i, (name, col, lvl) in enumerate(ANIM_SKILLS):
+        cx = 20 + (i // rows) * gap_x
+        cy = top + (i % rows) * rowh
+        o.append("<rect x='%d' y='%d' width='%d' height='9' rx='4.5'/>" % (cx + 122, cy, bar_w))
+    o.append("</clipPath></defs>")
+    o.append("<text x='%d' y='20' text-anchor='middle' font-family=\"%s\" font-size='11' font-weight='700' fill='#00E5FF'>&#9889; LIVE SKILL MATRIX</text>" % (W // 2, MONO))
+    for i, (name, col, lvl) in enumerate(ANIM_SKILLS):
+        cx = 20 + (i // rows) * gap_x
+        cy = top + (i % rows) * rowh
+        fw = int(bar_w * lvl / 100.0)
+        o.append("<text x='%d' y='%d' font-family=\"%s\" font-size='11' fill='%s'>%s</text>"
+                 % (cx + 116, cy + 9, MONO, col, g.esc(name)))
+        o.append("<rect x='%d' y='%d' width='%d' height='9' rx='4.5' fill='#0b1220' stroke='%s' stroke-opacity='.7'/>"
+                 % (cx + 122, cy, bar_w, col))
+        o.append("<rect x='%d' y='%d' width='%d' height='9' rx='4.5' fill='%s' fill-opacity='.85'/>"
+                 % (cx + 122, cy, fw, col))
+        o.append("<text x='%d' y='%d' font-family=\"%s\" font-size='9' fill='#5A6B85'>%d</text>"
+                 % (cx + 122 + bar_w + 8, cy + 9, MONO, lvl))
+        o.append("<g clip-path='url(#tracks)'><rect x='%d' y='%d' width='26' height='9' fill='url(#shine)'>"
+                 "<animate attributeName='x' values='%d;%d' dur='2.8s' begin='%.2fs' repeatCount='infinite'/>"
+                 "</rect></g>" % (cx + 122, cy, cx + 122 - 26, cx + 122 + bar_w, i * 0.19))
+    o.append("</svg>")
+    return "\n".join(o)
+
+
+def build_animated():
+    g.write("anim-matrix-header.svg", build_matrix_header())
+    g.write("anim-typewriter.svg", build_typewriter())
+    g.write("anim-ecg.svg", build_ecg())
+    g.write("anim-radar.svg", build_radar())
+    g.write("anim-wordcycle.svg", build_wordcycle())
+    g.write("anim-skillbars.svg", build_skillbars())
 
 
 # --------------------------------------------------------------------- main
@@ -663,6 +895,7 @@ def main():
 
     build_data(repos, followers, following, contrib, agg)
     build_badges(agg, contrib, followers, repos)
+    build_animated()
     build_blog()
     build_og()
 
