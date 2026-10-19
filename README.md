@@ -12,6 +12,7 @@
 <!-- ══ LIVE STATUS BADGES — GitHub-native, self-hosted, zero third-party ══ -->
 <p align="center">
   <a href="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/profile-art.yml"><img src="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/profile-art.yml/badge.svg" alt="Profile Art workflow status"/></a>
+  <a href="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/snake.yml"><img src="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/snake.yml/badge.svg" alt="Snake workflow status"/></a>
   <a href="https://vikrambtech2025-png.github.io/vikrambtech2025-png/"><img src="https://github.com/vikrambtech2025-png/vikrambtech2025-png/actions/workflows/pages/pages-build-deployment/badge.svg" alt="GitHub Pages deployment status"/></a>
 </p>
 
@@ -300,10 +301,10 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 
 <br/>
 
-## 🕸️ Webshooter
+## 🐍 Contribution Snake
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/main/assets/generated/webshooter.svg" width="100%" alt="Animated web shooter firing a web onto the last 56 days of contributions"/>
+<img src="https://raw.githubusercontent.com/vikrambtech2025-png/vikrambtech2025-png/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution snake"/>
 </div>
 
 <p align="center">

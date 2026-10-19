@@ -9,7 +9,7 @@ import os
 import random
 import re
 import sys
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import generate_art as g
@@ -307,93 +307,6 @@ def build_galaxy(contrib):
     return "\n".join(out)
 
 
-# --------------------------------------------------------------- webshooter
-def build_webshooter(contrib):
-    """Spider-Man web shooter firing onto the last 56 days of contributions.
-    Replaces the third-party Platane/snk snake: same grid, zero dependencies."""
-    W, H = 760, 210
-    out = panel(W, H, "WEBSHOOTER", "firing webs at the last 56 days")
-    out.append("""<style><![CDATA[
-.wline{stroke-dasharray:506;animation:wshot 4.6s infinite}
-.gun{animation:recoil 4.6s infinite}
-.splat{transform-box:fill-box;transform-origin:center;animation:splatcycle 4.6s infinite}
-.flash,.shock,.mflash,.thwip{transform-box:fill-box;transform-origin:center}
-.flash{opacity:0;animation:flashk 4.6s infinite}
-.shock{opacity:0;animation:shockk 4.6s infinite}
-.mflash{opacity:0;animation:mflashk 4.6s infinite}
-.thwip{opacity:0;animation:thwipk 4.6s infinite}
-.core{animation:corepulse 1.7s ease-in-out infinite alternate}
-.sway{transform-box:fill-box;transform-origin:top center;animation:swayk 5.4s ease-in-out infinite}
-@keyframes wshot{0%{stroke-dashoffset:510}8%{stroke-dashoffset:0}62%{stroke-dashoffset:0}74%{stroke-dashoffset:510}100%{stroke-dashoffset:510}}
-@keyframes recoil{0%{transform:translateX(0)}2%{transform:translateX(-5px)}7%{transform:translateX(1px)}10%{transform:translateX(0)}100%{transform:translateX(0)}}
-@keyframes splatcycle{0%,6%{opacity:0;transform:scale(.35)}10%{opacity:1;transform:scale(1.1)}15%,56%{opacity:1;transform:scale(1)}72%{opacity:0;transform:scale(1.04)}100%{opacity:0;transform:scale(.35)}}
-@keyframes flashk{0%,6%{opacity:0;transform:scale(.4)}9%{opacity:.95;transform:scale(1.2)}17%{opacity:0;transform:scale(2.1)}100%{opacity:0;transform:scale(.4)}}
-@keyframes shockk{0%,7%{opacity:0;transform:scale(.5)}10%{opacity:.85;transform:scale(.9)}26%{opacity:0;transform:scale(2.4)}100%{opacity:0;transform:scale(.5)}}
-@keyframes mflashk{0%,1%{opacity:0;transform:scale(.3)}3%{opacity:.95;transform:scale(1.35)}9%{opacity:0;transform:scale(2)}100%{opacity:0;transform:scale(.3)}}
-@keyframes thwipk{0%{opacity:0;transform:scale(.6)}3%{opacity:1;transform:scale(1.15)}14%{opacity:1;transform:scale(1)}24%{opacity:0;transform:scale(1)}100%{opacity:0;transform:scale(.6)}}
-@keyframes corepulse{from{opacity:.3}to{opacity:.95}}
-@keyframes swayk{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.6deg)}}
-@media (prefers-reduced-motion: reduce){
-.wline,.gun,.splat,.flash,.shock,.mflash,.thwip,.core,.sway{animation:none !important}
-.flash,.shock,.mflash,.thwip{opacity:0}
-}
-]]></style>""")
-    # ambient hanging web strands
-    out.append("<path class='sway' d='M252,0 Q256,24 249,44' fill='none' stroke='#E6F1FF' stroke-width='1.2' opacity='.3'/>")
-    out.append("<path class='sway' style='animation-duration:6.6s;animation-delay:-2.4s' d='M338,0 Q334,20 340,37' fill='none' stroke='#E6F1FF' stroke-width='1.1' opacity='.22'/>")
-    # 56-day contribution grid - the web target
-    end = datetime.strptime(max(contrib), "%Y-%m-%d").date() if contrib else datetime.now(timezone.utc).date()
-    gx, gy, cell, pitch = 569, 52, 12, 14
-    heat = ["#0e1420", "#13443a", "#227d55", "#37b56e", "#7effa9"]
-    for i in range(56):
-        d = end - timedelta(days=55 - i)
-        lvl = contrib.get(d.isoformat(), (0, 0))[0]
-        out.append("<rect x='%d' y='%d' width='%d' height='%d' rx='2.5' fill='%s'/>"
-                   % (gx + (i // 7) * pitch, gy + ((d.weekday() + 1) % 7) * pitch,
-                      cell, cell, heat[min(lvl, 4)]))
-    # trajectory guide + shooter gauntlet
-    out.append("<line x1='118' y1='100' x2='624' y2='100' stroke='#00E5FF' stroke-width='1' stroke-dasharray='2 8' opacity='.13'/>")
-    out.append("<g class='gun'>")
-    out.append("<rect x='26' y='94' width='12' height='12' rx='4' fill='#131c2c' stroke='#22304a' stroke-width='1.2'/>")
-    out.append("<rect x='36' y='86' width='72' height='28' rx='6' fill='#0a1018' stroke='#22304a' stroke-width='1.5'/>")
-    out.append("<rect x='36' y='82' width='56' height='6' rx='3' fill='#131c2c'/>")
-    out.append("<rect x='46' y='93' width='30' height='14' rx='4' fill='#050b12' stroke='#00E5FF' stroke-opacity='.55' stroke-width='1'/>")
-    out.append("<rect class='core' x='48' y='95' width='26' height='10' rx='3' fill='#00E5FF' opacity='.35'/>")
-    for i, op in enumerate((0.25, 0.45, 0.65)):
-        out.append("<rect x='%d' y='91' width='3' height='18' rx='1.5' fill='#00E5FF' opacity='%.2f'/>" % (84 + i * 6, op))
-    for fx in (42, 54, 66):
-        out.append("<rect x='%d' y='114' width='8' height='9' rx='2' fill='#131c2c'/>" % fx)
-    out.append("<rect x='104' y='91' width='14' height='18' rx='4' fill='#0a1018' stroke='#00E5FF' stroke-opacity='.7' stroke-width='1.4'/>")
-    out.append("<circle cx='118' cy='100' r='4.5' fill='#7EF2FF'/>")
-    out.append("<circle class='mflash' cx='118' cy='100' r='10' fill='#7EF2FF'/>")
-    out.append("</g>")
-    # web line: cyan glow + white core, shoot / hold / retract cycle
-    out.append("<line class='wline' x1='118' y1='100' x2='624' y2='100' stroke='#00E5FF' stroke-opacity='.16' stroke-width='7' stroke-linecap='round' fill='none'/>")
-    out.append("<line class='wline' x1='118' y1='100' x2='624' y2='100' stroke='#F4FAFF' stroke-width='2.6' stroke-linecap='round' fill='none'/>")
-    # impact splat centred on the grid
-    tips = [(624 + 54 * math.cos(math.radians(k * 45)),
-             100 + 54 * math.sin(math.radians(k * 45))) for k in range(8)]
-    out.append("<g class='splat'>")
-    for tx, ty in tips:
-        out.append("<line x1='624' y1='100' x2='%.1f' y2='%.1f' stroke='#E6F1FF' stroke-opacity='.85' stroke-width='1.6' stroke-linecap='round'/>" % (tx, ty))
-    for r, sw, op in ((18, 1.5, 0.95), (36, 1.2, 0.7), (54, 1, 0.55)):
-        pts = " ".join("%.1f,%.1f" % (624 + r * math.cos(math.radians(k * 45)),
-                                      100 + r * math.sin(math.radians(k * 45))) for k in range(8))
-        out.append("<polygon points='%s' fill='none' stroke='#E6F1FF' stroke-width='%s' stroke-opacity='%s' stroke-linejoin='round'/>"
-                   % (pts, sw, op))
-    out.append("<circle cx='624' cy='100' r='2.5' fill='#E6F1FF'/>")
-    out.append("</g>")
-    out.append("<circle class='flash' cx='624' cy='100' r='9' fill='#FFFFFF'/>")
-    out.append("<circle class='shock' cx='624' cy='100' r='16' fill='none' stroke='#00E5FF' stroke-width='2'/>")
-    out.append("<g transform='rotate(-8 150 66)'><text class='thwip' x='150' y='66' text-anchor='middle' font-family=\"%s\" font-size='20' font-weight='700' font-style='italic' fill='#E6F1FF' stroke='#00E5FF' stroke-width='0.4'>THWIP!</text></g>" % MONO)
-    # captions
-    out.append("<text x='72' y='140' text-anchor='middle' font-family=\"%s\" font-size='8.5' fill='#5A6B85'>WEB-SHOOTER MK.IV</text>" % MONO)
-    total, longest, cur = g.streaks(contrib) if contrib else (0, 0, 0)
-    out.append("<text x='624' y='166' text-anchor='middle' font-family=\"%s\" font-size='9.5' fill='#5A6B85'>%d contributions · streak %dd / best %dd</text>"
-               % (MONO, total, cur, longest))
-    out.append("<text x='36' y='184' font-family=\"%s\" font-size='9' fill='#5A6B85'>// tether locked on grid center · cartridge 98%%</text>" % MONO)
-    out.append("</svg>")
-    return "\n".join(out)
 
 
 # ----------------------------------------------------------------- guestbook
@@ -979,7 +892,6 @@ def main():
     g.write("traffic.svg", build_traffic(views, clones, runs))
     g.write("wrapped.svg", build_wrapped(contrib, repos, agg))
     g.write("galaxy.svg", build_galaxy(contrib))
-    g.write("webshooter.svg", build_webshooter(contrib))
     g.write("guestbook.svg", build_guestbook(comments))
     g.write("reactions.svg", build_reactions(react))
 
