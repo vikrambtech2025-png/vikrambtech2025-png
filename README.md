@@ -287,7 +287,7 @@ I'm an **AI/ML Engineer** who turns research into **production-grade systems** �
 </tr>
 </table>
 
-<sub>→ <a href="https://github.com/vikrambtech2025-png?tab=repositories">Explore all 199 repositories</a></sub>
+<sub>→ <a href="https://github.com/vikrambtech2025-png?tab=repositories">Explore all 182 repositories</a></sub>
 
 </div>
 
