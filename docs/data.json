@@ -1,13 +1,13 @@
 {
   "user": "vikrambtech2025-png",
-  "generated_at": "2026-10-20T11:48:21Z",
+  "generated_at": "2026-10-21T11:59:54Z",
   "stats": {
-    "repos": 199,
+    "repos": 200,
     "followers": 6,
     "following": 24,
     "stars": 0,
-    "contributions": 466,
-    "current_streak": 3,
+    "contributions": 468,
+    "current_streak": 4,
     "longest_streak": 4
   },
   "languages": [
@@ -17,7 +17,7 @@
     },
     {
       "name": "Python",
-      "bytes": 2752480
+      "bytes": 3205378
     },
     {
       "name": "JavaScript",
@@ -61,6 +61,13 @@
     }
   ],
   "repos": [
+    {
+      "name": "email-agent",
+      "description": "Local-first, read-only email agent: monitors Gmail, classifies mail, detects deadlines and phishing, and alerts you via desktop/Telegram. 335 tests, deterministic-first analysis.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/email-agent"
+    },
     {
       "name": "vikrambtech2025-png",
       "description": "AI/ML Engineer building production RAG systems, LLM applications, and autonomous agents.",
@@ -137,13 +144,6 @@
       "language": "Jupyter Notebook",
       "stars": 0,
       "url": "https://github.com/vikrambtech2025-png/water-soil-wetness-prediction"
-    },
-    {
-      "name": "walmart-sales-prediction",
-      "description": "Walmart Sales Prediction - time series ML service using scikit-learn on the walmart dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
-      "language": "Jupyter Notebook",
-      "stars": 0,
-      "url": "https://github.com/vikrambtech2025-png/walmart-sales-prediction"
     }
   ]
 }
