@@ -1,47 +1,47 @@
 {
   "user": "vikrambtech2025-png",
-  "generated_at": "2026-10-21T11:59:54Z",
+  "generated_at": "2026-10-22T12:02:42Z",
   "stats": {
-    "repos": 200,
+    "repos": 182,
     "followers": 6,
     "following": 24,
     "stars": 0,
-    "contributions": 468,
-    "current_streak": 4,
-    "longest_streak": 4
+    "contributions": 470,
+    "current_streak": 5,
+    "longest_streak": 5
   },
   "languages": [
     {
       "name": "Jupyter Notebook",
-      "bytes": 87582848
+      "bytes": 85525232
     },
     {
       "name": "Python",
-      "bytes": 3205378
-    },
-    {
-      "name": "JavaScript",
-      "bytes": 158655
-    },
-    {
-      "name": "HTML",
-      "bytes": 88788
+      "bytes": 3012324
     },
     {
       "name": "Dockerfile",
-      "bytes": 76536
+      "bytes": 75169
+    },
+    {
+      "name": "HTML",
+      "bytes": 71427
     },
     {
       "name": "TypeScript",
-      "bytes": 60408
+      "bytes": 37813
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 30705
     },
     {
       "name": "CSS",
-      "bytes": 37798
+      "bytes": 22569
     },
     {
       "name": "Java",
-      "bytes": 13995
+      "bytes": 6408
     },
     {
       "name": "Makefile",
@@ -57,23 +57,30 @@
     },
     {
       "name": "Procfile",
-      "bytes": 192
+      "bytes": 150
     }
   ],
   "repos": [
-    {
-      "name": "email-agent",
-      "description": "Local-first, read-only email agent: monitors Gmail, classifies mail, detects deadlines and phishing, and alerts you via desktop/Telegram. 335 tests, deterministic-first analysis.",
-      "language": "Python",
-      "stars": 0,
-      "url": "https://github.com/vikrambtech2025-png/email-agent"
-    },
     {
       "name": "vikrambtech2025-png",
       "description": "AI/ML Engineer building production RAG systems, LLM applications, and autonomous agents.",
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/vikrambtech2025-png/vikrambtech2025-png"
+    },
+    {
+      "name": "ml-projectyard",
+      "description": "ML-ProjectYard - ML service using PyTorch on the Not required (see project). dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/ml-projectyard"
+    },
+    {
+      "name": "email-agent",
+      "description": "Local-first, read-only email agent: monitors Gmail, classifies mail, detects deadlines and phishing, and alerts you via desktop/Telegram. 335 tests, deterministic-first analysis.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/email-agent"
     },
     {
       "name": "citecheck",
@@ -130,13 +137,6 @@
       "language": "Jupyter Notebook",
       "stars": 0,
       "url": "https://github.com/vikrambtech2025-png/white-wine-quality-prediction"
-    },
-    {
-      "name": "weather-forecasting",
-      "description": "Weather Forecasting - time series ML service using XGBoost on the weather data of all countries dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
-      "language": "Jupyter Notebook",
-      "stars": 0,
-      "url": "https://github.com/vikrambtech2025-png/weather-forecasting"
     },
     {
       "name": "water-soil-wetness-prediction",
