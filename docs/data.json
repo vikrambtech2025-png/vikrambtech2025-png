@@ -1,13 +1,13 @@
 {
   "user": "vikrambtech2025-png",
-  "generated_at": "2026-10-23T11:49:08Z",
+  "generated_at": "2026-10-24T11:12:55Z",
   "stats": {
-    "repos": 182,
-    "followers": 6,
+    "repos": 183,
+    "followers": 7,
     "following": 24,
     "stars": 0,
-    "contributions": 470,
-    "current_streak": 0,
+    "contributions": 480,
+    "current_streak": 2,
     "longest_streak": 5
   },
   "languages": [
@@ -17,7 +17,7 @@
     },
     {
       "name": "Python",
-      "bytes": 3012324
+      "bytes": 3364896
     },
     {
       "name": "Dockerfile",
@@ -57,10 +57,17 @@
     },
     {
       "name": "Procfile",
-      "bytes": 150
+      "bytes": 221
     }
   ],
   "repos": [
+    {
+      "name": "ClauseLens",
+      "description": "Local-first contract risk analysis tool with evidence verification",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/ClauseLens"
+    },
     {
       "name": "vikrambtech2025-png",
       "description": "AI/ML Engineer building production RAG systems, LLM applications, and autonomous agents.",
@@ -137,13 +144,6 @@
       "language": "Jupyter Notebook",
       "stars": 0,
       "url": "https://github.com/vikrambtech2025-png/white-wine-quality-prediction"
-    },
-    {
-      "name": "water-soil-wetness-prediction",
-      "description": "Water Soil Wetness Prediction - tabular regression ML service using TensorFlow on the soil moisture dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
-      "language": "Jupyter Notebook",
-      "stars": 0,
-      "url": "https://github.com/vikrambtech2025-png/water-soil-wetness-prediction"
     }
   ]
 }
