@@ -1964,12 +1964,14 @@
 <polygon points="556.0,328.0 564.0,324.0 564.0,330.0 556.0,334.0" fill="#0a1a24"/>
 <rect x='552.5' y='329.3' width='1.5' height='2' fill='#ffd98a' opacity='1.00' stroke='none'/><rect x='558.0' y='329.3' width='1.5' height='2' fill='#ffd98a' opacity='1.00' stroke='none'/>
 </g>
-<g data-d='' data-c='0' data-l='0'>
-<polygon points="572.0,320.0 580.0,324.0 572.0,328.0 564.0,324.0" fill="#0d1526"/>
-<polygon points="564.0,324.0 572.0,328.0 572.0,330.0 564.0,326.0" fill="#080e18"/>
-<polygon points="572.0,328.0 580.0,324.0 580.0,326.0 572.0,330.0" fill="#0a1220"/>
+<g data-d='2026-10-29' data-c='1' data-l='1'>
+<polygon points="572.0,320.0 580.0,324.0 572.0,328.0 564.0,324.0" fill="#12414f"/>
+<polygon points="564.0,324.0 572.0,328.0 572.0,334.0 564.0,330.0" fill="#0b2430"/>
+<polygon points="572.0,328.0 580.0,324.0 580.0,330.0 572.0,334.0" fill="#0a1a24"/>
+<rect x='568.5' y='329.3' width='1.5' height='2' fill='#ffd98a' opacity='1.00' stroke='none'/><rect x='574.0' y='329.3' width='1.5' height='2' fill='#ffd98a' opacity='1.00' stroke='none'/>
 </g>
-<g data-d='2026-10-24' data-c='10' data-l='2'>
+<rect class='beamup' x='571.0' y='276.0' width='2' height='44' fill='url(#upl)' stroke='none' style='animation-delay:0.00s'/>
+<g data-d='2026-10-24' data-c='11' data-l='2'>
 <polygon points="548.0,324.0 556.0,328.0 548.0,332.0 540.0,328.0" fill="#0e7d92"/>
 <polygon points="540.0,328.0 548.0,332.0 548.0,344.0 540.0,340.0" fill="#0b2430"/>
 <polygon points="548.0,332.0 556.0,328.0 556.0,340.0 548.0,344.0" fill="#0a1a24"/>
