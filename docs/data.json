@@ -1,6 +1,6 @@
 {
   "user": "vikrambtech2025-png",
-  "generated_at": "2026-10-31T12:43:32Z",
+  "generated_at": "2026-11-01T13:34:47Z",
   "stats": {
     "repos": 184,
     "followers": 7,
@@ -62,6 +62,13 @@
   ],
   "repos": [
     {
+      "name": "vikrambtech2025-png",
+      "description": "AI/ML Engineer building production RAG systems, LLM applications, and autonomous agents.",
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/vikrambtech2025-png"
+    },
+    {
       "name": "ClauseLens",
       "description": "Local-first contract risk analysis tool with evidence verification",
       "language": "Python",
@@ -74,13 +81,6 @@
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/vikrambtech2025-png/faceattend"
-    },
-    {
-      "name": "vikrambtech2025-png",
-      "description": "AI/ML Engineer building production RAG systems, LLM applications, and autonomous agents.",
-      "language": "Python",
-      "stars": 0,
-      "url": "https://github.com/vikrambtech2025-png/vikrambtech2025-png"
     },
     {
       "name": "ml-projectyard",
