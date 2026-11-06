@@ -36,6 +36,13 @@
   &nbsp;— interactive terminal, <kbd>⌘K</kbd> command palette, live project explorer.
 </p>
 
+<br/>
+
+<!-- ══ GIT-KOI — pixel-art koi drawn from public activity, nightly ══ -->
+<p align="center">
+  <img src="koi/koi.gif" width="256" alt="My koi — drawn from my public GitHub activity"/>
+</p>
+
 </div>
 
 <br/>
