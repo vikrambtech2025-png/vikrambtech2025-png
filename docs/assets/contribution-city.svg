@@ -1497,7 +1497,7 @@
 <polygon points="516.0,268.0 524.0,272.0 524.0,274.0 516.0,270.0" fill="#080e18"/>
 <polygon points="524.0,272.0 532.0,268.0 532.0,270.0 524.0,274.0" fill="#0a1220"/>
 </g>
-<g data-d='2026-08-01' data-c='246' data-l='4'>
+<g data-d='2026-08-01' data-c='245' data-l='4'>
 <polygon points="436.0,268.0 444.0,272.0 436.0,276.0 428.0,272.0" fill="#00E5FF" class="peak"/>
 <polygon points="428.0,272.0 436.0,276.0 436.0,300.0 428.0,296.0" fill="#00E5FF" class="peak"/>
 <polygon points="436.0,276.0 444.0,272.0 444.0,296.0 436.0,300.0" fill="#0891a6" class="peak"/>
@@ -1974,11 +1974,13 @@
 <polygon points="540.0,328.0 548.0,332.0 548.0,334.0 540.0,330.0" fill="#080e18"/>
 <polygon points="548.0,332.0 556.0,328.0 556.0,330.0 548.0,334.0" fill="#0a1220"/>
 </g>
-<g data-d='' data-c='0' data-l='0'>
-<polygon points="564.0,324.0 572.0,328.0 564.0,332.0 556.0,328.0" fill="#0d1526"/>
-<polygon points="556.0,328.0 564.0,332.0 564.0,334.0 556.0,330.0" fill="#080e18"/>
-<polygon points="564.0,332.0 572.0,328.0 572.0,330.0 564.0,334.0" fill="#0a1220"/>
+<g data-d='2026-11-13' data-c='1' data-l='1'>
+<polygon points="564.0,324.0 572.0,328.0 564.0,332.0 556.0,328.0" fill="#12414f"/>
+<polygon points="556.0,328.0 564.0,332.0 564.0,338.0 556.0,334.0" fill="#0b2430"/>
+<polygon points="564.0,332.0 572.0,328.0 572.0,334.0 564.0,338.0" fill="#0a1a24"/>
+<rect x='560.5' y='333.3' width='1.5' height='2' fill='#ffd98a' opacity='1.00' stroke='none'/><rect x='566.0' y='333.3' width='1.5' height='2' fill='#ffd98a' opacity='1.00' stroke='none'/>
 </g>
+<rect class='beamup' x='563.0' y='280.0' width='2' height='44' fill='url(#upl)' stroke='none' style='animation-delay:0.00s'/>
 <g data-d='' data-c='0' data-l='0'>
 <polygon points="556.0,328.0 564.0,332.0 556.0,336.0 548.0,332.0" fill="#0d1526"/>
 <polygon points="548.0,332.0 556.0,336.0 556.0,338.0 548.0,334.0" fill="#080e18"/>
