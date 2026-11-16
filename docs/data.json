@@ -1,8 +1,8 @@
 {
   "user": "vikrambtech2025-png",
-  "generated_at": "2026-11-15T14:03:08Z",
+  "generated_at": "2026-11-16T15:59:31Z",
   "stats": {
-    "repos": 186,
+    "repos": 187,
     "followers": 7,
     "following": 24,
     "stars": 0,
@@ -17,15 +17,15 @@
     },
     {
       "name": "Python",
-      "bytes": 3553977
+      "bytes": 3621234
     },
     {
       "name": "JavaScript",
-      "bytes": 84849
+      "bytes": 84733
     },
     {
       "name": "Dockerfile",
-      "bytes": 76100
+      "bytes": 76582
     },
     {
       "name": "HTML",
@@ -61,6 +61,13 @@
     }
   ],
   "repos": [
+    {
+      "name": "agentic-rag",
+      "description": null,
+      "language": "Python",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/agentic-rag"
+    },
     {
       "name": "period-timer-flutter",
       "description": null,
@@ -137,13 +144,6 @@
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/vikrambtech2025-png/production-rag"
-    },
-    {
-      "name": "heart-failure-prediction",
-      "description": "Heart Failure Prediction - tabular classification ML service using PyTorch on the heart failure clinical data dataset (Gradio app with Docker and tests) - part of the ML-ProjectYard collection",
-      "language": "Jupyter Notebook",
-      "stars": 0,
-      "url": "https://github.com/vikrambtech2025-png/heart-failure-prediction"
     }
   ]
 }
