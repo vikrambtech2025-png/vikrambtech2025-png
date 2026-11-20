@@ -1,13 +1,13 @@
 {
   "user": "vikrambtech2025-png",
-  "generated_at": "2026-11-19T15:52:36Z",
+  "generated_at": "2026-11-20T15:35:30Z",
   "stats": {
-    "repos": 189,
+    "repos": 190,
     "followers": 7,
     "following": 24,
     "stars": 0,
     "contributions": 550,
-    "current_streak": 3,
+    "current_streak": 4,
     "longest_streak": 5
   },
   "languages": [
@@ -61,6 +61,13 @@
     }
   ],
   "repos": [
+    {
+      "name": "rust-file-compressor",
+      "description": "My first Rust project: a gzip file compressor built with flate2",
+      "language": "Rust",
+      "stars": 0,
+      "url": "https://github.com/vikrambtech2025-png/rust-file-compressor"
+    },
     {
       "name": "faculty-q",
       "description": null,
@@ -137,13 +144,6 @@
       "language": "Python",
       "stars": 0,
       "url": "https://github.com/vikrambtech2025-png/citecheck"
-    },
-    {
-      "name": "LangGraph-Agent",
-      "description": "A multi-agent LangGraph research workflow: analyst personas, parallel interview loops with Tavily web search, and cited report synthesis.",
-      "language": "Python",
-      "stars": 0,
-      "url": "https://github.com/vikrambtech2025-png/LangGraph-Agent"
     }
   ]
 }

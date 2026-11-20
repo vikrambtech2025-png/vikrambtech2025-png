@@ -1462,7 +1462,7 @@
 <polygon points="508.0,264.0 516.0,268.0 516.0,270.0 508.0,266.0" fill="#080e18"/>
 <polygon points="516.0,268.0 524.0,264.0 524.0,266.0 516.0,270.0" fill="#0a1220"/>
 </g>
-<g data-d='2026-08-01' data-c='242' data-l='4'>
+<g data-d='2026-08-01' data-c='241' data-l='4'>
 <polygon points="428.0,264.0 436.0,268.0 428.0,272.0 420.0,268.0" fill="#00E5FF" class="peak"/>
 <polygon points="420.0,268.0 428.0,272.0 428.0,296.0 420.0,292.0" fill="#00E5FF" class="peak"/>
 <polygon points="428.0,272.0 436.0,268.0 436.0,292.0 428.0,296.0" fill="#0891a6" class="peak"/>
@@ -1965,10 +1965,11 @@
 <polygon points="548.0,324.0 556.0,328.0 556.0,330.0 548.0,326.0" fill="#080e18"/>
 <polygon points="556.0,328.0 564.0,324.0 564.0,326.0 556.0,330.0" fill="#0a1220"/>
 </g>
-<g data-d='2026-11-19' data-c='0' data-l='0'>
-<polygon points="572.0,320.0 580.0,324.0 572.0,328.0 564.0,324.0" fill="#0d1526"/>
-<polygon points="564.0,324.0 572.0,328.0 572.0,330.0 564.0,326.0" fill="#080e18"/>
-<polygon points="572.0,328.0 580.0,324.0 580.0,326.0 572.0,330.0" fill="#0a1220"/>
+<g data-d='2026-11-19' data-c='1' data-l='1'>
+<polygon points="572.0,320.0 580.0,324.0 572.0,328.0 564.0,324.0" fill="#12414f"/>
+<polygon points="564.0,324.0 572.0,328.0 572.0,334.0 564.0,330.0" fill="#0b2430"/>
+<polygon points="572.0,328.0 580.0,324.0 580.0,330.0 572.0,334.0" fill="#0a1a24"/>
+<rect x='568.5' y='329.3' width='1.5' height='2' fill='#ffd98a' opacity='1.00' stroke='none'/><rect x='574.0' y='329.3' width='1.5' height='2' fill='#ffd98a' opacity='1.00' stroke='none'/>
 </g>
 <g data-d='2026-11-14' data-c='1' data-l='1'>
 <polygon points="548.0,324.0 556.0,328.0 548.0,332.0 540.0,328.0" fill="#12414f"/>
@@ -1976,7 +1977,7 @@
 <polygon points="548.0,332.0 556.0,328.0 556.0,334.0 548.0,338.0" fill="#0a1a24"/>
 <rect x='544.5' y='333.3' width='1.5' height='2' fill='#bfefff' opacity='1.00' stroke='none'/><rect x='550.0' y='333.3' width='1.5' height='2' fill='#bfefff' opacity='0.45' stroke='none'/>
 </g>
-<g data-d='' data-c='0' data-l='0'>
+<g data-d='2026-11-20' data-c='0' data-l='0'>
 <polygon points="564.0,324.0 572.0,328.0 564.0,332.0 556.0,328.0" fill="#0d1526"/>
 <polygon points="556.0,328.0 564.0,332.0 564.0,334.0 556.0,330.0" fill="#080e18"/>
 <polygon points="564.0,332.0 572.0,328.0 572.0,330.0 564.0,334.0" fill="#0a1220"/>
